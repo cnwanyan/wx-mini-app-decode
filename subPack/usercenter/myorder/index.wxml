@@ -1,0 +1,49 @@
+<view class="coupon-block data-v-75e88114">
+    <view class="head data-v-75e88114">
+        <view class="nav data-v-75e88114">
+            <view bindtap="__e" class="{{['nav-item','data-v-75e88114',navInd==='0'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navHandle',['0'] ] ] ] ]}}">
+                <text class="item-txt data-v-75e88114">加油订单</text>
+            </view>
+            <view bindtap="__e" class="{{['nav-item','data-v-75e88114',navInd==='1'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navHandle',['1'] ] ] ] ]}}">
+                <text class="item-txt data-v-75e88114">充电订单</text>
+            </view>
+        </view>
+    </view>
+    <view class="body data-v-75e88114">
+        <swiper bindchange="__e" class="cont-sw-swiper data-v-75e88114" current="{{navInd}}" data-event-opts="{{[ [ 'change',[ [ 'intervalChange',['$event'] ] ] ] ]}}" indicatorDots="{{false}}">
+            <swiper-item class="data-v-75e88114">
+                <scroll-view class="scroll-box data-v-75e88114" scrollY="true">
+                    <view class="page-bottom data-v-75e88114">
+                        <block wx:if="{{!oilLineEmpty}}">
+                            <oil-order-line bind:__l="__l" bind:oilLineHandle="__e" class="data-v-75e88114" data-event-opts="{{[ [ '^oilLineHandle',[ ['oilLineHandle'] ] ] ]}}" vueId="5fced42c-1"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-2"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-3"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-4"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-5"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-6"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-7"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-8"></oil-order-line>
+                            <oil-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-9"></oil-order-line>
+                        </block>
+                        <order-empty bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-10" wx:else></order-empty>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item class="data-v-75e88114">去除充电<scroll-view class="scroll-box data-v-75e88114" scrollY="true">
+                    <view class="page-bottom data-v-75e88114">
+                        <block wx:if="{{chargeLineEmpty}}">
+                            <charge-order-line bind:__l="__l" bind:chargeLineHandle="__e" class="data-v-75e88114" data-event-opts="{{[ [ '^chargeLineHandle',[ ['chargeLineHandle'] ] ] ]}}" vueId="5fced42c-11"></charge-order-line>
+                            <charge-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-12"></charge-order-line>
+                            <charge-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-13"></charge-order-line>
+                            <charge-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-14"></charge-order-line>
+                            <charge-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-15"></charge-order-line>
+                            <charge-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-16"></charge-order-line>
+                            <charge-order-line bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-17"></charge-order-line>
+                        </block>
+                        <order-empty bind:__l="__l" class="data-v-75e88114" vueId="5fced42c-18" wx:else></order-empty>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

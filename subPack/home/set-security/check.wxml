@@ -1,0 +1,11 @@
+<view class="security-check data-v-ab850af8">
+    <view class="desc data-v-ab850af8">{{'请通过短信验证你绑定的手机号'+phoneHandle}}</view>
+    <view class="check-inp data-v-ab850af8">
+        <view class="inp data-v-ab850af8">
+            <view class="code-desc data-v-ab850af8">验证码</view>
+            <input bindblur="__e" bindinput="__e" class="inp-num data-v-ab850af8" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','smsCode','$event',['trim'] ] ] ] ],[ 'blur',[ ['$forceUpdate'] ] ] ]}}" maxlength="4" type="number" value="{{smsCode}}"></input>
+        </view>
+        <view bindtap="__e" class="{{['code-btn','data-v-ab850af8',waitingTime?'disable':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'getCode',['$event'] ] ] ] ]}}">{{smsCodeButton}}</view>
+    </view>
+    <view catchtap="__e" class="{{['btn','data-v-ab850af8',smsCode?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'doDel',['$event'] ] ] ] ]}}">注销账号</view>
+</view>

@@ -1,0 +1,12 @@
+<view class="point-list data-v-779273ea">
+    <view class="point-item data-v-779273ea" wx:for="{{dataList}}" wx:for-index="__i0__" wx:key="id">
+        <view class="point-item__info data-v-779273ea">
+            <view class="type data-v-779273ea">{{item.source}}</view>
+            <view class="order data-v-779273ea" wx:if="{{item.order_no}}">{{'订单号：'+item.order_no}}</view>
+            <view class="created data-v-779273ea">{{item.change_time}}</view>
+        </view>
+        <view class="point-item__num data-v-779273ea">{{item.change_points}}</view>
+    </view>
+    <view class="empty-tips data-v-779273ea" wx:if="{{!isLoading&&dataList.length===0}}">暂无数据</view>
+    <view class="end-tips data-v-779273ea" wx:if="{{!hasMore}}">我也是有底线的~</view>
+</view>

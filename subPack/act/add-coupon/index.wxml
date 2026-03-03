@@ -1,0 +1,17 @@
+<view class="coupon-block data-v-2ba1034c">
+    <view class="cont data-v-2ba1034c">
+        <view class="cont-head data-v-2ba1034c">
+            <view class="cont-head-lf data-v-2ba1034c">兑换码</view>
+            <view catchtap="__e" class="cont-head-rf data-v-2ba1034c" data-event-opts="{{[ [ 'tap',[ [ 'go2Coupon',['$event'] ] ] ] ]}}">我的优惠券<hll-icon bind:__l="__l" class="data-v-2ba1034c" color="#FF6600" name="ic-arrow-right" size="12px" vueId="0ade1ba0-1"></hll-icon>
+            </view>
+        </view>
+        <view class="inp-coupon data-v-2ba1034c">
+            <input autoFocus="{{true}}" bindinput="__e" class="coupon-inp data-v-2ba1034c" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','couponNum','$event',[] ] ] ] ] ]}}" placeholder="请输入您的兑换码" value="{{couponNum}}"></input>
+        </view>
+        <view catchtap="__e" class="{{['btn','data-v-2ba1034c',couponNum?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'getCoupon',['$event'] ] ] ] ]}}">兑换</view>
+    </view>
+    <view class="footer data-v-2ba1034c">
+        <view class="title data-v-2ba1034c">兑换说明：</view>
+        <view class="footer-desc data-v-2ba1034c">兑换码由数字、英文字母组成；兑换码有兑换次数限制；兑换码输入时需区分大小写；如有其它问题，请咨询相应客服：<text class="strong data-v-2ba1034c">95036</text>。</view>
+    </view>
+</view>

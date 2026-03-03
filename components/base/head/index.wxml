@@ -1,0 +1,11 @@
+<view class="nav" style="{{'height:'+navH+'px'+';'+'background:'+bgColor+';'}}">
+    <view class="nav-title" style="{{'font-size:'+titleFontSize+';'+'color:'+titleColor+';'}}">{{''+title+''}}<view bindtap="__e" class="left-item" data-event-opts="{{[ [ 'tap',[ [ 'goBack',['$event'] ] ] ] ]}}" wx:if="{{showLeftBtn&&pageLength>=2}}">
+            <hll-icon bind:__l="__l" class="head-back" color="{{titleColor}}" name="ic-arrow-left" size="36rpx" vueId="6f839a60-1"></hll-icon>
+        </view>
+        <block wx:else>
+            <view bindtap="__e" class="left-item left-home-icon" data-event-opts="{{[ [ 'tap',[ [ 'goHome',['$event'] ] ] ] ]}}" wx:if="{{isHomeBtn}}">
+                <image class="back-icon" mode="widthFix" src="{{blackHome?'https://ops-img-static.huolala.cn/imgs/2021/163401032712279635099162.png':'https://ops-img-static.huolala.cn/imgs/2021/163376903219833729458983.png'}}"></image>
+            </view>
+        </block>
+    </view>
+</view>

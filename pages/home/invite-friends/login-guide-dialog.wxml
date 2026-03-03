@@ -1,0 +1,14 @@
+<view class="data-v-500352f6">
+    <view catchtouchmove="preventTouchMove" class="mask data-v-500352f6" wx:if="{{isShow}}">
+        <view class="home-popup data-v-500352f6">
+            <view class="content data-v-500352f6">
+                <image class="gift-icon data-v-500352f6" src="https://ops-img-static.huolala.cn/imgs/2021/162858665031146858817528.png"></image>
+                <view class="price-detail data-v-500352f6">
+                    <view class="price-tips data-v-500352f6">需要登录后才可领取优惠奖励哦~</view>
+                    <view catchtap="__e" class="see-btn data-v-500352f6" data-event-opts="{{[ [ 'tap',[ [ 'goLogin',['$event'] ] ] ] ]}}">立即登录</view>
+                    <view catchtap="__e" class="see-btn see-cancal data-v-500352f6" data-event-opts="{{[ [ 'tap',[ [ 'goHome',['$event'] ] ] ] ]}}">取消</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

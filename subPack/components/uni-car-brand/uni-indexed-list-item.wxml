@@ -1,0 +1,15 @@
+<view class="data-v-4777bc6e">
+    <view class="uni-indexed-list__title-wrapper data-v-4777bc6e" wx:if="{{loaded||list.itemIndex<15}}">
+        <text class="uni-indexed-list__title data-v-4777bc6e" wx:if="{{list.items&&list.items.length>0}}">{{list.key}}</text>
+    </view>
+    <view class="uni-indexed-list__list data-v-4777bc6e" wx:if="{{(loaded||list.itemIndex<15)&&list.items&&list.items.length>0}}">
+        <view class="uni-indexed-list__item data-v-4777bc6e" hoverClass="uni-indexed-list__item--hover" wx:for="{{list.items}}" wx:key="index">
+            <view bindtap="__e" class="uni-indexed-list__item-container data-v-4777bc6e" data-event-opts="{{[ [ 'tap',[ [ 'onClick',['$0',index],['idx'] ] ] ] ]}}">
+                <view class="{{['uni-indexed-list__item-border','data-v-4777bc6e',index===list.items.length-1?'uni-indexed-list__item-border--last':'']}}">
+                    <image class="brand-logo data-v-4777bc6e" src="{{item.currItem.brand_logo}}"></image>
+                    <text class="uni-indexed-list__item-content data-v-4777bc6e">{{item.currItem.brand_name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

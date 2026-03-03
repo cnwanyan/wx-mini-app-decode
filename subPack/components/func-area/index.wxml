@@ -1,0 +1,12 @@
+<view class="{{['func-area','data-v-1e04162a',small?'usercenter-type':'']}}">
+    <view class="area-title data-v-1e04162a" wx:if="{{title}}">{{title}}</view>
+    <view class="{{['area-cont','data-v-1e04162a',!title?'no-title':'']}}">
+        <view bindtap="__e" class="cont-item data-v-1e04162a" data-event-opts="{{[ [ 'tap',[ [ 'bindItemClick',['$0'],[ [ ['configData','',index] ] ] ] ] ] ]}}" wx:for="{{configData}}" wx:key="index">
+            <view class="item-img-box data-v-1e04162a">
+                <image class="item-img data-v-1e04162a" src="{{item.content}}"></image>
+                <view class="flag data-v-1e04162a" wx:if="{{item.corner_text}}">{{item.corner_text}}</view>
+            </view>
+            <text class="item-desc data-v-1e04162a">{{item.name}}</text>
+        </view>
+    </view>
+</view>

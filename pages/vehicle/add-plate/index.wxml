@@ -1,0 +1,67 @@
+<view class="add-plate data-v-b12bb80e">
+    <view class="data-v-b12bb80e">
+        <view class="title data-v-b12bb80e">基本信息</view>
+        <view class="cont cont-base data-v-b12bb80e">
+            <view class="base-head data-v-b12bb80e">车牌号码<image class="ok-icon data-v-b12bb80e" src="https://ops-img-static.huolala.cn/imgs/2021/16291942034935558379281.png"></image>
+            </view>
+            <view class="{{['base-body','data-v-b12bb80e',errPlate?'no-padding':'']}}">
+                <view catchtap="__e" class="{{['base-num','data-v-b12bb80e',provinceVal==='省'?'gray':'',provinceActive?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'showProvinceKeyBoard',['$event'] ] ] ] ]}}">{{provinceVal}}</view>
+                <view catchtap="__e" class="{{['base-num','data-v-b12bb80e',plateFlagNumber===index&&provinceVal!=='省'&&!provinceActive||plateFlagNumber===-1&&index===0&&provinceVal!=='省'&&!provinceActive?'active':'',plateNumArr[6]?'nolastBg':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'numberKeyBoard',[index] ] ] ] ]}}" wx:for="{{plateNumArr}}" wx:key="index">{{item}}</view>
+            </view>
+            <view class="err-tips data-v-b12bb80e" wx:if="{{errPlate}}">{{errPlate}}</view>
+        </view>
+    </view>
+    <view class="{{['add-carinfo-box','data-v-b12bb80e',isShowArrow?'carinfo-box-active':'']}}">
+        <view bindtap="__e" class="add-carinfo data-v-b12bb80e" data-event-opts="{{[ [ 'tap',[ [ 'toggleArrow',['$event'] ] ] ] ]}}">
+            <view class="info-lf data-v-b12bb80e">
+                <view class="lf-line data-v-b12bb80e"></view>
+                <view class="lf-txt data-v-b12bb80e">补充车辆信息</view>
+            </view>
+            <view class="data-v-b12bb80e">
+                <image class="{{['info-arrow','data-v-b12bb80e',isShowArrow?'ani-round':'']}}" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2022/164240186225715998117245.png"></image>
+            </view>
+        </view>
+        <view class="tips-desc data-v-b12bb80e">完善以下信息，获取实时违章提醒，在线办理违章等服务</view>
+        <view class="cont cont-body data-v-b12bb80e" wx:if="{{isShowArrow}}">
+            <view catchtap="__e" class="line base-foot data-v-b12bb80e" data-event-opts="{{[ [ 'tap',[ [ 'go2Brand',['$event'] ] ] ] ]}}">
+                <view class="brand-desc-box data-v-b12bb80e">品牌型号</view>
+                <view class="plate-detail-box data-v-b12bb80e">
+                    <view class="plate-detail data-v-b12bb80e">{{''+brandName+''}}<text class="brand-txt data-v-b12bb80e" wx:if="{{!brandName}}">选择品牌型号</text>
+                    </view>
+                    <hll-icon bind:__l="__l" class="data-v-b12bb80e" color="#999" name="icon-arrow-right" size="14px" vueId="7230e7f6-1"></hll-icon>
+                </view>
+            </view>
+            <view class="line data-v-b12bb80e">
+                <view class="data-v-b12bb80e">车辆识别代号</view>
+                <view class="data-v-b12bb80e">
+                    <input bindfocus="__e" bindinput="__e" class="{{['inp','data-v-b12bb80e',vehicleIdNumErr?'inp-err-padding':'']}}" data-event-opts="{{[ [ 'focus',[ [ 'initErrTips',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','vehicleIdNum','$event',[] ] ],[ 'vehicleIdUpperHandle',['$event'] ] ] ] ]}}" maxlength="17" placeholder="请输入车辆识别代号" placeholderStyle="color: #999" value="{{vehicleIdNum}}"></input>
+                    <view class="line-error data-v-b12bb80e" wx:if="{{vehicleIdNumErr}}">{{''+vehicleIdNumErr+''}}</view>
+                </view>
+            </view>
+            <view class="line data-v-b12bb80e">
+                <view class="data-v-b12bb80e">发动机代号</view>
+                <view class="data-v-b12bb80e">
+                    <input bindfocus="__e" bindinput="__e" class="{{['inp','data-v-b12bb80e',turboIdNumErr?'inp-err-padding':'']}}" data-event-opts="{{[ [ 'focus',[ [ 'initErrTips',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','turboIdNum','$event',[] ] ],[ 'turboIdUpperHandle',['$event'] ] ] ] ]}}" maxlength="17" placeholder="请输入发动机代号" placeholderStyle="color: #999" value="{{turboIdNum}}"></input>
+                    <view class="line-error data-v-b12bb80e" wx:if="{{turboIdNumErr}}">{{turboIdNumErr}}</view>
+                </view>
+            </view>
+            <view catchtap="__e" class="line data-v-b12bb80e" data-event-opts="{{[ [ 'tap',[ [ 'closeKeyBoard',['$event'] ] ] ] ]}}">
+                <view class="data-v-b12bb80e">注册日期</view>
+                <view class="{{['go-date','data-v-b12bb80e',registerTime?'active':'']}}">
+                    <picker bindchange="__e" class="data-v-b12bb80e" data-event-opts="{{[ [ 'change',[ [ 'regisDateHandle',['$event'] ] ] ] ]}}" headerText="选择注册日期" mode="date">{{registerTime||'请选择注册日期'}}</picker>
+                    <hll-icon bind:__l="__l" class="data-v-b12bb80e" color="#999" name="icon-arrow-right" size="14px" vueId="7230e7f6-2"></hll-icon>
+                </view>
+            </view>
+            <view catchtap="__e" class="line data-v-b12bb80e" data-event-opts="{{[ [ 'tap',[ [ 'closeKeyBoard',['$event'] ] ] ] ]}}">
+                <view class="data-v-b12bb80e">行驶里程</view>
+                <view class="line-mile-rf data-v-b12bb80e">
+                    <input bindinput="__e" class="inp inp-mile data-v-b12bb80e" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','mileage','$event',[] ] ],[ 'mileageHandle',['$event'] ] ] ] ]}}" maxlength="7" placeholder="请输入行驶里程" placeholderStyle="color: #999" type="number" value="{{mileage}}"></input>
+                    <view class="mile-unit data-v-b12bb80e" wx:if="{{mileage!==undefined&&mileage!==''}}">km</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtap="__e" class="send data-v-b12bb80e" data-event-opts="{{[ [ 'tap',[ [ 'send',['$event'] ] ] ] ]}}">提交</view>
+    <province-keyboard bind:__l="__l" bind:boardClick="__e" bind:checkHandle="__e" bind:close="__e" class="data-v-b12bb80e vue-ref" data-event-opts="{{[ [ '^boardClick',[ ['boardHandle'] ] ],[ '^close',[ ['closeProvince'] ] ],[ '^checkHandle',[ ['checkPlateNum'] ] ] ]}}" data-ref="refProKeyBoard" vueId="7230e7f6-3"></province-keyboard>
+    <num-keyboard bind:__l="__l" bind:boardClick="__e" bind:checkHandle="__e" class="data-v-b12bb80e vue-ref" data-event-opts="{{[ [ '^boardClick',[ ['numBoardHandle'] ] ],[ '^checkHandle',[ ['checkPlateNum'] ] ] ]}}" data-ref="refNumKeyBoard" vueId="7230e7f6-4"></num-keyboard>
+</view>

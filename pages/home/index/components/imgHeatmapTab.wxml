@@ -1,0 +1,8 @@
+<view class="img-heatmap-tab data-v-72893d94">
+    <view class="img-heatmap-tab-header _div data-v-72893d94">
+        <view bindtap="__e" class="tab-item data-v-72893d94" data-event-opts="{{[ [ 'tap',[ [ 'changeTab',['$0',index],[ [ ['data','',index] ] ] ] ] ] ]}}" wx:for="{{data}}" wx:key="index">
+            <view class="{{['data-v-72893d94',currentTab===index?'active':'']}}">{{item.tab_title}}</view>
+        </view>
+    </view>
+    <img-heatmap bind:__l="__l" class="data-v-72893d94" data="{{data[currentTab]}}" vueId="0dd7b0e2-1" wx:if="{{data[currentTab]}}"></img-heatmap>
+</view>

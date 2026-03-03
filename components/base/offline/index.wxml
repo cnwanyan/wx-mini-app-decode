@@ -1,0 +1,6 @@
+<view class="offline data-v-100ae1df">
+    <view class="data-v-100ae1df">
+        <image class="offline-icon data-v-100ae1df" mode="widthFix" src="/static/img/offline.png"></image>
+        <view class="desc data-v-100ae1df">目前没有网络，请先检查网络设置~</view>
+    </view>
+</view>

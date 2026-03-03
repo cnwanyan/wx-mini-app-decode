@@ -1,0 +1,26 @@
+<view class="coupon-block data-v-edd0aac0">
+    <view class="head data-v-edd0aac0">
+        <view class="nav data-v-edd0aac0">
+            <view bindtap="__e" class="{{['nav-item','data-v-edd0aac0',navInd===index?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navHandle',['$0',index],[ [ ['nav','',index] ] ] ] ] ] ]}}" wx:for="{{nav}}" wx:key="index">
+                <text class="item-txt data-v-edd0aac0">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="body data-v-edd0aac0">
+        <scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="scroll-box data-v-edd0aac0" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'reFrestHandle',['$event'] ] ] ],[ 'scrolltolower',[ [ 'bottomHandle',['$event'] ] ] ] ]}}" refresherBackground="transparent" refresherEnabled="true" refresherThreshold="{{80}}" refresherTriggered="{{triFresh}}" scrollY="true">
+            <view class="page-bottom data-v-edd0aac0">
+                <block wx:if="{{list&&list.length>0}}">
+                    <order-line bind:__l="__l" bind:cancelFailDialog="__e" bind:cancelHandle="__e" bind:updateOrderList="__e" class="data-v-edd0aac0" config="{{item}}" currOpenId="{{currOpenId}}" data-event-opts="{{[ [ '^updateOrderList',[ ['initGetOrderList'] ] ],[ '^cancelHandle',[ ['cancelHandle'] ] ],[ '^cancelFailDialog',[ ['cancelFailDialog'] ] ] ]}}" navItem="{{currItem}}" vueId="{{'be7e0354-1-'+__i0__}}" wx:for="{{list}}" wx:for-index="__i0__" wx:key="order_id"></order-line>
+                </block>
+                <order-empty bind:__l="__l" class="data-v-edd0aac0" vueId="be7e0354-2" wx:else></order-empty>
+            </view>
+        </scroll-view>
+    </view>
+    <v-dialog bind:__l="__l" class="data-v-edd0aac0 vue-ref" data-ref="refCancel" vueId="be7e0354-3"></v-dialog>
+    <v-dialog bind:__l="__l" class="data-v-edd0aac0 vue-ref" data-ref="refFailDialog" vueId="be7e0354-4" vueSlots="{{['default']}}">
+        <view class="fail-cont data-v-edd0aac0">
+            <view class="fail-msg data-v-edd0aac0">{{''+errMsg+'，若有疑问请联系客服'}}</view>
+            <view catchtap="__e" class="fail-num data-v-edd0aac0" data-event-opts="{{[ [ 'tap',[ [ 'contentHandle',['$event'] ] ] ] ]}}">95036</view>
+        </view>
+    </v-dialog>
+</view>

@@ -1,0 +1,32 @@
+<view bindtap="__e" class="service_fee_modal data-v-a9fb4696" data-event-opts="{{[ [ 'tap',[ [ '$emit',['close'] ] ] ] ]}}">
+    <view catchtap="__e" class="container data-v-a9fb4696" data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}">
+        <view class="real_fee data-v-a9fb4696">
+            <view class="real_fee_content data-v-a9fb4696">
+                <label class="_span data-v-a9fb4696">¥</label>{{$root.m0+''}}</view>
+            <view class="real_fee_desc data-v-a9fb4696">实际支付金额</view>
+        </view>
+        <view class="detail_fee data-v-a9fb4696">
+            <view class="item_fee data-v-a9fb4696">
+                <view class="item_fee_label data-v-a9fb4696">应付金额</view>
+                <view class="item_fee_content data-v-a9fb4696">{{'¥'+$root.m1}}</view>
+            </view>
+            <view class="item_fee data-v-a9fb4696" wx:if="{{isShowDiscount&&discount&&price}}">
+                <view class="item_fee_label data-v-a9fb4696">货拉拉优惠金额</view>
+                <view class="item_fee_content item_fee_content--color data-v-a9fb4696">{{'-¥'+$root.m2+''}}</view>
+            </view>
+            <view class="item_fee data-v-a9fb4696" wx:if="{{isShowCoupon}}">
+                <view class="item_fee_label data-v-a9fb4696">优惠券</view>
+                <view class="item_fee_content item_fee_content--color data-v-a9fb4696">{{'-¥'+$root.m3+''}}</view>
+            </view>
+            <view class="item_fee data-v-a9fb4696" wx:if="{{serviceFee>0}}">
+                <view class="item_fee_label data-v-a9fb4696">服务费</view>
+                <view class="item_fee_content data-v-a9fb4696">{{'+¥'+$root.m4}}</view>
+            </view>
+            <view class="item_fee data-v-a9fb4696" wx:if="{{oil_coin_discount_amount>0}}">
+                <view class="item_fee_label data-v-a9fb4696">加油金</view>
+                <view class="item_fee_content data-v-a9fb4696">{{'-¥'+$root.m5}}</view>
+            </view>
+        </view>
+        <view bindtap="__e" class="service_fee_know data-v-a9fb4696" data-event-opts="{{[ [ 'tap',[ [ '$emit',['close'] ] ] ] ]}}">我知道了</view>
+    </view>
+</view>

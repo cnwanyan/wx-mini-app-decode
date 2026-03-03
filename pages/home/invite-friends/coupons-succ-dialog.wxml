@@ -1,0 +1,18 @@
+<view class="data-v-3da3cd6b">
+    <view catchtouchmove="preventTouchMove" class="mask data-v-3da3cd6b" wx:if="{{isShow}}">
+        <view class="home-popup data-v-3da3cd6b">
+            <view class="content data-v-3da3cd6b">
+                <image catchtap="__e" class="down-close data-v-3da3cd6b" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/162737812130809814938517.png"></image>
+                <view class="price-detail data-v-3da3cd6b">
+                    <view class="price-tips data-v-3da3cd6b">恭喜您，免费获得优惠券包</view>
+                    <view class="price-unit-box data-v-3da3cd6b">
+                        <text class="price data-v-3da3cd6b">{{inviterAmount}}</text>
+                        <view class="unit data-v-3da3cd6b">元</view>
+                    </view>
+                    <view class="coupons-desc data-v-3da3cd6b">领取后5分钟到账</view>
+                    <view catchtap="__e" class="see-btn data-v-3da3cd6b" data-event-opts="{{[ [ 'tap',[ [ 'goCoupons',['$event'] ] ] ] ]}}">立即查看</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

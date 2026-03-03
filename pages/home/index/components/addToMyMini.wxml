@@ -1,0 +1,14 @@
+<view class="add-my-mini data-v-2fc4adb2">
+    <view class="container data-v-2fc4adb2">
+        <view class="content data-v-2fc4adb2">
+            <view class="data-v-2fc4adb2">点击“</view>
+            <view class="dot-wrapper data-v-2fc4adb2">
+                <text class="dot data-v-2fc4adb2"></text>
+                <text class="dot dot-m data-v-2fc4adb2"></text>
+                <text class="dot data-v-2fc4adb2"></text>
+            </view>
+            <view class="data-v-2fc4adb2">”，选择“添加到我的小程序”，下次访问更便捷</view>
+        </view>
+        <image bindtap="__e" class="close data-v-2fc4adb2" data-event-opts="{{[ [ 'tap',[ [ 'onClose',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/a3978f28b53cef83e3af4b5aa61af6f99a6db6db.png"></image>
+    </view>
+</view>

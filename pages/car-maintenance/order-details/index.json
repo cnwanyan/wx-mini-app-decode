@@ -1,0 +1,1 @@
+{"navigationBarTitleText":"订单详情","enablePullDownRefresh":true,"usingComponents":{"store-line":"/pages/car-maintenance/order-details/store-line","details-msg":"/pages/car-maintenance/order-details/details-msg","goods-line":"/components/business/goods-line/index","v-dialog":"/components/base/dialog/index"}}

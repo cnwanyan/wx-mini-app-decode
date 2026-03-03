@@ -1,0 +1,24 @@
+<view catchtap="__e" class="msg-car data-v-f63a77b8" data-event-opts="{{[ [ 'tap',[ [ 'msgCarHandle',['$event'] ] ] ] ]}}">
+    <view class="data-v-f63a77b8" wx:if="{{config}}">
+        <view class="car-plate-box data-v-f63a77b8">
+            <image class="car-img data-v-f63a77b8" mode="widthFix" src="{{config.logo||'https://ops-img-static.huolala.cn/imgs/2022/164500536113972943991772.png'}}"></image>
+            <view class="data-v-f63a77b8">
+                <view class="plate-default-box data-v-f63a77b8">
+                    <view class="car-plate data-v-f63a77b8">{{config.car_no_fix||''}}</view>
+                    <hll-icon bind:__l="__l" class="right-icon data-v-f63a77b8" color="#333" name="ic-arrow-right" size="16px" vueId="f09574c0-1"></hll-icon>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="no-car data-v-f63a77b8" wx:else>
+        <image class="add-icon data-v-f63a77b8" src="https://ops-img-static.huolala.cn/imgs/2021/162873863220001883622778.png"></image>
+        <view class="no-car-desc data-v-f63a77b8">添加车辆</view>
+    </view>
+    <view catchtap="__e" class="arrow-right-box data-v-f63a77b8" data-event-opts="{{[ [ 'tap',[ [ 'go2OrderCenter',['$event'] ] ] ] ]}}" wx:if="{{config}}">
+        <view class="line data-v-f63a77b8"></view>
+        <view class="right-box-order data-v-f63a77b8">
+            <view class="order-num data-v-f63a77b8">{{totalCount||'0'}}</view>
+            <view class="orer-desc data-v-f63a77b8">我的订单</view>
+        </view>
+    </view>
+</view>

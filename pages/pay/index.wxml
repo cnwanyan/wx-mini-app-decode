@@ -1,0 +1,9 @@
+<view class="data-v-e2652e0e">
+    <view class="cont data-v-e2652e0e">
+        <view class="data-v-e2652e0e">
+            <image class="loading data-v-e2652e0e" src="https://ops-img-static.huolala.cn/imgs/2021/162668329831523187542387.gif"></image>
+            <text class="loading-txt data-v-e2652e0e">支付中...</text>
+        </view>
+    </view>
+    <cashier bind:__l="__l" bind:onMpPayShowFail="__e" bind:onPayFail="__e" bind:onPaySuccess="__e" class="data-v-e2652e0e vue-ref" data-event-opts="{{[ [ '^onPaySuccess',[ ['paySucc'] ] ],[ '^onPayFail',[ ['payFail'] ] ],[ '^onMpPayShowFail',[ ['onMpPayShowFail'] ] ] ]}}" data-ref="cashier" env="{{env}}" payToken="{{payToken}}" vueId="2b6a4b78-1" wx:if="{{showPayComponent}}"></cashier>
+</view>

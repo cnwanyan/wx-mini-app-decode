@@ -1,0 +1,16 @@
+<view class="coupon-block data-v-75904c7a">
+    <view class="head data-v-75904c7a"></view>
+    <view class="body data-v-75904c7a">
+        <block wx:if="{{couponList&&couponList.length>0}}">
+            <coupon-line bind:__l="__l" bind:radioChange="__e" class="data-v-75904c7a" config="{{item}}" couponId="{{couponId}}" data-event-opts="{{[ [ '^radioChange',[ ['radioChange'] ] ] ]}}" vueId="{{'077ff127-1-'+ind}}" wx:for="{{couponList}}" wx:for-index="ind" wx:key="ind"></coupon-line>
+        </block>
+        <view class="empty-block data-v-75904c7a" wx:else>
+            <image class="no-coupon data-v-75904c7a" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+            <view class="no-txt data-v-75904c7a">暂无优惠券</view>
+        </view>
+        <view class="coupon-end data-v-75904c7a" wx:if="{{couponList&&couponList.length>0}}">没有更多优惠券，前往首页探索当季优惠吧~</view>
+    </view>
+    <view class="foot data-v-75904c7a" wx:if="{{couponList.length>0}}">
+        <view catchtap="__e" class="foot-name data-v-75904c7a" data-event-opts="{{[ [ 'tap',[ [ 'confirmCoupon',['$event'] ] ] ] ]}}">确定</view>
+    </view>
+</view>

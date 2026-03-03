@@ -1,0 +1,29 @@
+<view class="data-v-659fcc1e">
+    <view class="g-title data-v-659fcc1e">
+        <text catchtap="__e" class="g-title-style data-v-659fcc1e" data-event-opts="{{[ [ 'tap',[ [ 'face2Invite',['$event'] ] ] ] ]}}">面对面邀请</text>
+        <hll-icon bind:__l="__l" catch:click="__e" class="data-v-659fcc1e" color="#fff" data-event-opts="{{[ [ '^click',[ [ 'face2Invite',['$event'] ] ] ] ]}}" name="icon-arrow-right" size="12px" vueId="498ca0e7-1"></hll-icon>
+    </view>
+    <view class="g-cont data-v-659fcc1e">
+        <view class="cont-li data-v-659fcc1e">
+            <image class="guide-icon data-v-659fcc1e" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162692237921494802101927.png"></image>
+            <view class="guide-desc data-v-659fcc1e">发送邀请</view>
+        </view>
+        <view class="g-cont-center data-v-659fcc1e">
+            <image class="guide-little data-v-659fcc1e" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16269226142009615775947.png"></image>
+            <view class="cont-li cont-li-margin data-v-659fcc1e">
+                <image class="guide-icon data-v-659fcc1e" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/1626922460757650766881.png"></image>
+                <view class="guide-desc data-v-659fcc1e">好友下单</view>
+            </view>
+            <image class="guide-little data-v-659fcc1e" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16269226142009615775947.png"></image>
+        </view>
+        <view class="cont-li data-v-659fcc1e">
+            <image class="guide-icon data-v-659fcc1e" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16269224744097558511960.png"></image>
+            <view class="guide-desc data-v-659fcc1e">奖励到账</view>
+        </view>
+    </view>
+    <view class="g-coupon-center data-v-659fcc1e">
+        <image class="coupon-icon data-v-659fcc1e" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16340959197327390549502.png"></image>
+        <view class="txt data-v-659fcc1e">前往查看已获得优惠券</view>
+        <image catchtap="__e" class="coupon-go-icon data-v-659fcc1e" data-event-opts="{{[ [ 'tap',[ [ 'goCoupon',['$event'] ] ] ] ]}}" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163409591039162200261375.png"></image>
+    </view>
+</view>

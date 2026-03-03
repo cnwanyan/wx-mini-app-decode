@@ -1,0 +1,12 @@
+<view bindtap="__e" class="order-line-box data-v-567dadac" data-event-opts="{{[ [ 'tap',[ [ 'oilLineClick',['$event'] ] ] ] ]}}">
+    <view class="top data-v-567dadac">
+        <view class="order-time data-v-567dadac">下单时间：2021年01月09日 12:10</view>
+        <view class="order-status data-v-567dadac">已取消</view>
+    </view>
+    <view class="bottom data-v-567dadac">
+        <view class="oil-txt data-v-567dadac">订单编号：202101091447107756812000002</view>
+        <view class="oil-txt data-v-567dadac">加油金额：￥200</view>
+        <view class="oil-txt data-v-567dadac">油品编号：92#汽油</view>
+        <view class="oil-txt data-v-567dadac">加油站点：品牌优选-石化第二加油站</view>
+    </view>
+</view>

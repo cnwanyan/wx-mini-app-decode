@@ -1,0 +1,21 @@
+<view class="city-select-box data-v-1505398a">
+    <view class="indexed-list data-v-1505398a" wx:if="{{list&&list.length>0}}">
+        <uni-car-brand bind:__l="__l" bind:click="__e" class="data-v-1505398a" data-event-opts="{{[ [ '^click',[ ['bindClick'] ] ] ]}}" options="{{list}}" showSelect="{{false}}" vueId="19d3b69a-1"></uni-car-brand>
+    </view>
+    <view class="data-v-1505398a">
+        <uni-drawer bind:__l="__l" class="data-v-1505398a vue-ref" data-ref="showRight" mode="right" vueId="19d3b69a-2" vueSlots="{{['default']}}">
+            <view bindtap="__e" class="draw-head data-v-1505398a" data-event-opts="{{[ [ 'tap',[ [ 'closeDrawer',['$event'] ] ] ] ]}}" wx:if="{{currBrand}}">
+                <image class="brand-logo data-v-1505398a" lazyLoad="true" src="{{currBrand.brand_logo}}"></image>
+                <view class="draw-head-brand data-v-1505398a">{{currBrand.brand_name}}</view>
+            </view>
+            <scroll-view class="draw-scroll data-v-1505398a" scrollY="true">
+                <view class="draw-box data-v-1505398a">
+                    <view class="draw-title data-v-1505398a">请选择车系</view>
+                    <view class="draw-ul data-v-1505398a">
+                        <view catchtap="__e" class="draw-li data-v-1505398a" data-event-opts="{{[ [ 'tap',[ [ 'brandTypeHandle',['$0'],[ [ ['brandTypeList','',index] ] ] ] ] ] ]}}" wx:for="{{brandTypeList}}" wx:key="index">{{item.vehicle}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </uni-drawer>
+    </view>
+</view>

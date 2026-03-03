@@ -1,0 +1,19 @@
+<view bindtap="__e" catchtouchmove="preventTouchMove" class="mask" data-event-opts="{{[ [ 'tap',[ [ 'maskHideHandle',['$event'] ] ] ] ]}}" wx:if="{{isShow}}">
+    <view catchtap="__e" class="hll-dialog" data-event-opts="{{[ [ 'tap',[ [ 'onContentClick',['$event'] ] ] ] ]}}" style="{{dialogStyle}}">
+        <view class="title" style="{{titleStyle}}" wx:if="{{title}}">{{title}}</view>
+        <view class="content" style="{{msgStyle}}">
+            <slot wx:if="{{isSlotContent}}"></slot>
+            <text class="cont-txt" wx:else>{{msg}}</text>
+        </view>
+        <view class="bottom-btn" wx:if="{{bottomBtn}}">
+            <view bindtap="__e" class="btn cancel" data-event-opts="{{[ [ 'tap',[ [ 'operDialog',['cancle'] ] ] ] ]}}" wx:if="{{type==='confirm'}}">{{cancleBtnText}}</view>
+            <view bindtap="__e" class="btn confirm" data-event-opts="{{[ [ 'tap',[ [ 'operDialog',['confirm'] ] ] ] ]}}">{{confirmBtnText}}</view>
+        </view>
+        <view class="center-btn" wx:else>
+            <view bindtap="__e" class="btn-box" data-event-opts="{{[ [ 'tap',[ [ 'operDialog',['confirm'] ] ] ] ]}}">
+                <text class="btn-txt">确认</text>
+            </view>
+        </view>
+        <image bindtap="__e" class="close" data-event-opts="{{[ [ 'tap',[ [ 'operDialog',['cancle'] ] ] ] ]}}" src="https://cimg1.fenqile.com/ibanner2/M00/00/96/kagHAF1_YRSACIdjAAACmUyL1Cc666.png" wx:if="{{showClose}}"></image>
+    </view>
+</view>

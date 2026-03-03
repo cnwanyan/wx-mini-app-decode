@@ -1,0 +1,9 @@
+<view class="security-info data-v-6faf9a10">
+    <image class="del-img data-v-6faf9a10" src="https://ops-img-static.huolala.cn/imgs/2021/16312616933988455109219.png"></image>
+    <view class="title data-v-6faf9a10">注销账号，将放弃以下权益和资产</view>
+    <view class="ul data-v-6faf9a10">
+        <view class="li data-v-6faf9a10">1、请确保所有订单已完结并且无纠纷</view>
+        <view class="li data-v-6faf9a10">2、账号注销后历史订单产生的积分、赠券等权益视为自动放弃</view>
+    </view>
+    <view bindtap="__e" class="btn data-v-6faf9a10" data-event-opts="{{[ [ 'tap',[ [ 'go2Check',['$event'] ] ] ] ]}}">同意放弃以上权益</view>
+</view>

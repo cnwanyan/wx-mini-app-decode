@@ -1,0 +1,36 @@
+<view class="invite-block data-v-218009f3">
+    <view class="head data-v-218009f3">
+        <view class="nav data-v-218009f3">
+            <view bindtap="__e" class="{{['nav-item','data-v-218009f3',navInd==='0'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navHandle',['0'] ] ] ] ]}}">
+                <text class="item-txt data-v-218009f3">已邀请的朋友</text>
+            </view>
+            <view bindtap="__e" class="{{['nav-item','data-v-218009f3',navInd==='1'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navHandle',['1'] ] ] ] ]}}">
+                <text class="item-txt data-v-218009f3">未下单的朋友</text>
+            </view>
+        </view>
+    </view>
+    <view class="body data-v-218009f3">
+        <swiper bindchange="__e" class="cont-sw-swiper data-v-218009f3" current="{{navInd}}" data-event-opts="{{[ [ 'change',[ [ 'intervalChange',['$event'] ] ] ] ]}}" indicatorDots="{{false}}">
+            <swiper-item class="data-v-218009f3">
+                <scroll-view class="scroll-box data-v-218009f3" scrollY="true">
+                    <view class="page-bottom data-v-218009f3">
+                        <block wx:if="{{readyInviteList.length>0}}">
+                            <invite-list-line bind:__l="__l" class="data-v-218009f3" config="{{item}}" vueId="{{'e9f65e28-1-'+index}}" wx:for="{{readyInviteList}}" wx:key="index"></invite-list-line>
+                        </block>
+                        <order-empty bind:__l="__l" class="data-v-218009f3" vueId="e9f65e28-2" wx:else></order-empty>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item class="data-v-218009f3">
+                <scroll-view class="scroll-box data-v-218009f3" scrollY="true">
+                    <view class="page-bottom data-v-218009f3">
+                        <block wx:if="{{noInviteList.length>0}}">
+                            <no-order-line bind:__l="__l" class="data-v-218009f3" config="{{item}}" vueId="{{'e9f65e28-3-'+index}}" wx:for="{{noInviteList}}" wx:key="index"></no-order-line>
+                        </block>
+                        <order-empty bind:__l="__l" class="data-v-218009f3" vueId="e9f65e28-4" wx:else></order-empty>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

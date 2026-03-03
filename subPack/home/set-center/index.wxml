@@ -1,0 +1,12 @@
+<view class="set-center data-v-bb334f34">
+    <view class="cont data-v-bb334f34" wx:for="{{pageList}}" wx:for-index="ind" wx:for-item="content" wx:key="ind">
+        <view class="title data-v-bb334f34">{{content.title||'-'}}</view>
+        <view class="ul data-v-bb334f34">
+            <view catchtap="__e" class="li data-v-bb334f34" data-event-opts="{{[ [ 'tap',[ [ 'goPage',['$0'],[ [ ['pageList','',ind],['cont','',index] ] ] ] ] ] ]}}" wx:for="{{content.cont}}" wx:key="index">
+                <view class="data-v-bb334f34">{{item.name||'-'}}</view>
+                <hll-icon bind:__l="__l" class="data-v-bb334f34" color="#999" name="ic-arrow-right" size="12px" vueId="{{'2f4661c7-1-'+ind+'-'+index}}"></hll-icon>
+            </view>
+        </view>
+    </view>
+    <view catchtap="__e" class="logout data-v-bb334f34" data-event-opts="{{[ [ 'tap',[ [ 'logOut',['$event'] ] ] ] ]}}">退出当前账号</view>
+</view>

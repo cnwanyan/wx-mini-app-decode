@@ -1,0 +1,20 @@
+<view class="data-v-676d175e">
+    <view class="head data-v-676d175e">
+        <image class="t_img data-v-676d175e" mode="widthFix" src="{{pageInfo&&pageInfo.topImg||'https://ops-img-static.huolala.cn/imgs/2021/163945158212119402004028.png'}}"></image>
+        <view class="head-cont data-v-676d175e">
+            <image class="t_img data-v-676d175e" mode="widthFix" src="{{pageInfo&&pageInfo.bodyImg||'https://ops-img-static.huolala.cn/imgs/2021/163945160430099818881554.png'}}"></image>
+            <view class="btn-box data-v-676d175e">
+                <image catchtap="__e" class="{{['btn_img','data-v-676d175e',isGet?'move':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'getCoupeHandle',['$event'] ] ] ] ]}}" mode="widthFix" src="{{!isGet?'https://ops-img-static.huolala.cn/imgs/2022/165474352320850583386566.png':'https://ops-img-static.huolala.cn/imgs/2021/16394516218631536638880.png'}}" style="{{'width:'+(pageInfo&&pageInfo.btnWidth||'560rpx')+';'+'bottom:'+(pageInfo&&pageInfo.btnBottom||'194rpx')+';'}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="rule data-v-676d175e" style="{{'background-image:'+'url('+pageInfo.ruleBg+')'+';'+'color:'+(pageInfo.ruleColor||'red')+';'}}" wx:if="{{pageInfo}}">
+        <view class="ul data-v-676d175e">
+            <view class="li data-v-676d175e" wx:for="{{ruleList}}" wx:for-index="ind" wx:key="ind">{{''+item.desc+''}}<text class="data-v-676d175e" style="{{'color:'+(item.strongColor||'#000')+';'}}" wx:if="{{item.strongtxt}}">{{''+item.strongtxt+''}}</text>；</view>
+        </view>
+    </view>
+    <view class="cont-guide data-v-676d175e">
+        <image class="img data-v-676d175e" lazyLoad="true" mode="widthFix" src="{{pageInfo&&pageInfo.guideImg||'https://ops-img-static.huolala.cn/imgs/2021/163877205916949979244498.png'}}"></image>
+    </view>
+    <cou-fail-dialog bind:__l="__l" class="data-v-676d175e vue-ref" data-ref="refFailCoupons" vueId="7f67e4cc-1"></cou-fail-dialog>
+</view>

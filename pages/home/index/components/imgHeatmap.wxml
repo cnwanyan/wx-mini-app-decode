@@ -1,0 +1,4 @@
+<view class="img-heatmap data-v-5f83dd72">
+    <image class="heatmap-img data-v-5f83dd72" mode="widthFix" src="{{data.img_url}}"></image>
+    <view catchtap="__e" class="img-heatmap-item data-v-5f83dd72" data-event-opts="{{[ [ 'tap',[ [ 'handleClickItem',['$0',index],[ [ ['data.hot_data','',index] ] ] ] ] ] ]}}" style="{{'width:'+item.width_per*100+'%'+';'+'height:'+item.height_per*100+'%'+';'+'top:'+item.top_per*100+'%'+';'+'left:'+item.left_per*100+'%'+';'}}" wx:for="{{data.hot_data}}" wx:key="index"></view>
+</view>

@@ -1,0 +1,14 @@
+<view class="data-v-6789b2ed">
+    <view catchtouchmove="preventTouchMove" class="mask data-v-6789b2ed" wx:if="{{isShow}}">
+        <view class="home-popup data-v-6789b2ed">
+            <view class="content data-v-6789b2ed">
+                <image catchtap="__e" class="down-close data-v-6789b2ed" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/162737812130809814938517.png"></image>
+                <image class="warn-icon data-v-6789b2ed" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/16285855491495800275983.png"></image>
+                <view class="price-detail data-v-6789b2ed">
+                    <view class="price-tips data-v-6789b2ed">{{couDesc}}</view>
+                    <view catchtap="__e" class="see-btn data-v-6789b2ed" data-event-opts="{{[ [ 'tap',[ [ 'goCoupons',['$event'] ] ] ] ]}}">立即查看</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

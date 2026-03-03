@@ -1,0 +1,65 @@
+<view class="station-info-details-list data-v-2ff3d18a">
+    <view class="station-info-details-list-wrap data-v-2ff3d18a">
+        <view bindtap="__e" class="image-wrap pos-r data-v-2ff3d18a" data-event-opts="{{[ [ 'tap',[ [ 'preview',['$event'] ] ] ] ]}}">
+            <image class="img data-v-2ff3d18a" src="{{logo}}"></image>
+        </view>
+        <view class="station-info-details data-v-2ff3d18a">
+            <view class="station-info-details-header data-v-2ff3d18a">
+                <view class="station-info-details-header-text data-v-2ff3d18a">
+                    <view class="title data-v-2ff3d18a">{{orderData.gas_name}}</view>
+                    <view class="desc data-v-2ff3d18a">
+                        <view class="desc-content-wrap data-v-2ff3d18a">
+                            <view class="desc-content data-v-2ff3d18a">{{''+orderData.gas_address+''}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view catchtap="__e" class="navigation-wrap data-v-2ff3d18a" data-event-opts="{{[ [ 'tap',[ [ 'navigation',['$event'] ] ] ] ]}}">
+                    <view class="navigation-box data-v-2ff3d18a" style="{{navigationStyle}}">
+                        <view class="navigation data-v-2ff3d18a">
+                            <image class="img data-v-2ff3d18a" src="{{navigationIcon}}"></image>
+                            <view class="data-v-2ff3d18a">{{distance}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="info-wrap data-v-2ff3d18a">
+                <text class="hll_only data-v-2ff3d18a">{{vipText}}</text>
+                <text class="info-wrap-money-icon data-v-2ff3d18a" style="{{moneyStyle}}">¥</text>
+                <text class="info-wrap-val data-v-2ff3d18a" style="{{moneyStyle}}">{{price}}</text>
+                <text class="info-wrap-unit data-v-2ff3d18a">/L</text>
+                <image catchtap="__e" class="info-wrap-question data-v-2ff3d18a" data-event-opts="{{[ [ 'tap',[ [ 'onShowPriceTipModal',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/14714a1855862a420e497abb36381bd046147c58.png"></image>
+            </view>
+            <view class="info-price-down data-v-2ff3d18a">
+                <view class="container data-v-2ff3d18a" wx:if="{{$root.m0>0}}">
+                    <text class="down-l data-v-2ff3d18a">加<text class="number data-v-2ff3d18a">200</text>
+                    </text>
+                    <text class="down-r data-v-2ff3d18a">约省<text class="number data-v-2ff3d18a">{{$root.g0}}</text>
+                    </text>
+                </view>
+                <view class="can-use-coupon-tag data-v-2ff3d18a" wx:if="{{orderData.available_coupons>0}}">{{''+(orderData.available_coupons===1?'可用优惠券':'不可用券')+''}}</view>
+            </view>
+            <view class="gas-sign data-v-2ff3d18a">
+                <text class="gas-sign-text data-v-2ff3d18a" style="{{gasSignStyle}}" wx:for="{{textTag}}" wx:key="index">{{''+item+''}}</text>
+            </view>
+            <view class="gas-icon-sign data-v-2ff3d18a">
+                <view class="gas-icon-sign-item data-v-2ff3d18a" wx:for="{{iconTag}}" wx:key="index">
+                    <view class="gas-icon-sign-item data-v-2ff3d18a" wx:if="{{$root.g1}}">
+                        <text class="gas-icon data-v-2ff3d18a" wx:if="{{item.icon}}">{{''+item.icon+''}}</text>
+                        <text class="data-v-2ff3d18a">{{item.name}}</text>
+                    </view>
+                    <block wx:else>
+                        <image alt binderror="__e" class="img data-v-2ff3d18a" data-event-opts="{{[ [ 'error',[ [ 'onErrIcon',[index] ] ] ] ]}}" src="{{item.icon}}"></image>
+                        <text class="data-v-2ff3d18a">{{item.name}}</text>
+                    </block>
+                </view>
+                <block wx:if="{{$root.g2}}">
+                    <view class="gas-icon-sign-item data-v-2ff3d18a" wx:for="{{adverts}}" wx:key="index">
+                        <text class="gas-icon data-v-2ff3d18a" wx:if="{{item.titleWithinIcon}}">{{''+item.titleWithinIcon+''}}</text>
+                        <text class="data-v-2ff3d18a">{{item.titleAfterIcon}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="xy_text data-v-2ff3d18a" wx:if="{{showYjyXy}}">{{''+iconOutererContent+''}}</view>
+</view>

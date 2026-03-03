@@ -1,0 +1,11 @@
+<view class="goods-item data-v-005c730c" wx:if="{{item&&item.goods_id}}">
+    <image class="goods-img data-v-005c730c" lazyLoad="true" mode="widthFix" src="{{item.logo||'https://ops-img-static.huolala.cn/imgs/2021/161854211126327654141518.png'}}"></image>
+    <view class="data-v-005c730c">
+        <view class="goods-name data-v-005c730c">{{item.goods_name||'-'}}</view>
+        <view class="price-box data-v-005c730c">
+            <view class="price data-v-005c730c">¥<view class="price-num data-v-005c730c">{{''+$root.m0+''}}</view>
+            </view>
+            <view class="del-price data-v-005c730c">{{'¥'+(item.market_price/100||'0')+''}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="tips data-v-7d6ecebf">
+    <view class="tips-title data-v-7d6ecebf">温馨提示：</view>
+    <view class="data-v-7d6ecebf">
+        <view class="tips-li data-v-7d6ecebf" wx:for="{{tipsList}}" wx:for-item="tips" wx:key="index">{{''+tips+''}}</view>
+    </view>
+</view>

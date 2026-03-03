@@ -1,0 +1,24 @@
+<view class="data-v-d761c39c">
+    <view class="store-details data-v-d761c39c">
+        <store-info bind:__l="__l" class="data-v-d761c39c" config="{{storeDetail}}" storePhone="{{storePhone}}" vueId="7113a0d6-1"></store-info>
+        <view class="nav-box data-v-d761c39c" style="{{'top:'+customHei+'px'+';'}}">
+            <view class="sub-nav data-v-d761c39c">
+                <view catchtap="__e" class="{{['nav-item','data-v-d761c39c',currServiceId===item.service_id?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'subNavHandle',['$0',ind],[ [ ['subNav','',ind] ] ] ] ] ] ]}}" wx:for="{{subNav}}" wx:for-index="ind" wx:key="ind">
+                    <text class="item-txt data-v-d761c39c">{{item.service_name}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="water-body data-v-d761c39c" style="{{bodyStyle}}">
+            <view class="data-v-d761c39c" wx:if="{{subList&&subList.length>0}}">
+                <goods-line bind:__l="__l" class="data-v-d761c39c" config="{{item}}" storeInfo="{{storeDetail}}" vueId="{{'7113a0d6-2-'+__i0__}}" wx:for="{{subList}}" wx:for-index="__i0__" wx:key="goods_id"></goods-line>
+            </view>
+            <block wx:else>
+                <view class="empty-block data-v-d761c39c" wx:if="{{subList&&subList.length===0}}">
+                    <image class="no-coupon data-v-d761c39c" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+                    <view class="no-txt data-v-d761c39c">暂无数据</view>
+                </view>
+            </block>
+        </view>
+        <view class="end-tips data-v-d761c39c" wx:if="{{subList&&subList.length>0}}">我也是有底线的~</view>
+    </view>
+</view>

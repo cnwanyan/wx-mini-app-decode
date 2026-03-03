@@ -1,0 +1,15 @@
+<view class="coupon-line data-v-0e954f8a">
+    <view class="line-lf data-v-0e954f8a">
+        <view class="coupon-name-box data-v-0e954f8a">
+            <view class="coupon-code data-v-0e954f8a">
+                <text class="code-icon data-v-0e954f8a">兑换码</text>
+                <view class="data-v-0e954f8a">{{config.code||''}}</view>
+            </view>
+            <view class="coupon-name data-v-0e954f8a">{{'兑换名称：'+(config.packet_name||'')+''}}</view>
+            <view class="time data-v-0e954f8a" wx:if="{{config.timeStr}}">{{'兑换时间：'+(config.timeStr||'')+''}}</view>
+        </view>
+    </view>
+    <view class="line-rf data-v-0e954f8a">
+        <image class="statuso-icon data-v-0e954f8a" src="https://ops-img-static.huolala.cn/imgs/2022/16533597954367145039045.png"></image>
+    </view>
+</view>

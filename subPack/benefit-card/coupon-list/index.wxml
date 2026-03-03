@@ -1,0 +1,13 @@
+<view class="coupon-block data-v-5f53a7cc">
+    <view class="head data-v-5f53a7cc"></view>
+    <view class="body data-v-5f53a7cc">
+        <block wx:if="{{couponList&&couponList.length>0}}">
+            <coupon-line bind:__l="__l" class="data-v-5f53a7cc" config="{{item}}" vueId="{{'763343a3-1-'+ind}}" wx:for="{{couponList}}" wx:for-index="ind" wx:key="ind"></coupon-line>
+        </block>
+        <view class="empty-block data-v-5f53a7cc" wx:else>
+            <image class="no-coupon data-v-5f53a7cc" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+            <view class="no-txt data-v-5f53a7cc">暂无兑换记录</view>
+        </view>
+        <view class="coupon-end data-v-5f53a7cc" wx:if="{{couponList&&couponList.length>0}}">没有更多优惠券，前往首页探索当季优惠吧~</view>
+    </view>
+</view>

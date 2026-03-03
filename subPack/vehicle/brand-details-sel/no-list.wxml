@@ -1,0 +1,7 @@
+<view class="no-list data-v-4d6bc08b">
+    <view class="data-v-4d6bc08b">
+        <image class="no-list-icon data-v-4d6bc08b" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162701018315938458613462.png"></image>
+        <view class="desc data-v-4d6bc08b">暂无车辆数据~</view>
+        <view bindtap="__e" class="reload data-v-4d6bc08b" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">返回</view>
+    </view>
+</view>

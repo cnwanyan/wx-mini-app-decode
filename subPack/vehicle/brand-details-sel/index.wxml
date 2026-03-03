@@ -1,0 +1,31 @@
+<view class="brand-detail-sel data-v-006baaea">
+    <view class="data-v-006baaea">
+        <view class="title data-v-006baaea">选择生产年份</view>
+        <view class="head data-v-006baaea">
+            <view catchtap="__e" class="brand data-v-006baaea" data-event-opts="{{[ [ 'tap',[ [ 'backBrand',['$event'] ] ] ] ]}}">
+                <image class="brand-logo data-v-006baaea" src="{{brandLogo}}"></image>
+                <view class="brand-sub brand-name data-v-006baaea">{{brand}}</view>
+            </view>
+            <view class="data-v-006baaea">></view>
+            <view bindtap="__e" class="brand-sub data-v-006baaea" data-event-opts="{{[ [ 'tap',[ [ 'initFirst',['$event'] ] ] ] ]}}">{{brandTypeName}}</view>
+            <block wx:for="{{headArr}}" wx:key="index">
+                <view class="data-v-006baaea">></view>
+                <view catchtap="__e" class="brand-sub data-v-006baaea" data-event-opts="{{[ [ 'tap',[ [ 'backListHandle',['$0'],[ [ ['headArr','',index] ] ] ] ] ] ]}}">{{item.name}}</view>
+            </block>
+        </view>
+    </view>
+    <view class="data-v-006baaea">
+        <view class="title data-v-006baaea">{{listTitle}}</view>
+        <view class="cont data-v-006baaea">
+            <block wx:if="{{list&&list.length>0}}">
+                <view catchtap="__e" class="cont-li data-v-006baaea" data-event-opts="{{[ [ 'tap',[ [ 'lineHandle',['$0'],[ [ ['list','',index] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:key="index">
+                    <view class="lf data-v-006baaea">{{item.currName}}</view>
+                    <view class="rf data-v-006baaea">
+                        <hll-icon bind:__l="__l" class="data-v-006baaea" color="#BFBFBF" name="icon-arrow-right" size="14px" vueId="{{'fdc6611e-1-'+index}}"></hll-icon>
+                    </view>
+                </view>
+            </block>
+            <no-list bind:__l="__l" class="data-v-006baaea" vueId="fdc6611e-2" wx:else></no-list>
+        </view>
+    </view>
+</view>

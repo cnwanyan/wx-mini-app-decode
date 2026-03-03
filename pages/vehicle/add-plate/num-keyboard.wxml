@@ -1,0 +1,17 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-ac22ced2" wx:if="{{isShow}}">
+    <view class="{{['pro-keyboard','data-v-ac22ced2',showBoard?'show':'']}}">
+        <view class="keyboard-cancel data-v-ac22ced2">
+            <text catchtap="__e" class="cancel-txt data-v-ac22ced2" data-event-opts="{{[ [ 'tap',[ [ 'cancelBoard',[1] ] ] ] ]}}">确定</text>
+        </view>
+        <view class="key-top data-v-ac22ced2">
+            <view catchtap="__e" class="{{['key-top-li','data-v-ac22ced2',index===activeInd?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'boardClick',['$0',index],[ [ ['keyTops','',index] ] ] ] ] ] ]}}" wx:for="{{keyTops}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="key-ul data-v-ac22ced2">
+            <view catchtap="__e" class="{{['key-li','key-number','data-v-ac22ced2',index+5===activeInd?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'boardClick',['$0',index+5],[ [ ['keyNumber','',index] ] ] ] ] ] ]}}" wx:for="{{keyNumber}}" wx:key="*this">{{item}}</view>
+            <view catchtap="__e" class="{{['key-li','data-v-ac22ced2',index+15===activeInd?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'boardClick',['$0',index+15],[ [ ['keyValues','',index] ] ] ] ] ] ]}}" wx:for="{{keyValues}}" wx:key="*this">{{item}}</view>
+            <view catchtap="__e" class="{{['key-del','data-v-ac22ced2',41===activeInd?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'boardClick',['',41] ] ] ] ]}}">
+                <image class="key-del-icon data-v-ac22ced2" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16292672713071857504321.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

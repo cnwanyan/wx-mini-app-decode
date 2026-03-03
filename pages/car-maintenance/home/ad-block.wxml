@@ -1,0 +1,16 @@
+<view class="ad-block data-v-202926d2" wx:if="{{adArr===null||adArr.length>0}}">
+    <view class="ad-cont data-v-202926d2" wx:if="{{adArr&&adArr.length>0}}">
+        <view class="ad-cont-sw data-v-202926d2">
+            <swiper autoplay="{{true}}" bindchange="__e" class="cont-sw-swiper data-v-202926d2" data-event-opts="{{[ [ 'change',[ [ 'intervalChange',['$event'] ] ] ] ]}}" indicatorDots="{{false}}" interval="{{3000}}">
+                <swiper-item class="data-v-202926d2" wx:for="{{adArr}}" wx:key="index">
+                    <view bindtap="__e" class="cont-sw-item swiper-item data-v-202926d2" data-event-opts="{{[ [ 'tap',[ [ 'funcHandleImg',['$0'],[ [ ['adArr','',index] ] ] ] ] ] ]}}">
+                        <image class="sw-image data-v-202926d2" mode="scaleToFill" src="{{item.content}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="cont-sw-dot data-v-202926d2" wx:if="{{adArr&&adArr.length>1}}">
+                <view class="{{['dot','data-v-202926d2',indexs==dotIndexs?'dot-active':'']}}" style="display:inline-block;" wx:for="{{adArr}}" wx:for-index="indexs" wx:for-item="items" wx:key="indexs"></view>
+            </view>
+        </view>
+    </view>
+</view>

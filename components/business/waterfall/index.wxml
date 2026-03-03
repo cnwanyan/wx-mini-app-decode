@@ -1,0 +1,26 @@
+<view class="empty-block-carno data-v-c38d9814" wx:if="{{noPlate}}">
+    <image class="no-coupon data-v-c38d9814" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163151288127775574999875.png"></image>
+    <view class="no-txt data-v-c38d9814">无适合商品，请输入车辆型号～</view>
+    <view catchtap="__e" class="add-car-box data-v-c38d9814" data-event-opts="{{[ [ 'tap',[ [ 'go2AddPlate',['$event'] ] ] ] ]}}">
+        <image class="icon-add data-v-c38d9814" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2022/16426510348334564723923.png"></image>
+        <view class="car-txt data-v-c38d9814">添加车辆型号</view>
+    </view>
+</view>
+<block wx:else>
+    <view class="wf-page data-v-c38d9814" wx:if="{{allList&&allList.length>0}}">
+        <view class="data-v-c38d9814" id="left" wx:if="{{leftList.length>0}}">
+            <view bindtap="__e" class="wf-item data-v-c38d9814" data-event-opts="{{[ [ 'tap',[ [ 'itemTap',['$0'],[ [ ['leftList','',ind] ] ] ] ] ] ]}}" wx:for="{{leftList}}" wx:for-index="ind" wx:key="ind">
+                <flow-item bind:__l="__l" class="data-v-c38d9814" item="{{item}}" vueId="{{'09766eb6-1-'+ind}}"></flow-item>
+            </view>
+        </view>
+        <view class="data-v-c38d9814" id="right" wx:if="{{rightList.length>0}}">
+            <view bindtap="__e" class="wf-item data-v-c38d9814" data-event-opts="{{[ [ 'tap',[ [ 'itemTap',['$0'],[ [ ['rightList','',ind] ] ] ] ] ] ]}}" wx:for="{{rightList}}" wx:for-index="ind" wx:key="ind">
+                <flow-item bind:__l="__l" class="data-v-c38d9814" item="{{item}}" vueId="{{'09766eb6-2-'+ind}}"></flow-item>
+            </view>
+        </view>
+    </view>
+    <view class="empty-block data-v-c38d9814" wx:else>
+        <image class="no-coupon data-v-c38d9814" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+        <view class="no-txt data-v-c38d9814">暂无数据</view>
+    </view>
+</block>

@@ -1,0 +1,18 @@
+<view class="store-line data-v-86877570" wx:if="{{config}}">
+    <view class="line-lf data-v-86877570">
+        <image class="store-logo data-v-86877570" lazyLoad="true" mode="aspectFill" src="{{config.store_logo||'https://ops-img-static.huolala.cn/imgs/2021/161854236441503706156020.png'}}"></image>
+    </view>
+    <view class="line-rf data-v-86877570">
+        <view class="name data-v-86877570">{{config.store_name||'-'}}</view>
+        <view class="address data-v-86877570">{{config.addr||'-'}}</view>
+        <view class="lbs data-v-86877570">
+            <view class="lbs-lf data-v-86877570">
+                <view class="time data-v-86877570">{{'营业时间：'+(config.bussiness_time||'-')+''}}</view>
+            </view>
+            <view catchtap="__e" class="lbs-rf data-v-86877570" data-event-opts="{{[ [ 'tap',[ [ 'goLbs',['$0'],['config'] ] ] ] ]}}">
+                <image class="lbs-icon data-v-86877570" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163015784811278493878162.png"></image>
+                <view class="distance data-v-86877570">{{(config.distance||'-')+'km'}}</view>
+            </view>
+        </view>
+    </view>
+</view>

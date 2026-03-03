@@ -1,0 +1,26 @@
+<view catchtap="__e" class="goods-line data-v-a26542da" data-event-opts="{{[ [ 'tap',[ [ 'go2GoodsDetail',['$0'],['config'] ] ] ] ]}}">
+    <view class="line-lf data-v-a26542da">
+        <image class="goods-logo data-v-a26542da" lazyLoad="true" mode="widthFix" src="{{config.logo}}"></image>
+    </view>
+    <view class="line-rf data-v-a26542da">
+        <view class="goods-name-box data-v-a26542da">
+            <view class="name data-v-a26542da">{{config.goods_name||'-'}}</view>
+            <view class="goods-label data-v-a26542da" wx:if="{{labelArr.length>0}}">
+                <view class="label data-v-a26542da" wx:for="{{labelArr}}" wx:for-index="__i0__" wx:key="*this">{{''+item+''}}</view>
+            </view>
+            <view class="server-num data-v-a26542da">{{'已售'+(config.sales_count||'0')+'件'}}</view>
+        </view>
+        <view class="goodsprice data-v-a26542da">
+            <view class="goodsprice-lf data-v-a26542da">
+                <view class="price-box data-v-a26542da">
+                    <view class="price data-v-a26542da">¥<view class="price-num data-v-a26542da">{{$root.m0}}</view>
+                    </view>
+                    <view class="del-price data-v-a26542da">{{'¥'+(config.market_price/100||'0')+''}}</view>
+                </view>
+            </view>
+            <view class="goodsprice-rf data-v-a26542da">
+                <view catchtap="__e" class="btn data-v-a26542da" data-event-opts="{{[ [ 'tap',[ [ 'go2OrderConfirm',['$0'],['config'] ] ] ] ]}}">立即购买</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="change-goods-block data-v-43a836d5">
+    <view class="head data-v-43a836d5">已为您优先展示爱车适配机油</view>
+    <view class="body data-v-43a836d5" wx:if="{{packageList}}">
+        <block wx:if="{{packageList&&packageList.length>0}}">
+            <goods-line bind:__l="__l" class="data-v-43a836d5" config="{{item}}" oldGoods="{{oldGoods}}" vueId="{{'52951c1e-1-'+__i0__}}" wx:for="{{packageList}}" wx:for-index="__i0__" wx:key="goods_id"></goods-line>
+        </block>
+        <view class="empty-block data-v-43a836d5" wx:else>
+            <image class="no-coupon data-v-43a836d5" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+            <view class="no-txt data-v-43a836d5">暂无保养套餐</view>
+        </view>
+        <view class="end-tips data-v-43a836d5" wx:if="{{packageList&&packageList.length>0&&gFecthOk}}">我也是有底线的~</view>
+    </view>
+</view>

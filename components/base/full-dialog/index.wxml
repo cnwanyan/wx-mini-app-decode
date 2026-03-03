@@ -1,0 +1,13 @@
+<view catchtouchmove="preventTouchMove" class="mask" wx:if="{{isShow}}">
+    <view class="hll-full-dialog">
+        <view class="content" style="{{msgStyle}}">
+            <slot wx:if="{{isSlotContent}}"></slot>
+            <text class="cont-txt" wx:else>{{msg}}</text>
+        </view>
+        <view bindtap="__e" class="center-btn" data-event-opts="{{[ [ 'tap',[ [ 'operDialog',['confirm'] ] ] ] ]}}">
+            <view class="btn-box">
+                <text class="btn-txt">{{btnText}}</text>
+            </view>
+        </view>
+    </view>
+</view>

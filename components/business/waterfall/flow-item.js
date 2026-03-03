@@ -1,0 +1,9 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/business/waterfall/flow-item"],{"15dd":function(t,e,n){"use strict";var r=n("5310"),c=n.n(r);c.a},"3b8f":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r=n("65ac"),c={props:{item:{type:Object,require:!0,default:function(){return{}}}},methods:{priceFormat:r.priceFormat}};e.default=c},"4c7d":function(t,e,n){"use strict";n.r(e);var r=n("3b8f"),c=n.n(r);for(var u in r)["default"].indexOf(u)<0&&function(t){n.d(e,t,(function(){return r[t]}))}(u);e["default"]=c.a},5310:function(t,e,n){},6982:function(t,e,n){"use strict";n.r(e);var r=n("b7cb"),c=n("4c7d");for(var u in c)["default"].indexOf(u)<0&&function(t){n.d(e,t,(function(){return c[t]}))}(u);n("15dd");var i,a=n("f0c5"),o=Object(a["a"])(c["default"],r["b"],r["c"],!1,null,"005c730c",null,!1,r["a"],i);e["default"]=o.exports},b7cb:function(t,e,n){"use strict";var r;n.d(e,"b",(function(){return c})),n.d(e,"c",(function(){return u})),n.d(e,"a",(function(){return r}));var c=function(){var t=this,e=t.$createElement,n=(t._self._c,t.item&&t.item.goods_id?t.priceFormat(t.item.sale_price):null);t.$mp.data=Object.assign({},{$root:{m0:n}})},u=[]}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/business/waterfall/flow-item-create-component',
+    {
+        'components/business/waterfall/flow-item-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("6982"))
+        })
+    },
+    [['components/business/waterfall/flow-item-create-component']]
+]);

@@ -1,0 +1,8 @@
+<view class="offline data-v-7adfc9a2">
+    <view class="data-v-7adfc9a2">
+        <image class="offline-icon data-v-7adfc9a2" mode="widthFix" src="/static/img/net-err.png" wx:if="{{isErr}}"></image>
+        <image class="offline-icon data-v-7adfc9a2" mode="widthFix" src="/static/img/offline.png" wx:else></image>
+        <view class="desc data-v-7adfc9a2">{{isErr?'网络异常，请刷新重试~':'目前没有网络，请先检查网络设置~'}}</view>
+        <view bindtap="__e" class="reload data-v-7adfc9a2" data-event-opts="{{[ [ 'tap',[ [ 'reload',['$event'] ] ] ] ]}}">重新加载</view>
+    </view>
+</view>

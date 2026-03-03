@@ -1,0 +1,139 @@
+<view class="oil-detail data-v-6cee1383">
+    <default-location-tips bind:__l="__l" class="data-v-6cee1383" tips="定位服务未开启，开启后才能看到准确的油站信息~" vueId="b179f144-1"></default-location-tips>
+    <view bindtap="__e" class="oil-tip data-v-6cee1383" data-event-opts="{{[ [ 'tap',[ [ 'onShowSupplierNameTip',['all'] ] ] ] ]}}" wx:if="{{orderData.supplier_name}}">
+        <image alt class="oil-tip-icon data-v-6cee1383" src="https://static.huolala.cn/image/01165932b6707a42b00f06f14eae83ca77533e0e.png"></image>{{''+orderData.supplier_name+''}}</view>
+    <view class="container loaded data-v-6cee1383" wx:if="{{loaded}}">
+        <view class="oil-station data-v-6cee1383">
+            <station-info bind:__l="__l" class="data-v-6cee1383" distance="{{formatDistance}}" iconOutererContent="{{currentData.iconOutererContent}}" isXyActivity="{{currentData.isXyActivity}}" orderData="{{orderData}}" price="{{currentData.price_yfq}}" two_hundred_discount="{{currentData.two_hundred_discount}}" vueId="b179f144-2"></station-info>
+        </view>
+        <view class="select-wrap data-v-6cee1383" wx:if="{{!isBFMQRCode}}">
+            <view class="title data-v-6cee1383">
+                <text class="main data-v-6cee1383">选择油号</text>
+            </view>
+            <view class="flex flex-wrap select-oil data-v-6cee1383">
+                <view class="select-item flex flex-justify-center data-v-6cee1383" wx:for="{{priceList}}" wx:key="index">
+                    <view bindtap="__e" class="{{['content','data-v-6cee1383',orderData.partner_id==14||orderData.partner_id==15||orderData.partner_id==32||orderData.partner_id==16||orderData.partner_id==17||orderData.partner_id==18||orderData.partner_id==20||orderData.partner_id==27||orderData.partner_id==28?currentData.oil_salt===item.oil_salt:currentData.oil_no===item.oil_no?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'oilNoChange',['$0'],[ [ ['priceList','',index] ] ] ] ] ] ]}}">{{''+item.oil_name+''}}</view>
+                </view>
+            </view>
+            <view class="title data-v-6cee1383" wx:if="{{currentData.gun_no&&currentData.gun_no.length>0}}">
+                <text class="main data-v-6cee1383">选择枪号</text>
+            </view>
+            <view class="flex flex-wrap select-gun data-v-6cee1383">
+                <view class="select-item flex flex-justify-center data-v-6cee1383" wx:for="{{$root.l0}}" wx:for-index="__i0__" wx:key="$orig">
+                    <view bindtap="__e" class="{{['content','data-v-6cee1383',currentGun===item[$orig]?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'gunNoChange',['$0'],[ [ ['currentData.gun_no','',__i0__] ] ] ] ] ] ]}}">{{''+item.g0+'号枪'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="orange-pull data-v-6cee1383" wx:if="{{orderData.transaction_type===2}}">
+            <view class="header data-v-6cee1383">
+                <text class="title data-v-6cee1383">金额</text>
+                <text class="tips data-v-6cee1383">需先加油再付款</text>
+            </view>
+            <view class="{{['select-pull','mt-12','data-v-6cee1383',isXLAPP?'isXLAPP':'']}}">
+                <view bindtap="__e" class="{{['price-amount','data-v-6cee1383',selectedPull.fuel_id?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'openPull',['$event'] ] ] ] ]}}">
+                    <view class="data-v-6cee1383">{{''+(selectedPull.fuel_id?$root.g1:'确认油号和枪号，选择加油单')+''}}</view>
+                    <image class="price-amount-icon data-v-6cee1383" src="{{selectedPull.fuel_id?'https://static.huolala.cn/image/ca06dd1f3a65cf69276f2d30b1ca2c3c2f759251.png':'https://static.huolala.cn/image/7779019ae3b1ace85a86234aacdcfed836384235.png'}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="select-wrap data-v-6cee1383" wx:else>
+            <view class="title data-v-6cee1383">
+                <text class="main data-v-6cee1383">{{orderData.oil_unit==2?'升数':'金额'}}</text>
+                <view class="tip data-v-6cee1383" wx:if="{{isQuotaPrice}}">
+                    <image class="tip_icon data-v-6cee1383" src="https://static.huolala.cn/image/94f54acb1a9640ac28f8ced345d5f1561421e5da.png"></image>
+                    <text class="data-v-6cee1383">该油站暂不支持自定义金额</text>
+                </view>
+            </view>
+            <view class="enter-price data-v-6cee1383" wx:if="{{!isQuotaPrice}}">
+                <input bindinput="__e" class="price-input data-v-6cee1383" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','price','$event',[] ] ] ] ] ]}}" placeholder="{{inputPlaceholder}}" type="digit" value="{{price}}"></input>
+                <view class="enter-price-unit data-v-6cee1383" wx:if="{{orderData.oil_unit==2}}">L</view>
+                <view bindtap="__e" class="enter-price-notloggedin-mask data-v-6cee1383" data-event-opts="{{[ [ 'tap',[ [ 'checkIsLogin',['$event'] ] ] ] ]}}" wx:if="{{!isLogin}}"></view>
+            </view>
+            <view class="enter-price-bottom data-v-6cee1383" wx:if="{{orderData.oil_unit==2}}">
+                <view class="unit-left data-v-6cee1383">{{'枪价:¥'+currentData.price_gun+'/L'}}</view>
+                <view class="unit-right data-v-6cee1383">折合:<text class="text data-v-6cee1383">{{order_total_amount}}</text>元</view>
+            </view>
+            <view class="flex select-price data-v-6cee1383" wx:if="{{orderData.oil_unit!=2&&oilPriceList}}">
+                <view class="price-item flex data-v-6cee1383" wx:for="{{oilPriceList}}" wx:for-index="key" wx:for-item="val" wx:key="key">
+                    <view bindtap="__e" class="{{['price-content','flex','flex-v','flex-justify-center','data-v-6cee1383',price===key?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onClickPriceItem',[key] ] ] ] ]}}">
+                        <view class="data-v-6cee1383">{{'￥'+key}}</view>
+                        <view class="discount-show data-v-6cee1383" wx:if="{{val&&val!=='0'&&val!=='0.0'&&val!=='0.00'}}">{{'优惠￥'+(val||'-')+''}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="title data-v-6cee1383" wx:if="{{orderData.partner_id==10&&isQuotaPrice&&oilLiterList&&price}}">
+                <text class="main data-v-6cee1383">升数</text>
+                <text class="liter-tip data-v-6cee1383">{{'约'+oilLiterList[price]+'L'}}</text>
+            </view>
+        </view>
+        <view class="preferential data-v-6cee1383" wx:if="{{orderPrice}}">
+            <view class="preferential-item flex flex-justify-between data-v-6cee1383" wx:if="{{isShowDiscount}}">
+                <view class="preferential-item-desc data-v-6cee1383">
+                    <text class="hll-you-icon data-v-6cee1383">优</text>货拉拉优惠金额</view>
+                <view class="discount-color data-v-6cee1383" wx:if="{{discount&&orderPrice}}">{{'-￥'+discount+''}}</view>
+                <view class="data-v-6cee1383" style="opacity:0.54;" wx:else>暂无可用优惠</view>
+            </view>
+            <view bindtap="__e" class="preferential-item flex flex-justify-between data-v-6cee1383" data-event-opts="{{[ [ 'tap',[ [ 'goToCoupon',['$event'] ] ] ] ]}}">
+                <view class="preferential-item-desc data-v-6cee1383">
+                    <text class="hll-quan-icon data-v-6cee1383">券</text>优惠券</view>
+                <view class="flex flex-align-center data-v-6cee1383">
+                    <text class="discount-color data-v-6cee1383" wx:if="{{isShowCoupon}}">{{'-￥'+currentCoupon.coupon_money+''}}</text>
+                    <text class="data-v-6cee1383" style="opacity:0.54;" wx:else>{{''+(couponList.length?noUseCoupon?'不使用优惠券':'查询无更高优惠券可用':'暂无可用')+''}}</text>
+                    <image class="more-icon data-v-6cee1383" src="https://static.huolala.cn/image/89bf0daf49ed965c4454cf524afbcb2fe517201d.png"></image>
+                </view>
+            </view>
+            <view class="preferential-item flex flex-justify-between data-v-6cee1383" wx:if="{{showServiceFee&&!orderData.hide_service_fee}}">
+                <view class="preferential-item-desc data-v-6cee1383">
+                    <text class="hll-fu-icon data-v-6cee1383">服</text>服务费</view>
+                <view class="increase-color data-v-6cee1383">{{'+￥'+serviceFee}}</view>
+            </view>
+        </view>
+        <view class="partner-name data-v-6cee1383" wx:if="{{orderData&&orderData.partner_name}}">该服务由第三方提供，优惠加油仅提供信息服务</view>
+        <view class="confirm-btn data-v-6cee1383">
+            <view class="confirm-btn-price data-v-6cee1383">
+                <view class="price-item data-v-6cee1383">
+                    <view class="value data-v-6cee1383">
+                        <text class="icon data-v-6cee1383">￥</text>
+                        <text class="num data-v-6cee1383">{{''+(orderPrice>0?order_real_pay_amount:0)+''}}</text>
+                    </view>
+                    <block wx:if="{{orderPrice>0&&showServiceFee&&orderData.hide_service_fee}}">
+                        <image catchtap="__e" class="service-fee-icon data-v-6cee1383" data-event-opts="{{[ [ 'tap',[ [ 'onShowServiceFeeDetail',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/870a5c15bcf4a36c10b10d47f2464326542954c1.png"></image>
+                        <text catchtap="__e" class="service-fee-text data-v-6cee1383" data-event-opts="{{[ [ 'tap',[ [ 'onShowServiceFeeDetail',['$event'] ] ] ] ]}}">含服务费</text>
+                    </block>
+                </view>
+                <view class="price-item data-v-6cee1383">
+                    <text class="desc data-v-6cee1383">已优惠:</text>
+                    <view class="value data-v-6cee1383">
+                        <text class="{{['data-v-6cee1383','icon discount']}}">￥</text>
+                        <text class="{{['data-v-6cee1383','num discount']}}">{{''+(orderPrice>0?order_total_discount_amount:0)+''}}</text>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="__e" class="{{['btn','data-v-6cee1383',!isCanSubmit?'disable-btn':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'goToOrderPay',['$event'] ] ] ] ]}}">确认订单</view>
+        </view>
+        <login-modal bind:__l="__l" bind:loginSuccess="__e" class="data-v-6cee1383" data-event-opts="{{[ [ '^loginSuccess',[ ['onLoginSuccess'] ] ] ]}}" vueId="b179f144-3" wx:if="{{isShowLoginModal}}"></login-modal>
+    </view>
+    <select-coupon bind:__l="__l" bind:close="__e" bind:selectCoupon="__e" class="data-v-6cee1383" currentCoupon="{{currentCoupon}}" data-event-opts="{{[ [ '^selectCoupon',[ ['onSelectCoupon'] ] ],[ '^close',[ ['e0'] ] ] ]}}" list="{{couponList}}" vueId="b179f144-4" wx:if="{{showCouponModal}}"></select-coupon>
+    <service-fee bind:__l="__l" bind:close="__e" class="data-v-6cee1383" coupon_money="{{currentCoupon.coupon_money}}" data-event-opts="{{[ [ '^close',[ ['e1'] ] ] ]}}" discount="{{discount}}" isShowCoupon="{{isShowCoupon}}" isShowDiscount="{{isShowDiscount}}" order_real_pay_amount="{{order_real_pay_amount}}" order_total_amount="{{order_total_amount}}" price="{{orderPrice}}" serviceFee="{{serviceFee}}" vueId="b179f144-5" wx:if="{{showServiceFeeModal}}"></service-fee>
+    <my-popup bind:__l="__l" bind:close="__e" bind:confirm="__e" class="data-v-6cee1383" confirmBtnText="{{showPopupEmpty?'确定':'确认加油单'}}" confirmDisabled="{{!selectedPull.fuel_id}}" data-event-opts="{{[ [ '^close',[ ['closePull'] ] ],[ '^confirm',[ ['confirmPull'] ] ] ]}}" emptyText="暂无加油单~" loading="{{popupLoading}}" showEmpty="{{showPopupEmpty}}" title="选择加油单" value="{{showPull}}" vueId="b179f144-6" vueSlots="{{['content']}}">
+        <view class="data-v-6cee1383" slot="content">
+            <view class="pull-list data-v-6cee1383" wx:if="{{pullList.length}}">
+                <view class="pull-item data-v-6cee1383" wx:for="{{$root.l1}}" wx:for-index="__i1__" wx:key="fuel_id">
+                    <view class="pull-item-top data-v-6cee1383">
+                        <image class="pull-item-icon data-v-6cee1383" src="https://static.huolala.cn/image/776026073ea4aedc96902444b8bd63f8c722cef3.png"></image>
+                        <text class="pull-item-name data-v-6cee1383">{{''+(currentGun?currentGun+' ':'')+item[$orig].oil_no+'#'}}</text>
+                    </view>
+                    <view class="pull-item-bottom data-v-6cee1383">
+                        <text class="detail-text data-v-6cee1383">升数：<text class="text-bigger data-v-6cee1383">{{item[$orig].quantity+'L'}}</text>
+                        </text>
+                        <text class="detail-text data-v-6cee1383">油机金额：<text class="text-main data-v-6cee1383">{{'¥'+item.g2+''}}</text>
+                        </text>
+                    </view>
+                    <view class="pull-item-radio data-v-6cee1383">
+                        <radio catchtap="__e" checked="{{item[$orig].fuel_id===selectedPull.fuel_id}}" class="data-v-6cee1383" color="#ff6952" data-event-opts="{{[ [ 'tap',[ [ 'selectPull',['$0'],[ [ ['pullList','fuel_id',item[$orig].fuel_id] ] ] ] ] ] ]}}" style="transform:scale(0.7);"></radio>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </my-popup>
+</view>

@@ -1,0 +1,17 @@
+<view class="about-cjj data-v-3662a292">
+    <v-head bgColor="backgroundColor: transparent" bind:__l="__l" blackHome="true" class="data-v-3662a292" title="关于货拉拉车服" titleColor="#fff" titleFontSize="36rpx" vueId="450ee084-1"></v-head>
+    <view class="cont cont-top data-v-3662a292">
+        <image class="cjj-logo data-v-3662a292" src="https://ops-img-static.huolala.cn/imgs/2021/163108264410136284601793.png"></image>
+        <view class="txt data-v-3662a292">货拉拉车服围绕车主需求搭建了涵盖车服务、车生活的一站式服务平台，主要提供加油、充电以及保养、维修等车主服务提供给广大车主。</view>
+    </view>
+    <view class="cont cont-bottom data-v-3662a292">
+        <view class="title data-v-3662a292">货拉拉车服服务</view>
+        <view class="ul data-v-3662a292">
+            <view catchtap="__e" class="li data-v-3662a292" data-event-opts="{{[ [ 'tap',[ [ 'lineHandle',['$0'],[ [ ['list','',ind] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:for-index="ind" wx:key="ind">
+                <image class="li-logo data-v-3662a292" src="{{item.img?item.img:'https://ops-img-static.huolala.cn/imgs/2021/163108264410136284601793.png'}}"></image>
+                <view class="li-txt data-v-3662a292">{{item.name||'-'}}</view>
+            </view>
+        </view>
+        <view class="{{['desc','data-v-3662a292',descObj]}}">{{''+currDesc+''}}</view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="login-modal-bg data-v-46ccd46e">
+    <view class="login-modal data-v-46ccd46e">
+        <view class="title data-v-46ccd46e">登录后享加油优惠</view>
+        <button bindgetphonenumber="__e" class="btn data-v-46ccd46e" data-event-opts="{{[ [ 'getphonenumber',[ [ 'decryptPhoneNumber',['$event'] ] ] ] ]}}" openType="getPhoneNumber" type="default">立即登录</button>
+    </view>
+</view>

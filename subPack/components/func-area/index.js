@@ -1,0 +1,9 @@
+require('../../common/vendor.js');(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["subPack/components/func-area/index"],{"1c37":function(e,t,n){"use strict";n.r(t);var u=n("ce69"),a=n("29ff");for(var r in a)["default"].indexOf(r)<0&&function(e){n.d(t,e,(function(){return a[e]}))}(r);n("f52a");var f,c=n("f0c5"),i=Object(c["a"])(a["default"],u["b"],u["c"],!1,null,"1e04162a",null,!1,u["a"],f);t["default"]=i.exports},"29ff":function(e,t,n){"use strict";n.r(t);var u=n("d158"),a=n.n(u);for(var r in u)["default"].indexOf(r)<0&&function(e){n.d(t,e,(function(){return u[e]}))}(r);t["default"]=a.a},ce69:function(e,t,n){"use strict";var u;n.d(t,"b",(function(){return a})),n.d(t,"c",(function(){return r})),n.d(t,"a",(function(){return u}));var a=function(){var e=this,t=e.$createElement;e._self._c},r=[]},d158:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var u=n("eee5"),a={props:{configData:{type:Array,default:function(){return[]}},title:{type:String,default:""},small:{type:Boolean,default:!1}},methods:{bindItemClick:function(e){e&&!e.name.includes("联系我们")&&(0,u.resourceUrlAdapt)(e),this.$emit("funcHandle",e)}}};t.default=a}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'subPack/components/func-area/index-create-component',
+    {
+        'subPack/components/func-area/index-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("1c37"))
+        })
+    },
+    [['subPack/components/func-area/index-create-component']]
+]);

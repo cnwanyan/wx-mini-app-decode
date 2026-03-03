@@ -1,0 +1,5 @@
+<view class="{{['default-location-tips','data-v-41c2dc02',className]}}" wx:if="{{!latitude}}">
+    <image class="tips-icon data-v-41c2dc02" src="https://ops-img-static.huolala.cn/imgs/2021/163937399535333796481017.png"></image>
+    <view class="data-v-41c2dc02">{{''+tips+''}}</view>
+    <view catchtap="__e" class="tips-btn data-v-41c2dc02" data-event-opts="{{[ [ 'tap',[ [ 'getLocation',['$event'] ] ] ] ]}}">去开启</view>
+</view>

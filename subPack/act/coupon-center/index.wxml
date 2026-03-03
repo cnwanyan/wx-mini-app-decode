@@ -1,0 +1,10 @@
+<view class="coupon-center data-v-20b804a6">
+    <view class="cont data-v-20b804a6">
+        <view class="ul data-v-20b804a6">
+            <view catchtap="__e" class="li data-v-20b804a6" data-event-opts="{{[ [ 'tap',[ [ 'goPage',['$0'],[ [ ['list','',ind] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:for-index="ind" wx:key="ind">
+                <view class="data-v-20b804a6">{{item.name||'-'}}</view>
+                <hll-icon bind:__l="__l" class="data-v-20b804a6" color="#999" name="ic-arrow-right" size="12px" vueId="{{'e0b0a4d0-1-'+ind}}"></hll-icon>
+            </view>
+        </view>
+    </view>
+</view>

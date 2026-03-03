@@ -1,0 +1,9 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/usercenter/index/ad-block"],{"3b85":function(n,e,t){"use strict";t.r(e);var r=t("7078"),a=t.n(r);for(var u in r)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return r[n]}))}(u);e["default"]=a.a},4475:function(n,e,t){"use strict";var r=t("ddaa"),a=t.n(r);a.a},7078:function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r=t("1fbb"),a=t("eee5"),u={data:function(){return{adArr:[],dotIndexs:0}},methods:{getResList:r.getResList,funcHandleImg:function(n){this.$report("jj_car_personal_center_click",{ad_id:n.ad_id,module_type:"banner",module_name:n.name||"banner广告"}),n&&(0,a.resourceUrlAdapt)(n)},initComponent:function(){var n=this;this.getResList("personal_center_banner").then((function(e){e&&e.length>0?n.adArr=e:n.adArr=null}))},intervalChange:function(n){this.dotIndexs=n.detail.current}}};e.default=u},a564:function(n,e,t){"use strict";t.r(e);var r=t("c19f"),a=t("3b85");for(var u in a)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return a[n]}))}(u);t("4475");var c,i=t("f0c5"),d=Object(i["a"])(a["default"],r["b"],r["c"],!1,null,"4c790e80",null,!1,r["a"],c);e["default"]=d.exports},c19f:function(n,e,t){"use strict";var r;t.d(e,"b",(function(){return a})),t.d(e,"c",(function(){return u})),t.d(e,"a",(function(){return r}));var a=function(){var n=this,e=n.$createElement;n._self._c},u=[]},ddaa:function(n,e,t){}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'pages/usercenter/index/ad-block-create-component',
+    {
+        'pages/usercenter/index/ad-block-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("a564"))
+        })
+    },
+    [['pages/usercenter/index/ad-block-create-component']]
+]);

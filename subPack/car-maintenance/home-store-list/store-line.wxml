@@ -1,0 +1,20 @@
+<view bindtap="__e" class="store-line data-v-10e2e818" data-event-opts="{{[ [ 'tap',[ [ 'lineHandle',['$0'],['config'] ] ] ] ]}}">
+    <view class="line-lf data-v-10e2e818">
+        <image class="store-logo data-v-10e2e818" lazyLoad="true" mode="aspectFill" src="{{config.store_logo}}"></image>
+    </view>
+    <view class="line-rf data-v-10e2e818">
+        <view class="name data-v-10e2e818">{{config.store_name||''}}</view>
+        <view class="address data-v-10e2e818">{{config.addr||''}}</view>
+        <view class="time data-v-10e2e818">{{'营业时间：'+(config.bussiness_time||'')+''}}</view>
+        <view class="lbs data-v-10e2e818">
+            <view class="lbs-lf data-v-10e2e818">
+                <image class="badge-icon data-v-10e2e818" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163063996018806992436654.png"></image>
+                <view class="server-desc data-v-10e2e818">{{'已服务'+config.sale_count+'单'}}</view>
+            </view>
+            <view catchtap="__e" class="lbs-rf data-v-10e2e818" data-event-opts="{{[ [ 'tap',[ [ 'goLbs',['$0'],['config'] ] ] ] ]}}">
+                <image class="lbs-icon data-v-10e2e818" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162961534823377518517662.png"></image>
+                <view class="distance data-v-10e2e818">{{$root.m0+'km'}}</view>
+            </view>
+        </view>
+    </view>
+</view>

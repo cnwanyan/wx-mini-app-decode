@@ -1,0 +1,9 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/car-maintenance/home/ad-block"],{"242e":function(n,e,t){"use strict";t.r(e);var a=t("a582"),i=t.n(a);for(var r in a)["default"].indexOf(r)<0&&function(n){t.d(e,n,(function(){return a[n]}))}(r);e["default"]=i.a},"5a37":function(n,e,t){"use strict";var a;t.d(e,"b",(function(){return i})),t.d(e,"c",(function(){return r})),t.d(e,"a",(function(){return a}));var i=function(){var n=this,e=n.$createElement;n._self._c},r=[]},"6eff":function(n,e,t){},"8f83":function(n,e,t){"use strict";t.r(e);var a=t("5a37"),i=t("242e");for(var r in i)["default"].indexOf(r)<0&&function(n){t.d(e,n,(function(){return i[n]}))}(r);t("fbe6");var u,o=t("f0c5"),c=Object(o["a"])(i["default"],a["b"],a["c"],!1,null,"202926d2",null,!1,a["a"],u);e["default"]=c.exports},a582:function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=t("1fbb"),i=t("eee5"),r={data:function(){return{adArr:null,dotIndexs:0}},mounted:function(){this.initComponent()},methods:{getResList:a.getResList,initComponent:function(){var n=this;this.getResList("yangche_homepage_banner").then((function(e){e&&(n.adArr=e.slice(0,5)||[])}))},funcHandleImg:function(n){this.$report("jj_car_maintain_homepage_click",{ad_id:n.ad_id,module_type:"banner",module_name:n.name||"banner广告"}),n&&(0,i.resourceUrlAdapt)(n)},intervalChange:function(n){this.dotIndexs=n.detail.current}}};e.default=r},fbe6:function(n,e,t){"use strict";var a=t("6eff"),i=t.n(a);i.a}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'pages/car-maintenance/home/ad-block-create-component',
+    {
+        'pages/car-maintenance/home/ad-block-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("8f83"))
+        })
+    },
+    [['pages/car-maintenance/home/ad-block-create-component']]
+]);

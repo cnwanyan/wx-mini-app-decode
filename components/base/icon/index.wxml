@@ -1,0 +1,3 @@
+<text bindtap="__e" class="{{['hll-iconfont ',name,classIn,currCjjIcon]}}" data-event-opts="{{[ [ 'tap',[ [ 'onClick',['$event'] ] ] ] ]}}" style="{{'color:'+color+';'+'font-size:'+size+';'}}">
+    <slot></slot>
+</text>

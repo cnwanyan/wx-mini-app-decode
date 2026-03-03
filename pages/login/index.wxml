@@ -1,0 +1,38 @@
+<view>
+    <view class="content">
+        <view class="title-box">
+            <image class="logo" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2022/165646972813449996874592.png"></image>
+            <view class="title">您好，欢迎使用货拉拉车服</view>
+        </view>
+        <view class="phone-box">
+            <view class="{{['phone-line',mobileErr?'show-err':'']}}">
+                <input bindblur="__e" bindinput="__e" class="line-inp vue-ref" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','mobileString','$event',['trim'] ] ] ] ],[ 'blur',[ ['$forceUpdate'] ] ] ]}}" data-ref="phoneInpDom" focus="{{changeNumFocus}}" maxlength="11" placeholder="请填写手机号码" placeholderClass="place-holder" type="number" value="{{mobileString}}"></input>
+                <view catchtap="__e" class="phone-close" data-event-opts="{{[ [ 'tap',[ [ 'clearPhone',['$event'] ] ] ] ]}}" wx:if="{{mobileString}}">
+                    <hll-icon bind:__l="__l" color="#CCCCCC" name="ic-cross-f" size="34rpx" vueId="6b4b36ba-1"></hll-icon>
+                </view>
+            </view>
+            <view class="{{['err-txt',!mobileErr?'hide':'']}}">手机号码错误</view>
+            <view class="{{['phone-line','line-code',smsCodeErr?'show-err':'']}}">
+                <view bindtap="__e" class="code-flex" data-event-opts="{{[ [ 'tap',[ [ 'phoneCodeClick',['$event'] ] ] ] ]}}">
+                    <input bindblur="__e" bindinput="__e" class="line-inp" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','smsCode','$event',['trim'] ] ] ] ],[ 'blur',[ ['$forceUpdate'] ] ] ]}}" focus="{{changeCodeFocus}}" maxlength="4" placeholder="请输入验证码" placeholderClass="place-holder" type="number" value="{{smsCode}}"></input>
+                </view>
+                <view class="sms-box">
+                    <text bindtap="__e" class="{{[ 'sms-code-btn',[!mobileValid||sys_code_disable?'code-btn-disabled':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ '_beforeSendSmsCode',['$event'] ] ] ] ]}}" id="captcha-box">{{smsCodeButton}}</text>
+                </view>
+            </view>
+            <view class="{{['err-txt',!smsCodeErr?'hide':'']}}">验证码错误</view>
+        </view>
+        <view class="sub-box">
+            <text bindtap="__e" class="{{['submite',isDisableBtn?'button-disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'doLogin',['$event'] ] ] ] ]}}">登录</text>
+        </view>
+        <view class="other-log-box">
+            <view class="other-log">
+                <view class="half-line"></view>
+                <text>其他登录方式</text>
+                <view class="half-line"></view>
+            </view>
+            <image bindtap="__e" class="wxlogo" data-event-opts="{{[ [ 'tap',[ [ 'goWxLog',['$event'] ] ] ] ]}}" src="https://ops-img-static.huolala.cn/imgs/2021/16190739372429820642706.png"></image>
+        </view>
+    </view>
+    <v-dialog bind:__l="__l" class="vue-ref" data-ref="dialog" vueId="6b4b36ba-2"></v-dialog>
+</view>

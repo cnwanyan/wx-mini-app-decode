@@ -1,0 +1,14 @@
+<view bindtap="__e" class="charge-line-box data-v-ea5149f8" data-event-opts="{{[ [ 'tap',[ [ 'chargeLineClick',['$event'] ] ] ] ]}}">
+    <view class="top data-v-ea5149f8">
+        <view class="charge-orderid data-v-ea5149f8">订单号：202102201502517199订单号：202102201502517199订单号：202102201502517199</view>
+    </view>
+    <view class="bottom data-v-ea5149f8">
+        <view class="charge-time data-v-ea5149f8">2021-02-20 15:02:51</view>
+        <view class="charge-txt data-v-ea5149f8">加油金额：￥200</view>
+        <view class="charge-txt data-v-ea5149f8">油品编号：92#汽油</view>
+        <view class="charge-local data-v-ea5149f8">
+            <hll-icon bind:__l="__l" class="data-v-ea5149f8" color="#999" name="ic-location" size="24rpx" vueId="60d7430e-1"></hll-icon>
+            <view class="local-msg data-v-ea5149f8">广东省深圳市龙华区广东省深圳市宝广东省深圳市龙华区广东省深圳市宝安区致远南路安区致远南路</view>
+        </view>
+    </view>
+</view>

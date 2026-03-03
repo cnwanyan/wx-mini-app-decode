@@ -1,0 +1,22 @@
+<view class="plate-manage data-v-a0d9da66">
+    <view class="head-bar data-v-a0d9da66">
+        <view class="nav data-v-a0d9da66">
+            <view bindtap="__e" class="{{['nav-item','data-v-a0d9da66',navInd===ind?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navHandle',[ind] ] ] ] ]}}" wx:for="{{plateList}}" wx:for-index="ind" wx:key="ind">
+                <text class="item-txt data-v-a0d9da66">{{item.car_no_fix}}</text>
+            </view>
+        </view>
+        <view catchtap="__e" class="add-plate data-v-a0d9da66" data-event-opts="{{[ [ 'tap',[ [ 'go2AddPlate',['$event'] ] ] ] ]}}" wx:if="{{plateList&&plateList.length<3}}">+ 添加</view>
+    </view>
+    <view class="body data-v-a0d9da66">
+        <swiper bindchange="__e" class="cont-sw-swiper data-v-a0d9da66" current="{{navInd}}" data-event-opts="{{[ [ 'change',[ [ 'intervalChange',['$event'] ] ] ] ]}}" indicatorDots="{{false}}">
+            <swiper-item class="data-v-a0d9da66" wx:for="{{plateList}}" wx:for-index="ind" wx:key="ind">
+                <scroll-view class="scroll-box data-v-a0d9da66" scrollY="true">
+                    <view class="page-bottom data-v-a0d9da66">
+                        <plate-msg bind:__l="__l" bind:deleteHandle="__e" bind:switchHandle="__e" class="data-v-a0d9da66" data-event-opts="{{[ [ '^switchHandle',[ ['switchHandle'] ] ],[ '^deleteHandle',[ ['deleteHandle'] ] ] ]}}" msg="{{item}}" vueId="{{'8d8e952a-1-'+ind}}"></plate-msg>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <v-dialog bind:__l="__l" class="del-plate-dialog data-v-a0d9da66 vue-ref" data-ref="refDel" vueId="8d8e952a-2"></v-dialog>
+</view>

@@ -1,0 +1,10 @@
+<view class="set-userinfo data-v-5ff8eee0">
+    <view class="cont data-v-5ff8eee0">
+        <view class="ul data-v-5ff8eee0">
+            <view catchtap="__e" class="li data-v-5ff8eee0" data-event-opts="{{[ [ 'tap',[ [ 'go2Page',['$event'] ] ] ] ]}}">
+                <view class="data-v-5ff8eee0">永久注销账号</view>
+                <hll-icon bind:__l="__l" class="data-v-5ff8eee0" color="#999" name="ic-arrow-right" size="12px" vueId="960de488-1"></hll-icon>
+            </view>
+        </view>
+    </view>
+</view>

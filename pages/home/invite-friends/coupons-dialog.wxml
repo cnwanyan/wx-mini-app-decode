@@ -1,0 +1,11 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-769b83b5" wx:if="{{isShow}}">
+    <view class="home-popup data-v-769b83b5">
+        <view class="content data-v-769b83b5">
+            <image class="rule-little data-v-769b83b5" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162752534840053076362245.png"></image>
+            <image catchtap="__e" class="coupons-close data-v-769b83b5" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/162737812130809814938517.png"></image>
+            <view catchtap="__e" class="coupons-btn data-v-769b83b5" data-event-opts="{{[ [ 'tap',[ [ 'getCoupons',['$event'] ] ] ] ]}}">
+                <image class="coupons-icon data-v-769b83b5" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162752539122338354906730.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

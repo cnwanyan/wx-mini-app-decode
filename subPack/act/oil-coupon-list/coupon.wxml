@@ -1,0 +1,20 @@
+<view class="{{['coupon-item','flex','flex-align-center','data-v-28a269e6',data.coupon_status!=1?'coupon-disable':'']}}">
+    <view class="price-wrap flex flex-v flex-justify-center flex-align-center data-v-28a269e6">
+        <view class="price data-v-28a269e6">
+            <view class="f-16 data-v-28a269e6">￥</view>
+            <view class="data-v-28a269e6">{{data.coupon_money}}</view>
+        </view>
+        <view class="desc data-v-28a269e6">{{'满'+(data.condition_money||data.coupon_condition_money)+'可用'}}</view>
+    </view>
+    <view class="line data-v-28a269e6"></view>
+    <view class="info data-v-28a269e6">
+        <view class="info-title data-v-28a269e6">{{data.title||data.coupon_title}}</view>
+        <view class="info-date data-v-28a269e6">{{''+(data.start_date||data.expire_date_start)+' 至\n      '+(data.end_date||data.expire_date_end)+''}}</view>
+        <view class="info-desc data-v-28a269e6">{{''+(data.description||data.coupon_description)+''}}</view>
+    </view>
+    <view bindtap="__e" class="coupon-btn data-v-28a269e6" data-event-opts="{{[ [ 'tap',[ [ 'clickBtn',['$0'],['data'] ] ] ] ]}}" wx:if="{{data.coupon_status==1}}">
+        <view class="default-btn data-v-28a269e6" wx:if="{{btnType==='1'}}">
+            <view class="btn-txt data-v-28a269e6">立即使用</view>
+        </view>
+    </view>
+</view>

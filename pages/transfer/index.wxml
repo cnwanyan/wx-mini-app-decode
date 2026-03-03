@@ -1,0 +1,10 @@
+<view class="transfer-page data-v-3e68ec58">
+    <view class="title data-v-3e68ec58">请选择您的能源类型</view>
+    <view class="content data-v-3e68ec58">
+        <image class="bg data-v-3e68ec58" src="https://static.huolala.cn/image/70f0b606e2451259cf937881cdf925be50d7867e.png"></image>
+        <view class="btn-container data-v-3e68ec58">
+            <view bindtap="__e" class="btn data-v-3e68ec58" data-event-opts="{{[ [ 'tap',[ [ 'onJump',['oil'] ] ] ] ]}}"></view>
+            <view bindtap="__e" class="btn data-v-3e68ec58" data-event-opts="{{[ [ 'tap',[ [ 'onJump',['charge'] ] ] ] ]}}"></view>
+        </view>
+    </view>
+</view>

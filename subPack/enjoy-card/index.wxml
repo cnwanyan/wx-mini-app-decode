@@ -1,0 +1,191 @@
+<view class="enjoy-card data-v-7740fc34">
+    <image class="header data-v-7740fc34" mode="widthFix" src="{{banner}}"></image>
+    <view class="container data-v-7740fc34">
+        <view class="box-item data-v-7740fc34">
+            <view class="box-title data-v-7740fc34">
+                <image class="icon data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/2f263e7db766bf6d9ecb749061d299ab1cda077c.png"></image>
+                <text class="title data-v-7740fc34">{{first.title}}</text>
+            </view>
+            <view class="box-first data-v-7740fc34">
+                <view class="{{['item-first','data-v-7740fc34',first.status===1?'item-first-success':'']}}" wx:for="{{first.list}}" wx:key="index">
+                    <view class="title data-v-7740fc34">{{item.title}}</view>
+                    <view class="price data-v-7740fc34">
+                        <text class="label data-v-7740fc34">¥</text>
+                        <text class="amount data-v-7740fc34">{{item.amount}}</text>
+                    </view>
+                    <view class="desc data-v-7740fc34">{{item.desc}}</view>
+                    <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['first','$0'],[ [ ['first.list','',index] ] ] ] ] ] ]}}" wx:if="{{first.status===1}}">去看看</view>
+                </view>
+            </view>
+            <view class="tips data-v-7740fc34" wx:if="{{first.desc_list&&first.desc_list.length}}">
+                <text class="text data-v-7740fc34">tips:</text>
+                <view class="desc data-v-7740fc34">
+                    <view class="data-v-7740fc34" wx:for="{{first.desc_list}}" wx:for-item="descItem" wx:key="index">{{descItem}}</view>
+                </view>
+            </view>
+            <view bindtap="__e" class="receive-btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onReceive',['first'] ] ] ] ]}}" wx:if="{{first.status===0}}">一键领取</view>
+            <view class="receive-btn disable data-v-7740fc34" wx:if="{{first.status===9}}">很遗憾，来晚了</view>
+        </view>
+        <view class="box-item data-v-7740fc34">
+            <view class="box-title data-v-7740fc34">
+                <image class="icon data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/633a84574d06f7d71ec820323c4eb22a5f252057.png"></image>
+                <text class="title data-v-7740fc34">{{second.title}}</text>
+            </view>
+            <view class="box-second data-v-7740fc34">
+                <view class="item-second data-v-7740fc34" wx:for="{{second.list}}" wx:key="index">
+                    <view class="title data-v-7740fc34">{{item.title}}</view>
+                    <view class="price data-v-7740fc34">
+                        <text class="label data-v-7740fc34">¥</text>
+                        <text class="amount data-v-7740fc34">{{item.amount}}</text>
+                    </view>
+                    <view class="desc data-v-7740fc34">{{item.desc}}</view>
+                    <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onReceive',['second','$0'],[ [ ['second.list','',index] ] ] ] ] ] ]}}" wx:if="{{item.status===0}}">领取</view>
+                    <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['second','$0'],[ [ ['second.list','',index] ] ] ] ] ] ]}}" wx:if="{{item.status===1}}">去看看</view>
+                    <view class="btn disable data-v-7740fc34" wx:if="{{item.status===5}}">不可领</view>
+                </view>
+            </view>
+            <view class="tips data-v-7740fc34" wx:if="{{second.desc_list&&second.desc_list.length}}">
+                <text class="text data-v-7740fc34">tips:</text>
+                <view class="desc data-v-7740fc34">
+                    <view class="data-v-7740fc34" wx:for="{{second.desc_list}}" wx:for-item="descItem" wx:key="index">{{descItem}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="box-item data-v-7740fc34">
+            <view class="box-title data-v-7740fc34">
+                <image class="icon data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/5a346afe01a2aca5d4ef15c19cc8bffdc9f531c1.png"></image>
+                <text class="title data-v-7740fc34">{{third.title}}</text>
+            </view>
+            <view class="box-third data-v-7740fc34">
+                <view class="item-third data-v-7740fc34" wx:for="{{third.list}}" wx:key="index">
+                    <view class="bg _div data-v-7740fc34"></view>
+                    <view class="content data-v-7740fc34">
+                        <view class="price data-v-7740fc34">
+                            <view class="title data-v-7740fc34">{{item.title}}</view>
+                            <text class="label data-v-7740fc34">¥</text>
+                            <text class="amount data-v-7740fc34">{{item.amount}}</text>
+                            <text class="desc data-v-7740fc34">{{item.desc}}</text>
+                        </view>
+                        <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onReceive',['third','$0'],[ [ ['third.list','',index] ] ] ] ] ] ]}}" wx:if="{{item.status===0}}">立即去抢</view>
+                        <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['third','$0'],[ [ ['third.list','',index] ] ] ] ] ] ]}}" wx:if="{{item.status===3}}">去看看</view>
+                    </view>
+                </view>
+            </view>
+            <view class="tips data-v-7740fc34" wx:if="{{third.desc_list&&third.desc_list.length}}">
+                <text class="text data-v-7740fc34">tips:</text>
+                <view class="desc data-v-7740fc34">
+                    <view class="data-v-7740fc34" wx:for="{{third.desc_list}}" wx:for-item="descItem" wx:key="index">{{descItem}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="box-item data-v-7740fc34">
+            <view class="box-title data-v-7740fc34">
+                <image class="icon data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/d333303d09c51d871cd9185d7486e584f33e3126.png"></image>
+                <text class="title data-v-7740fc34">{{fourth.title}}</text>
+            </view>
+            <view class="box-fourth data-v-7740fc34">
+                <view bindtap="__e" class="item-fourth data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['fourth','$0'],[ [ ['fourth.list','',index] ] ] ] ] ] ]}}" wx:for="{{fourth.list}}" wx:key="index">
+                    <image class="icon data-v-7740fc34" mode="widthFix" src="{{item.img}}"></image>
+                    <view class="text data-v-7740fc34">{{item.title}}</view>
+                    <view class="desc data-v-7740fc34" wx:if="{{item.desc}}">{{item.desc}}</view>
+                </view>
+            </view>
+            <view class="tips data-v-7740fc34" wx:if="{{fourth.desc_list&&fourth.desc_list.length}}">
+                <text class="text data-v-7740fc34">tips:</text>
+                <view class="desc data-v-7740fc34">
+                    <view class="data-v-7740fc34" wx:for="{{fourth.desc_list}}" wx:for-item="descItem" wx:key="index">{{descItem}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="first-modal-bg data-v-7740fc34" wx:if="{{showFirstModal}}">
+        <view class="first-modal data-v-7740fc34">
+            <image class="header data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/e37a55859df3e23e90c6221868f30a9c33010e6a.png"></image>
+            <view class="list data-v-7740fc34">
+                <view class="item data-v-7740fc34" wx:for="{{first.list}}" wx:key="index">
+                    <view class="price data-v-7740fc34">
+                        <text class="label data-v-7740fc34">¥</text>
+                        <text class="amount data-v-7740fc34">{{item.amount}}</text>
+                    </view>
+                    <view class="info data-v-7740fc34">
+                        <view class="title data-v-7740fc34">{{item.title}}</view>
+                        <view class="desc data-v-7740fc34">{{item.desc}}</view>
+                    </view>
+                </view>
+            </view>
+            <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onFirstClose',['$event'] ] ] ] ]}}">去领取</view>
+            <image bindtap="__e" class="close-icon data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onFirstClose',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/91e57cef40ad9f7c28728c8bea8dbdffbb5e69f9.png"></image>
+        </view>
+    </view>
+    <view class="second-modal-bg data-v-7740fc34" wx:if="{{showSecondModal}}">
+        <view class="second-modal data-v-7740fc34">
+            <image class="header data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/c044a6bcdcb34f1e70814c44cd152e46155d562b.png"></image>
+            <view class="list data-v-7740fc34">
+                <view class="item data-v-7740fc34" wx:for="{{second.list}}" wx:key="index">
+                    <view class="price data-v-7740fc34">
+                        <text class="label data-v-7740fc34">¥</text>
+                        <text class="amount data-v-7740fc34">{{item.amount}}</text>
+                    </view>
+                    <view class="info data-v-7740fc34">
+                        <view class="title data-v-7740fc34">{{item.title}}</view>
+                        <view class="desc data-v-7740fc34">{{item.desc}}</view>
+                    </view>
+                    <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onReceive',['second','$0'],[ [ ['second.list','',index] ] ] ] ] ] ]}}" wx:if="{{item.status===0}}">领取</view>
+                    <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['second','$0'],[ [ ['second.list','',index] ] ] ] ] ] ]}}" wx:if="{{item.status===1}}">看一看</view>
+                    <view class="btn disable data-v-7740fc34" wx:if="{{item.status===5}}">不可领</view>
+                </view>
+            </view>
+            <image bindtap="__e" class="close-icon data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onSecondClose',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/91e57cef40ad9f7c28728c8bea8dbdffbb5e69f9.png"></image>
+        </view>
+    </view>
+    <view class="first-success-modal-bg data-v-7740fc34" wx:if="{{showFirstSuccessModal}}">
+        <view class="first-success-modal data-v-7740fc34">
+            <image class="header data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/8c0ea8cddcc4f1681ff1b88cf969e777368d8ca3.png"></image>
+            <image class="icon data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/d579569ff8323c7f851bed6f196e539f29886c02.png"></image>
+            <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onSuccessClose',['first'] ] ] ] ]}}">我知道了</view>
+            <image bindtap="__e" class="close-icon data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onSuccessClose',['first'] ] ] ] ]}}" src="https://static.huolala.cn/image/91e57cef40ad9f7c28728c8bea8dbdffbb5e69f9.png"></image>
+        </view>
+    </view>
+    <view class="success-modal-bg data-v-7740fc34" wx:if="{{showSuccessModal}}">
+        <view class="success-modal data-v-7740fc34">
+            <view class="header data-v-7740fc34">{{successMsgTitle}}</view>
+            <view class="price data-v-7740fc34">
+                <text class="label data-v-7740fc34">¥</text>
+                <text class="amount data-v-7740fc34">{{preLoginReceiveItem.amount}}</text>
+            </view>
+            <view class="title data-v-7740fc34">{{preLoginReceiveItem.title}}</view>
+            <view class="desc data-v-7740fc34" wx:if="{{preLoginReceiveItem.desc}}">{{preLoginReceiveItem.desc}}</view>
+            <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['success','$0'],['preLoginReceiveItem'] ] ] ] ]}}">去看看</view>
+            <image bindtap="__e" class="close-icon data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onSuccessClose',['second'] ] ] ] ]}}" src="https://static.huolala.cn/image/91e57cef40ad9f7c28728c8bea8dbdffbb5e69f9.png"></image>
+        </view>
+    </view>
+    <view class="third-success-modal-bg data-v-7740fc34" wx:if="{{showThirdSuccessModal}}">
+        <view class="success-modal data-v-7740fc34">
+            <view class="header data-v-7740fc34">{{successMsgTitle}}</view>
+            <view class="desc data-v-7740fc34">0.01元购充电VIP</view>
+            <image class="icon data-v-7740fc34" src="https://static.huolala.cn/image/cecd2ce6c6cd9e149b256d17b97b4cc547732cf7.png"></image>
+            <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onJumpDetail',['success','$0'],['preLoginReceiveItem'] ] ] ] ]}}">去看看</view>
+            <image bindtap="__e" class="close-icon data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onSuccessClose',['third'] ] ] ] ]}}" src="https://static.huolala.cn/image/91e57cef40ad9f7c28728c8bea8dbdffbb5e69f9.png"></image>
+        </view>
+    </view>
+    <view class="fail-modal-bg data-v-7740fc34" wx:if="{{showFailModal}}">
+        <view class="fail-modal data-v-7740fc34">
+            <image class="header data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/5b7704c44dc1cdcc99e0852ee4a480fd8bcced76.png"></image>
+            <image class="icon data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/bacfcf2a8072746c0b4f3e37ed4442653bd9e3eb.png"></image>
+            <view bindtap="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onFailClose',['$event'] ] ] ] ]}}">下次再来</view>
+            <image bindtap="__e" class="close-icon data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onFailClose',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/91e57cef40ad9f7c28728c8bea8dbdffbb5e69f9.png"></image>
+        </view>
+    </view>
+    <view class="login-modal-bg data-v-7740fc34" wx:if="{{showLoginModal}}">
+        <view class="login-modal data-v-7740fc34">
+            <view class="header data-v-7740fc34">
+                <text class="data-v-7740fc34">登录提醒</text>
+                <view bindtap="__e" class="close-wrapper data-v-7740fc34" data-event-opts="{{[ [ 'tap',[ [ 'onLoginClose',['$event'] ] ] ] ]}}">
+                    <image class="close data-v-7740fc34" mode="widthFix" src="https://static.huolala.cn/image/1330d3df49e95f35ac0098e8cb586e6fabb9553f.png"></image>
+                </view>
+            </view>
+            <view class="title data-v-7740fc34">登录后领取尊享权益</view>
+            <button bindgetphonenumber="__e" class="btn data-v-7740fc34" data-event-opts="{{[ [ 'getphonenumber',[ [ 'decryptPhoneNumber',['$event'] ] ] ] ]}}" openType="getPhoneNumber" type="default">去登录</button>
+        </view>
+    </view>
+</view>

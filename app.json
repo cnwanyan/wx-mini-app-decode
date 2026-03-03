@@ -1,0 +1,156 @@
+{
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位所在城市"
+    }
+  },
+  "preloadRule": {
+    "pages/home/index/index": {
+      "network": "all",
+      "packages": [
+        "subPack"
+      ]
+    },
+    "subPack/act/coupon-center/index": {
+      "network": "all",
+      "packages": [
+        "thirdPack"
+      ]
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "__usePrivacyCheck__": true,
+  "componentFramework": {
+    "allUsed": [
+      "exparser"
+    ],
+    "default": "exparser"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF6600",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "首页",
+        "iconPath": "static/tab_icon/tab_home.png",
+        "selectedIconPath": "static/tab_icon/tab_home_active.png"
+      },
+      {
+        "pagePath": "pages/tab-oil/index/index",
+        "text": "加油",
+        "iconPath": "static/tab_icon/tab_oil.png",
+        "selectedIconPath": "static/tab_icon/tab_oil_active.png"
+      },
+      {
+        "pagePath": "pages/tab-charge/index",
+        "text": "充电",
+        "iconPath": "static/tab_icon/tab_charge.png",
+        "selectedIconPath": "static/tab_icon/tab_charge_active.png"
+      },
+      {
+        "pagePath": "pages/usercenter/index/tabbar",
+        "text": "我的",
+        "iconPath": "static/tab_icon/tab_my.png",
+        "selectedIconPath": "static/tab_icon/tab_my_active.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "subPack/",
+      "pages": [
+        "benefit-card/online-getcoupon/index",
+        "benefit-card/add-coupon/index",
+        "benefit-card/coupon-list/index",
+        "benefit-card/home/index",
+        "benefit-card/qrcode/index",
+        "act/carman/index",
+        "act/oil-coupon-list/index",
+        "act/coupon-center/index",
+        "act/carman-coupon/index",
+        "act/add-coupon/index",
+        "usercenter/feedback/index",
+        "usercenter/point-list/index",
+        "home/oil-canuse/index",
+        "home/set-center/index",
+        "home/set-security/index",
+        "home/set-security/check",
+        "home/set-security/info",
+        "home/set-userinfo/index",
+        "home/agreement-center/index",
+        "home/agreement-center/about-cjj",
+        "home/agreement-center/policy",
+        "demo/index",
+        "usercenter/myorder/index",
+        "usercenter/myorder/oil_order_detail",
+        "usercenter/myorder/charge_order_detail",
+        "home/more-serve/index",
+        "vehicle/brand/index",
+        "vehicle/brand/no-list",
+        "vehicle/brand-details-sel/index",
+        "car-maintenance/store-details/index",
+        "car-maintenance/home-store-list/index",
+        "car-maintenance/store-list/index",
+        "car-maintenance/coupon-list/index",
+        "car-maintenance/order-center/index",
+        "car-maintenance/change-goods/index",
+        "oil-change/index",
+        "enjoy-card/index"
+      ]
+    },
+    {
+      "root": "oil-package/",
+      "pages": [
+        "pages/search-station/index",
+        "pages/select-city/index"
+      ]
+    },
+    {
+      "root": "subPayPack/",
+      "pages": [
+        "pay/index"
+      ]
+    },
+    {
+      "root": "thirdPack/",
+      "pages": [
+        "ruleIntro/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "货拉拉车服",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "pages": [
+    "pages/home/index/index",
+    "pages/home/city-select",
+    "pages/home/invite-friends/index",
+    "pages/home/invite-history/index",
+    "pages/login/index",
+    "pages/login/wx_login",
+    "pages/webview/index",
+    "pages/tab-oil/index/index",
+    "pages/oil-detail/index",
+    "pages/oil-order-pay/index",
+    "pages/tab-charge/index",
+    "pages/usercenter/index/index",
+    "pages/usercenter/index/tabbar",
+    "pages/pay/index",
+    "pages/vehicle/plate-manage/index",
+    "pages/vehicle/add-plate/index",
+    "pages/car-maintenance/home/index",
+    "pages/car-maintenance/order-details/index",
+    "pages/car-maintenance/order-confirm/index",
+    "pages/car-maintenance/goods-details/index",
+    "pages/fail-page/index",
+    "pages/transfer/index"
+  ]
+}

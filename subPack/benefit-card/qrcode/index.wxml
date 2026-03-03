@@ -1,0 +1,12 @@
+<view class="benefit-land data-v-149ddfaa">
+    <image class="benefit-bg data-v-149ddfaa" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2022/165327400642516149546637.png"></image>
+    <view class="benefit-code data-v-149ddfaa">
+        <image class="img data-v-149ddfaa" src="{{shareCodeUrl}}"></image>
+    </view>
+    <view class="rule-block data-v-149ddfaa">
+        <view class="title data-v-149ddfaa">{{coupeInfo.ruleTitle||'兑换说明：'}}</view>
+        <view class="msg data-v-149ddfaa">
+            <text class="data-v-149ddfaa">{{''+(coupeInfo.msgRule||'兑换说明')+''}}</text>
+        </view>
+    </view>
+</view>

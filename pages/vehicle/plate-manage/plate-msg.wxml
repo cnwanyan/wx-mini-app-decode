@@ -1,0 +1,29 @@
+<view class="plate-msg data-v-35533d2f">
+    <view class="plate-box data-v-35533d2f">
+        <view class="lf data-v-35533d2f">
+            <view class="data-v-35533d2f">
+                <image class="brand-logo data-v-35533d2f" src="{{msg.logo||'https://ops-img-static.huolala.cn/imgs/2022/164500536113972943991772.png'}}"></image>
+            </view>
+            <view class="data-v-35533d2f">
+                <view class="plate-num data-v-35533d2f">{{''+(msg.car_no_fix||'-')+''}}<view class="default-icon data-v-35533d2f" wx:if="{{msg.is_default}}">默认</view>
+                </view>
+                <view class="plate-desc data-v-35533d2f">{{msg.brand_name||'-'}}</view>
+                <view class="no-identifi identifi-style data-v-35533d2f" wx:if="{{!msg.is_auth}}">认证车辆，享受更多车主权益</view>
+                <view class="identifi data-v-35533d2f" wx:else>
+                    <image class="ready-id-icon data-v-35533d2f" src="https://ops-img-static.huolala.cn/imgs/2021/162909538035394225992624.png"></image>
+                    <view class="identifi-style data-v-35533d2f">已认证</view>
+                </view>
+            </view>
+        </view>
+        <view catchtap="__e" class="rf data-v-35533d2f" data-event-opts="{{[ [ 'tap',[ [ 'goAuth',['$event'] ] ] ] ]}}">
+            <hll-icon bind:__l="__l" class="data-v-35533d2f" color="#333" name="icon-arrow-right" size="20px" vueId="71a46d73-1"></hll-icon>
+            <view class="go-auth data-v-35533d2f" wx:if="{{!msg.is_auth}}">立即认证</view>
+        </view>
+    </view>
+    <view class="auto-set data-v-35533d2f">
+        <view class="auto-set-txt data-v-35533d2f">设置为默认车辆</view>
+        <view catchtap="__e" class="mask-switch data-v-35533d2f" data-event-opts="{{[ [ 'tap',[ [ 'beforeSwitch',['$event'] ] ] ] ]}}"></view>
+        <switch checked="{{msg.is_default===1}}" class="auto-set-switch data-v-35533d2f" color="#FF6600" style="transform:scale(0.7);"></switch>
+    </view>
+    <view catchtap="__e" class="del-plate data-v-35533d2f" data-event-opts="{{[ [ 'tap',[ [ 'beforeDelete',['$event'] ] ] ] ]}}">删除车辆</view>
+</view>

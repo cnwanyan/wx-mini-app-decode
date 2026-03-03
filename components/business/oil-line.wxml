@@ -1,0 +1,49 @@
+<view catchtap="__e" class="oil-cont-line data-v-e7644f14" data-event-opts="{{[ [ 'tap',[ [ 'oilLineHandle',['$0'],['config'] ] ] ] ]}}" wx:if="{{$root.g0.length>0}}">
+    <view class="oil-head data-v-e7644f14">
+        <view class="oil-head-lf data-v-e7644f14">
+            <image class="oil-station-img data-v-e7644f14" src="{{config.partner_id==6?'https://static.huolala.cn/image/ccc555819e4741b3ed946488b672d35e089830ee.jpeg':config.small_logo}}"></image>
+            <view class="oil-head-cent data-v-e7644f14">
+                <view class="cont-line-title data-v-e7644f14">{{config.gas_name}}</view>
+                <view class="cont-line-subtitle data-v-e7644f14">{{config.gas_address}}</view>
+            </view>
+        </view>
+        <view catchtap="__e" class="oil-head-rf data-v-e7644f14" data-event-opts="{{[ [ 'tap',[ [ 'goLbs',['$0'],['config'] ] ] ] ]}}">
+            <image class="oil-icon data-v-e7644f14" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/16251360336264366037471.png"></image>
+            <view class="data-v-e7644f14">{{config.distance}}</view>
+        </view>
+    </view>
+    <view class="oil price-box data-v-e7644f14">
+        <view class="lf data-v-e7644f14">
+            <view class="price-box-line data-v-e7644f14">
+                <text class="price-flag data-v-e7644f14">￥</text>
+                <text class="price data-v-e7644f14">{{config.price_yfq}}</text>
+                <text class="unit data-v-e7644f14">/L</text>
+                <text class="ori-price data-v-e7644f14" wx:if="{{$root.g1===false&&config.price_official>0}}">{{'¥'+config.price_official+'/L'}}</text>
+            </view>
+            <view class="info-price-down data-v-e7644f14">
+                <view class="container data-v-e7644f14" wx:if="{{$root.m0>0}}">
+                    <text class="down-l data-v-e7644f14">加<text class="number data-v-e7644f14">200</text>
+                    </text>
+                    <text class="down-r data-v-e7644f14">约省<text class="number data-v-e7644f14">{{$root.g2}}</text>
+                    </text>
+                </view>
+                <view class="can-use-coupon-tag _div data-v-e7644f14" wx:if="{{showCanUseCouponTag&&config.available_coupons>0}}">{{''+(config.available_coupons===1?'可用优惠券':'不可用券')+''}}</view>
+            </view>
+            <view class="lf-bottom-tip data-v-e7644f14" wx:if="{{showTag}}">
+                <block wx:if="{{$root.m1.textTag.length>0}}">
+                    <view class="flex-dom data-v-e7644f14" wx:for="{{$root.m2.textTag}}" wx:for-item="tTag" wx:key="index">
+                        <text class="discount-line data-v-e7644f14">{{tTag}}</text>
+                    </view>
+                </block>
+                <block wx:if="{{$root.m3.iconTag.length>0}}">
+                    <view class="flex-dom price-tips-box data-v-e7644f14" wx:for="{{$root.m4.iconTag}}" wx:for-item="iTag" wx:key="index">
+                        <view class="price-active-name-box data-v-e7644f14">
+                            <image class="icon-discount data-v-e7644f14" src="{{iTag.icon}}"></image>
+                        </view>
+                        <text class="price-tips data-v-e7644f14">{{iTag.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

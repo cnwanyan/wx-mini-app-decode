@@ -1,0 +1,33 @@
+<view class="usercenter data-v-2b87057b" style="{{'padding-top:'+headHei+';'}}">
+    <v-head bgColor="linear-gradient(180deg, #FFE4D2 0%, #F3F4F5 100%, #F3F4F5 100%);" bind:__l="__l" bind:fixedHeadHei="__e" blackHome="true" class="data-v-2b87057b" data-event-opts="{{[ [ '^fixedHeadHei',[ ['getHeadHei'] ] ] ]}}" title="个人中心" titleFontSize="34rpx" vueId="64cbd516-1" wx:if="{{runEnv==='wxMini'}}"></v-head>
+    <view class="body-center data-v-2b87057b">
+        <view class="serve-block data-v-2b87057b">
+            <view class="user-box data-v-2b87057b">
+                <block wx:if="{{userInfo&&isLog}}">
+                    <image binderror="__e" class="user-img data-v-2b87057b" data-event-opts="{{[ [ 'error',[ [ 'imgErrHandle',['$event'] ] ] ] ]}}" src="{{avatarUrl}}"></image>
+                    <view class="user-name data-v-2b87057b">{{userInfo.nick_name||'微信用户'}}</view>
+                </block>
+                <view catchtap="__e" class="no-log-head data-v-2b87057b" data-event-opts="{{[ [ 'tap',[ [ 'go2Log',['$event'] ] ] ] ]}}" wx:else>
+                    <image class="user-img data-v-2b87057b" src="https://ops-img-static.huolala.cn/imgs/2021/161880543739409453411634.png"></image>
+                    <view class="user-name data-v-2b87057b">立即登录</view>
+                </view>
+            </view>
+            <view catchtap="__e" class="data-v-2b87057b" data-event-opts="{{[ [ 'tap',[ [ 'go2Set',['$event'] ] ] ] ]}}">
+                <image class="set-icon data-v-2b87057b" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162873514035524133116715.png"></image>
+            </view>
+        </view>
+        <order-block bind:__l="__l" class="data-v-2b87057b" vueId="64cbd516-2"></order-block>
+        <do-note bind:__l="__l" class="data-v-2b87057b" vueId="64cbd516-3" wx:if="{{isLog}}"></do-note>
+        <ad-block bind:__l="__l" class="data-v-2b87057b vue-ref" data-ref="refUserCenterAd" vueId="64cbd516-4"></ad-block>
+        <func-area bind:__l="__l" bind:funcHandle="__e" class="data-v-2b87057b" configData="{{serveAreaArr}}" data-event-opts="{{[ [ '^funcHandle',[ ['funcHandle'] ] ] ]}}" small="{{true}}" title="常用功能" vueId="64cbd516-5" wx:if="{{serveAreaArr&&serveAreaArr.length>0}}"></func-area>
+        <bottom-popup bind:__l="__l" bind:input="__e" class="customer-service-popup data-v-2b87057b" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isShowCustomerServicePopup','$event',[] ] ] ] ] ]}}" showHeader="{{false}}" value="{{isShowCustomerServicePopup}}" vueId="64cbd516-6" vueSlots="{{['default']}}">
+            <view class="customer-service-popup-body data-v-2b87057b">
+                <view bindtap="__e" class="customer-service-popup-cell data-v-2b87057b" data-event-opts="{{[ [ 'tap',[ [ 'callCustomerService',['$event'] ] ] ] ]}}">呼叫-95036</view>
+                <view class="customer-service-popup-cell data-v-2b87057b">
+                    <button bindtap="__e" class="customer-service-popup-cell__button data-v-2b87057b" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" openType="contact">加油在线客服</button>
+                </view>
+                <view bindtap="__e" class="customer-service-popup-cell customer-service-popup-cell-cancel data-v-2b87057b" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">取消</view>
+            </view>
+        </bottom-popup>
+    </view>
+</view>

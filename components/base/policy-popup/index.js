@@ -1,0 +1,9 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/base/policy-popup/index"],{"0be6":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var i=t("0e25"),o={data:function(){return{showPolicyPopup:!1}},mounted:function(){var e=this;wx.getPrivacySetting&&wx.getPrivacySetting({success:function(n){n.needAuthorization?(e.showPolicyPopup=!0,e.$emit("need-agree",!0)):e.$emit("need-agree",!1)}})},methods:{goPolicy:function(){this.openPdf("https://static.huolala.cn/image/37ff244ba2b4dd23bd2ab78d4f9c95d831e19c14.pdf","货拉拉车服隐私政策")},openPdf:function(e,n){(0,i.openFile)(e,"".concat(n,".pdf"))},goWxPolicy:function(){wx.openPrivacyContract()},handleDisagree:function(){wx.exitMiniProgram()},handleAgree:function(){this.showPolicyPopup=!1,this.$emit("agree")}}};n.default=o},"1ee5":function(e,n,t){"use strict";t.r(n);var i=t("0be6"),o=t.n(i);for(var c in i)["default"].indexOf(c)<0&&function(e){t.d(n,e,(function(){return i[e]}))}(c);n["default"]=o.a},"26da":function(e,n,t){"use strict";var i;t.d(n,"b",(function(){return o})),t.d(n,"c",(function(){return c})),t.d(n,"a",(function(){return i}));var o=function(){var e=this,n=e.$createElement;e._self._c},c=[]},9966:function(e,n,t){"use strict";t.r(n);var i=t("26da"),o=t("1ee5");for(var c in o)["default"].indexOf(c)<0&&function(e){t.d(n,e,(function(){return o[e]}))}(c);t("327b");var a,u=t("f0c5"),r=Object(u["a"])(o["default"],i["b"],i["c"],!1,null,null,null,!1,i["a"],a);n["default"]=r.exports}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/base/policy-popup/index-create-component',
+    {
+        'components/base/policy-popup/index-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("9966"))
+        })
+    },
+    [['components/base/policy-popup/index-create-component']]
+]);

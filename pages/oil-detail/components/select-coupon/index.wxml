@@ -1,0 +1,36 @@
+<view bindtap="__e" class="select-coupon-bg data-v-7cdf4629" data-event-opts="{{[ [ 'tap',[ [ '$emit',['close'] ] ] ] ]}}">
+    <view catchtap="__e" class="select-coupon data-v-7cdf4629" data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}">
+        <view class="header data-v-7cdf4629">选择优惠券<view bindtap="__e" class="close data-v-7cdf4629" data-event-opts="{{[ [ 'tap',[ [ '$emit',['close'] ] ] ] ]}}">
+                <image class="close-icon data-v-7cdf4629" src="https://static.huolala.cn/image/63aa6dcd5a8398d2e39b31da5bc6217ae26da51f.png"></image>
+            </view>
+        </view>
+        <view class="main data-v-7cdf4629" wx:if="{{list.length>0}}">
+            <view catchtap="__e" class="no-use data-v-7cdf4629" data-event-opts="{{[ [ 'tap',[ [ '$emit',['select-coupon'] ] ] ] ]}}">不使用优惠券</view>
+            <view class="count data-v-7cdf4629">可用优惠券<text class="count-num data-v-7cdf4629">{{list.length}}</text>张</view>
+            <view class="list data-v-7cdf4629">
+                <view catchtap="__e" class="coupon-item data-v-7cdf4629" data-event-opts="{{[ [ 'tap',[ [ '$emit',['select-coupon','$0'],[ [ ['list','',index] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:key="index">
+                    <view class="coupon-left data-v-7cdf4629">
+                        <view class="price data-v-7cdf4629">
+                            <text class="sign data-v-7cdf4629">￥</text>{{item.coupon_money}}</view>
+                        <view class="desc data-v-7cdf4629">{{'满'+(item.condition_money||item.coupon_condition_money)+'可用'}}</view>
+                    </view>
+                    <view class="coupon-right data-v-7cdf4629">
+                        <view class="info data-v-7cdf4629">
+                            <view class="info-title data-v-7cdf4629">{{item.title||item.coupon_title}}</view>
+                            <view class="info-date data-v-7cdf4629">{{''+(item.start_date||item.expire_date_start)+' ~\n                '+(item.end_date||item.expire_date_end)+''}}</view>
+                            <view class="info-desc data-v-7cdf4629">{{item.description||item.coupon_description||''}}</view>
+                        </view>
+                        <view class="btn data-v-7cdf4629">
+                            <image class="btn-icon data-v-7cdf4629" src="https://static.huolala.cn/image/8999b88799ac0a01402be07e082d714c2353229c.png" wx:if="{{item.id===currentCoupon.id}}"></image>
+                            <image class="btn-icon data-v-7cdf4629" src="https://static.huolala.cn/image/362d43120c201f94ec8629a4ebba059ae483e73c.png" wx:else></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="empty data-v-7cdf4629" wx:else>
+            <image class="icon data-v-7cdf4629" src="https://static.huolala.cn/image/cb5d658d7d4dac4ba84c81b415010144ca062ae7.png"></image>
+            <view class="text data-v-7cdf4629">暂无优惠券~</view>
+        </view>
+    </view>
+</view>

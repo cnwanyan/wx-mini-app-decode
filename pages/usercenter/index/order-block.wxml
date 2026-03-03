@@ -1,0 +1,10 @@
+<view class="order-block data-v-9febd294">
+    <view class="order-block-top data-v-9febd294">
+        <view class="ul data-v-9febd294">
+            <view catchtap="__e" class="li data-v-9febd294" data-event-opts="{{[ [ 'tap',[ [ 'itemClick',['$0'],[ [ ['list','',ind] ] ] ] ] ] ]}}" wx:for="{{list}}" wx:for-index="ind" wx:key="ind">
+                <image class="img data-v-9febd294" src="{{item.img}}"></image>
+                <view class="txt data-v-9febd294">{{item.name||'-'}}</view>
+            </view>
+        </view>
+    </view>
+</view>

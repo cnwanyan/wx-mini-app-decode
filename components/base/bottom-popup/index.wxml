@@ -1,0 +1,16 @@
+<view class="bottom-popup data-v-5fdbd8c3" style="{{'--duration:'+(duration?duration+'ms':0)+';'}}" wx:if="{{containerShow}}">
+    <view bindtap="__e" class="{{['popup-mask','data-v-5fdbd8c3',contentShow?'popup-mask--show':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleMaskClick',['$event'] ] ] ] ]}}"></view>
+    <view bindtransitionend="__e" catchtouchmove="__e" class="{{['popup-content','data-v-5fdbd8c3',contentShow?'popup-content--show':'']}}" data-event-opts="{{[ [ 'transitionend',[ [ 'handleAnimationEnd',['$event'] ] ] ],[ 'touchmove',[ [ '',['$event'] ] ] ] ]}}">
+        <view class="popup-header data-v-5fdbd8c3" wx:if="{{showHeader}}">
+            <view class="popup-header__title data-v-5fdbd8c3">{{title}}</view>
+            <view bindtap="__e" class="popup-header-close data-v-5fdbd8c3" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ] ]}}" wx:if="{{showClose}}">
+                <view class="popup-header-close__line popup-header-close__line-1 data-v-5fdbd8c3"></view>
+                <view class="popup-header-close__line popup-header-close__line-2 data-v-5fdbd8c3"></view>
+            </view>
+        </view>
+        <view class="popup-body data-v-5fdbd8c3">
+            <slot></slot>
+            <view class="popup-body__safe-area data-v-5fdbd8c3"></view>
+        </view>
+    </view>
+</view>

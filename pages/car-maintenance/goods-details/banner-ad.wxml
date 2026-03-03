@@ -1,0 +1,14 @@
+<view class="banner-ad data-v-26d7401b">
+    <view class="banner-cont data-v-26d7401b">
+        <view class="banner-cont-sw data-v-26d7401b">
+            <swiper autoplay="{{true}}" bindchange="__e" circular="true" class="cont-sw-swiper data-v-26d7401b" data-event-opts="{{[ [ 'change',[ [ 'intervalChange',['$event'] ] ] ] ]}}" indicatorDots="{{false}}" interval="{{3000}}">
+                <swiper-item class="data-v-26d7401b" wx:for="{{bannerArr}}" wx:key="index">
+                    <view bindtap="__e" class="cont-sw-item swiper-item data-v-26d7401b" data-event-opts="{{[ [ 'tap',[ [ 'bannerHandler',['$0'],[ [ ['bannerArr','',index] ] ] ] ] ] ]}}">
+                        <image class="sw-image data-v-26d7401b" mode="aspectFill" src="{{item}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="dot-point data-v-26d7401b">{{''+dotIndexs+1+'/'+bannerArr.length+''}}</view>
+        </view>
+    </view>
+</view>

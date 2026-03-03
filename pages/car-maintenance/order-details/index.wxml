@@ -1,0 +1,70 @@
+<view class="order-details data-v-5f200542" style="{{pageBgStyle}}" wx:if="{{detailInfo}}">
+    <view class="cont data-v-5f200542">
+        <view class="detail-status data-v-5f200542">
+            <view class="lf data-v-5f200542">
+                <view class="status data-v-5f200542">{{pageStatusTxt}}</view>
+                <view class="status-desc data-v-5f200542">{{'本单服务类型：'+(detailInfo.order_type===2?'线下提货':'到店服务')+''}}</view>
+            </view>
+            <view class="rf data-v-5f200542">
+                <image class="status-logo data-v-5f200542" src="{{pageStatusIcon}}"></image>
+            </view>
+        </view>
+        <store-line bind:__l="__l" class="data-v-5f200542" config="{{storeInfo}}" vueId="40bf93de-1"></store-line>
+        <view class="coupons data-v-5f200542" wx:if="{{pageStatus===2}}">
+            <view class="title data-v-5f200542">服务二维码</view>
+            <view class="coupons-cen data-v-5f200542">
+                <image class="coupon-img data-v-5f200542" src="{{detailInfo.qr_code}}" wx:if="{{detailInfo.qr_code}}"></image>
+                <block wx:else>
+                    <image class="coupon-loading data-v-5f200542" src="https://ops-img-static.huolala.cn/imgs/2021/163125904911065992879370.png"></image>
+                    <view catchtap="__e" class="coupon-load-flex data-v-5f200542" data-event-opts="{{[ [ 'tap',[ [ 'reloadQrCode',['$event'] ] ] ] ]}}">
+                        <view class="data-v-5f200542">点击刷新</view>
+                        <image class="icon-load data-v-5f200542" src="https://ops-img-static.huolala.cn/imgs/2021/163125903939367151502454.png"></image>
+                    </view>
+                </block>
+            </view>
+            <view class="coupon-desc data-v-5f200542">根据导航信息前往门店，在门店接待出示该二维码核码， 核销后享受对应的服务权益。</view>
+        </view>
+        <view class="category-detail data-v-5f200542">
+            <block wx:if="{{detailInfo.goods_list&&detailInfo.goods_list.length>0}}">
+                <goods-line bind:__l="__l" class="data-v-5f200542" config="{{item}}" vueId="{{'40bf93de-2-'+__i0__}}" wx:for="{{detailInfo.goods_list}}" wx:for-index="__i0__" wx:key="goods_id"></goods-line>
+            </block>
+            <view class="order-coupon data-v-5f200542">
+                <view class="lf data-v-5f200542">
+                    <image class="coupon-icon data-v-5f200542" src="https://ops-img-static.huolala.cn/imgs/2021/162987578521688602802349.png"></image>
+                    <view class="lf-desc data-v-5f200542">优惠券</view>
+                </view>
+                <view class="rf data-v-5f200542">
+                    <view class="coupon-num data-v-5f200542">{{'-'+$root.m0+''}}</view>
+                </view>
+            </view>
+            <view class="price-detail data-v-5f200542">
+                <view class="desc data-v-5f200542">{{'总金额:￥'+$root.m1+''}}</view>
+                <view class="desc data-v-5f200542">{{'优惠:￥'+$root.m2+''}}</view>
+                <view class="all-price data-v-5f200542">
+                    <view class="desc data-v-5f200542">实付:</view>
+                    <view class="price-box data-v-5f200542">¥<view class="price data-v-5f200542">{{$root.m3}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="bottom data-v-5f200542">
+                <view class="do-pay data-v-5f200542" wx:if="{{pageStatus===1}}">
+                    <view catchtap="__e" class="btn data-v-5f200542" data-event-opts="{{[ [ 'tap',[ [ 'beforeCancelOrder',['$event'] ] ] ] ]}}">取消订单</view>
+                    <view catchtap="__e" class="btn data-v-5f200542" data-event-opts="{{[ [ 'tap',[ [ 'doPay',['$event'] ] ] ] ]}}">去付款</view>
+                </view>
+                <block wx:else>
+                    <view catchtap="__e" class="do-again data-v-5f200542" data-event-opts="{{[ [ 'tap',[ [ 'doAgainBuy',['$event'] ] ] ] ]}}" wx:if="{{pageStatus===3}}">
+                        <view class="btn data-v-5f200542">再次购买</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <details-msg bind:__l="__l" class="data-v-5f200542" detailInfo="{{detailInfo}}" pageStatus="{{pageStatus}}" vueId="40bf93de-3"></details-msg>
+    </view>
+    <view catchtap="__e" class="end-fail data-v-5f200542" data-event-opts="{{[ [ 'tap',[ [ 'contentHandle',['$event'] ] ] ] ]}}" wx:if="{{pageStatus===7}}">
+        <image class="call-icon data-v-5f200542" src="https://ops-img-static.huolala.cn/imgs/2021/163065039418354666761971.png"></image>
+        <view class="data-v-5f200542">联系客服</view>
+    </view>
+    <view class="end data-v-5f200542" wx:else>如有疑问，请联系客服：<view catchtap="__e" class="content-us data-v-5f200542" data-event-opts="{{[ [ 'tap',[ [ 'contentHandle',['$event'] ] ] ] ]}}">95036</view>
+    </view>
+    <v-dialog bind:__l="__l" class="data-v-5f200542 vue-ref" data-ref="refCancel" vueId="40bf93de-4"></v-dialog>
+</view>

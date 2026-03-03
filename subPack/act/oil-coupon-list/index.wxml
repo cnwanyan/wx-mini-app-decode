@@ -1,0 +1,29 @@
+<view class="data-v-51194135">
+    <view class="change-section data-v-51194135" wx:if="{{showExchange}}">
+        <view catchtap="__e" class="change-title data-v-51194135" data-event-opts="{{[ [ 'tap',[ [ 'goRuleDesc',['$event'] ] ] ] ]}}">
+            <image class="title-icon data-v-51194135" src="https://ops-img-static.huolala.cn/imgs/2022/164515182916332365435226.png"></image>使用说明</view>
+        <view class="change-box data-v-51194135">
+            <view class="{{['change-inp','data-v-51194135',isActive?'active':'']}}">
+                <input bindblur="__e" bindfocus="__e" bindinput="__e" class="inp data-v-51194135" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','couponNum','$event',['trim'] ] ],[ 'couponNumHandle',['$event'] ] ] ],[ 'blur',[ [ 'e0',['$event'] ],['$forceUpdate'] ] ],[ 'focus',[ [ 'e1',['$event'] ] ] ] ]}}" maxlength="50" placeholder="请输入您的兑换码" placeholderStyle="color: #999" value="{{couponNum}}"></input>
+            </view>
+            <view catchtap="__e" class="{{['btn','data-v-51194135',couponNum?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'goChange',['$event'] ] ] ] ]}}">兑换</view>
+            <view class="rule data-v-51194135">
+                <view class="rule-title data-v-51194135">兑换码说明：</view>
+                <view class="rule-desc data-v-51194135">兑换码由数字、英文字母组成；兑换码有兑换次数限制；兑换码输入时需区分大小写；如有其它问题，请咨询相应客服 团油客服：<text class="strong data-v-51194135">4000835999</text>，小桔加油客服：<text class="strong data-v-51194135">4000650888</text>，易加油客服：<text class="strong data-v-51194135">4008396555</text>。</view>
+            </view>
+        </view>
+    </view>
+    <view class="data-v-51194135" wx:if="{{showExchange&&couponList.length>0||!showExchange}}">
+        <view class="legal-tip data-v-51194135">优惠券由第三方提供，仅适用于部分油站、部分油号</view>
+        <block wx:if="{{couponList.length}}">
+            <view class="can-use data-v-51194135">可用优惠券<view class="c-orange data-v-51194135">{{''+couponList.length+''}}</view>张</view>
+            <view class="coupon-wrap data-v-51194135">
+                <v-coupon bind:__l="__l" bind:clickItem="__e" btnType="1" class="data-v-51194135" data="{{item}}" data-event-opts="{{[ [ '^clickItem',[ [ 'clickItem',['$0'],[ [ ['couponList','',index] ] ] ] ] ] ]}}" vueId="{{'36ee340a-1-'+index}}" wx:for="{{couponList}}" wx:key="index"></v-coupon>
+            </view>
+        </block>
+        <view class="no-coupon data-v-51194135" wx:if="{{couponList.length===0&&isEnd}}">
+            <image class="img data-v-51194135" mode="widthFix" src="https://static.huolala.cn/image/cb5d658d7d4dac4ba84c81b415010144ca062ae7.png"></image>
+            <view class="conpon-txt data-v-51194135">暂无优惠券~</view>
+        </view>
+    </view>
+</view>

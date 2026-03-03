@@ -1,0 +1,17 @@
+<view class="do-note data-v-8adecd00">
+    <view class="title data-v-8adecd00">记账小助手</view>
+    <view class="note-msg data-v-8adecd00">
+        <view class="note-msg-name data-v-8adecd00">
+            <view class="data-v-8adecd00">加油支出</view>
+            <view class="data-v-8adecd00">充电支出</view>
+        </view>
+        <view class="note-msg-num data-v-8adecd00">
+            <view class="data-v-8adecd00">{{'￥ '+$root.m0}}</view>
+            <view class="data-v-8adecd00">{{'￥ '+$root.m1}}</view>
+        </view>
+    </view>
+    <view class="line-box data-v-8adecd00">
+        <view class="line-lf data-v-8adecd00" style="{{'width:'+calWidth+'rpx'+';'}}"></view>
+        <view class="line-rf data-v-8adecd00"></view>
+    </view>
+</view>

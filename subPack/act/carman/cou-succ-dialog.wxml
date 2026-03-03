@@ -1,0 +1,18 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-1c92bbd1" wx:if="{{isShow}}">
+    <view class="home-popup data-v-1c92bbd1">
+        <view class="content data-v-1c92bbd1">
+            <view class="data-v-1c92bbd1">
+                <view class="cou-title data-v-1c92bbd1">恭喜您获得优惠券</view>
+                <image class="cou-money data-v-1c92bbd1" lazyLoad="true" mode="widthFix" src="{{succImg}}"></image>
+            </view>
+            <image catchtap="__e" class="coupons-close data-v-1c92bbd1" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/162737812130809814938517.png"></image>
+            <view catchtap="__e" class="coupons-btn data-v-1c92bbd1" data-event-opts="{{[ [ 'tap',[ [ 'go2Use',['$event'] ] ] ] ]}}">
+                <image class="coupons-icon data-v-1c92bbd1" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163903636817563240014856.png"></image>
+                <view catchtap="__e" class="cou-desc data-v-1c92bbd1" data-event-opts="{{[ [ 'tap',[ [ 'go2CoupeList',['$event'] ] ] ] ]}}">
+                    <text class="cou-desc-txt data-v-1c92bbd1">查看<text class="cou-desc-stong data-v-1c92bbd1">我的优惠券</text>
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

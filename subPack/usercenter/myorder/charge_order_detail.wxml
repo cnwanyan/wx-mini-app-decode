@@ -1,0 +1,27 @@
+<view class="charge-detail-block data-v-4f8b9c48">
+    <view class="charge-detail data-v-4f8b9c48">
+        <view class="charge-order-id data-v-4f8b9c48">订单号：2021022015订单号：202102201502517199订单号：20210220150251719902517199</view>
+        <view class="charge-local data-v-4f8b9c48">
+            <text class="name data-v-4f8b9c48">深圳金众金域深圳金众金域阁充电站深圳金众金域阁充电站深圳金众金域阁充电站阁充电站</text>
+            <text class="id data-v-4f8b9c48">充电桩：787482782</text>
+            <text class="plate data-v-4f8b9c48">车位号：890</text>
+        </view>
+        <view class="charge-detail data-v-4f8b9c48">
+            <view class="detail-line data-v-4f8b9c48">
+                <text class="line-txt lf data-v-4f8b9c48">下单时间</text>
+                <text class="line-txt rf data-v-4f8b9c48">2021-02-20 15:02:51</text>
+            </view>
+            <view class="detail-line data-v-4f8b9c48">
+                <text class="line-txt lf data-v-4f8b9c48">下单时间</text>
+                <text class="line-txt rf data-v-4f8b9c48">2021-02-20 15:02:51</text>
+            </view>
+            <view class="detail-line data-v-4f8b9c48">
+                <text class="line-txt lf data-v-4f8b9c48">下单时间</text>
+                <view class="price rf data-v-4f8b9c48">
+                    <text class="unit data-v-4f8b9c48">￥</text>
+                    <text class="num data-v-4f8b9c48">0</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

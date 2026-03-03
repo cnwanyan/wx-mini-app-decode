@@ -1,0 +1,1 @@
+.add-touch.data-v-6675a79c{height:-webkit-fit-content;height:fit-content;position:relative;width:-webkit-fit-content;width:fit-content}.add-touch.data-v-6675a79c image{display:block}.add-touch.data-v-6675a79c::after{content:"";height:var(--touch-height);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--touch-width);z-index:2}

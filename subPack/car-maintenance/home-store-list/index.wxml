@@ -1,0 +1,13 @@
+<view class="store-block data-v-d8ebb4a4">
+    <view class="head data-v-d8ebb4a4"></view>
+    <view class="body data-v-d8ebb4a4">
+        <block wx:if="{{storeList&&storeList.length>0}}">
+            <store-line bind:__l="__l" bind:changeStoreId="__e" class="data-v-d8ebb4a4" config="{{item}}" data-event-opts="{{[ [ '^changeStoreId',[ ['changeStoreId'] ] ] ]}}" storeId="{{currStoreId}}" vueId="{{'2d35b618-1-'+index}}" wx:for="{{storeList}}" wx:key="index"></store-line>
+        </block>
+        <view class="empty-block data-v-d8ebb4a4" wx:else>
+            <image class="no-coupon data-v-d8ebb4a4" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+            <view class="no-txt data-v-d8ebb4a4">暂无数据</view>
+        </view>
+        <view class="end-tips data-v-d8ebb4a4" wx:if="{{storeList&&storeList.length>0&&gFecthOk}}">我也是有底线的~</view>
+    </view>
+</view>

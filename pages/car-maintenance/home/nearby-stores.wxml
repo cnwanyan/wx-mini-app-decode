@@ -1,0 +1,26 @@
+<view class="store-box data-v-2b627991" wx:if="{{config&&config.length>0}}">
+    <carman-title bind:__l="__l" bind:rfHandle="__e" class="data-v-2b627991" configData="{{lineTitleConfig}}" data-event-opts="{{[ [ '^rfHandle',[ ['moreJump'] ] ] ]}}" vueId="65d3a1e8-1"></carman-title>
+    <view class="data-v-2b627991">
+        <view class="store-ul data-v-2b627991">
+            <view catchtap="__e" class="store-line data-v-2b627991" data-event-opts="{{[ [ 'tap',[ [ 'lineHandle',['$0'],[ [ ['config','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-item="storeInfo" wx:key="index">
+                <view class="line-lf data-v-2b627991">
+                    <image class="store-logo data-v-2b627991" lazyLoad="true" mode="aspectFill" src="{{storeInfo[$orig].store_logo}}"></image>
+                </view>
+                <view class="line-rf data-v-2b627991">
+                    <view class="name data-v-2b627991">{{storeInfo[$orig].store_name||''}}</view>
+                    <view class="address data-v-2b627991">{{storeInfo[$orig].addr||''}}</view>
+                    <view class="lbs data-v-2b627991">
+                        <view class="lbs-lf data-v-2b627991">
+                            <image class="badge-icon data-v-2b627991" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163063996018806992436654.png"></image>
+                            <view class="server-desc data-v-2b627991">{{'已服务'+storeInfo[$orig].sale_count+'单'}}</view>
+                        </view>
+                        <view catchtap="__e" class="lbs-rf data-v-2b627991" data-event-opts="{{[ [ 'tap',[ [ 'goLbs',['$0'],[ [ ['config','',index] ] ] ] ] ] ]}}">
+                            <image class="lbs-icon data-v-2b627991" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162961534823377518517662.png"></image>
+                            <view class="distance data-v-2b627991">{{''+storeInfo.m0+'km'}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="coupon-line data-v-5b4303a2">
+    <view class="line-lf data-v-5b4303a2">
+        <view class="line-lf-box data-v-5b4303a2">
+            <view class="price data-v-5b4303a2">{{'￥'+$root.m0+''}}</view>
+        </view>
+    </view>
+    <view class="line-rf data-v-5b4303a2">
+        <view class="coupon-name-box data-v-5b4303a2">
+            <view class="name data-v-5b4303a2">{{config.coupon_name||'-'}}</view>
+            <view class="time data-v-5b4303a2" wx:if="{{config.receive_time&&config.end_time}}">{{''+config.receive_time+'-'+config.end_time+''}}</view>
+            <view class="desc data-v-5b4303a2" wx:if="{{config.note}}">{{config.note}}</view>
+        </view>
+        <view catchtap="__e" class="coupon-status data-v-5b4303a2" data-event-opts="{{[ [ 'tap',[ [ 'go2Use',['$0'],['config'] ] ] ] ]}}">立即使用</view>
+    </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="data-v-25713504">
+    <default-location-tips bind:__l="__l" class="data-v-25713504" tips="定位服务未开启，开启后才能看到附近门店哦~" vueId="753d3516-1"></default-location-tips>
+    <view class="{{['car-maintenance','data-v-25713504',pageShow?'page-show':'']}}" style="{{'padding-top:'+customHei+16+'px'+';'+'background-size:'+$root.m0+';'}}">
+        <v-head bgColor="#FF7E17" bind:__l="__l" bind:fixedHeadHei="__e" class="data-v-25713504" data-event-opts="{{[ [ '^fixedHeadHei',[ ['fixHead'] ] ] ]}}" title="优惠养车" titleColor="#fff" vueId="753d3516-2" wx:if="{{runEnv==='wxMini'}}"></v-head>
+        <msg-car bind:__l="__l" class="data-v-25713504 vue-ref" config="{{defaultCar}}" data-ref="msgCar" vueId="753d3516-3"></msg-car>
+        <main-service-list bind:__l="__l" class="data-v-25713504" config="{{packageList}}" vueId="753d3516-4"></main-service-list>
+        <nearby-stores bind:__l="__l" class="data-v-25713504" config="{{storesList}}" vueId="753d3516-5"></nearby-stores>
+        <ad-block bind:__l="__l" class="data-v-25713504 vue-ref" data-ref="refAdBlock" vueId="753d3516-6"></ad-block>
+        <view class="nav-box data-v-25713504" style="{{'top:'+customHei+'px'+';'}}">
+            <view class="sub-nav data-v-25713504">
+                <view catchtap="__e" class="{{['nav-item','data-v-25713504',currServiceId===item.service_id?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'subNavHandle',['$0',ind],[ [ ['subNav','',ind] ] ] ] ] ] ]}}" wx:for="{{subNav}}" wx:for-index="ind" wx:key="ind">
+                    <text class="item-txt data-v-25713504">{{item.service_name}}</text>
+                </view>
+            </view>
+            <slide-label bind:__l="__l" bind:labelChange="__e" class="data-v-25713504" data-event-opts="{{[ [ '^labelChange',[ ['labelChange'] ] ] ]}}" labelArr="{{labelArr}}" labelName="{{currLabelName}}" vueId="753d3516-7" wx:if="{{labelArr&&labelArr.length>0&&subList&&subList.length!==0}}"></slide-label>
+        </view>
+        <view class="water-body data-v-25713504" style="{{bodyStyle}}">
+            <water-fall bind:__l="__l" bind:itemTap="__e" carNoInfo="{{defaultCar}}" class="data-v-25713504 vue-ref" data-event-opts="{{[ [ '^itemTap',[ ['waterGoodTap'] ] ] ]}}" data-ref="refWaterList" noPlate="{{checkPlateStyle}}" vueId="753d3516-8" wfList="{{subList}}"></water-fall>
+        </view>
+        <view class="end-tips data-v-25713504" wx:if="{{subList&&subList.length>0}}">我也是有底线的~</view>
+        <full-dialog bind:__l="__l" class="data-v-25713504 vue-ref" data-ref="refComDialog" vueId="753d3516-9" vueSlots="{{['default']}}">
+            <view class="dia-cont data-v-25713504">
+                <block wx:if="{{!hasStoreData}}">
+                    <image class="dia-img data-v-25713504" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163400402331362875046435.png"></image>
+                    <view class="dia-msg data-v-25713504">您附近没有可服务门店～</view>
+                </block>
+                <block wx:else>
+                    <image class="dia-img data-v-25713504" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163400403435477271934923.png"></image>
+                    <view class="dia-msg data-v-25713504">{{''+(dialogMsg||'商品库存不足，请选择其他商品~')+''}}</view>
+                </block>
+            </view>
+        </full-dialog>
+    </view>
+</view>

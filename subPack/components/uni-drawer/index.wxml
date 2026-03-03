@@ -1,0 +1,6 @@
+<view catchtouchmove="__e" class="{{['uni-drawer','data-v-2c8be68e',showDrawer?'uni-drawer--visible':'']}}" data-event-opts="{{[ [ 'touchmove',[ [ 'clear',['$event'] ] ] ] ]}}" wx:if="{{visibleSync}}">
+    <view bindtap="__e" class="{{['uni-drawer__mask','data-v-2c8be68e',showDrawer&&mask?'uni-drawer__mask--visible':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'close',['mask'] ] ] ] ]}}"></view>
+    <view class="{{['uni-drawer__content','data-v-2c8be68e',rightMode?'uni-drawer--right':'',!rightMode?'uni-drawer--left':'',showDrawer?'uni-drawer__content--visible':'']}}">
+        <slot></slot>
+    </view>
+</view>

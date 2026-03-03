@@ -1,0 +1,3 @@
+<view>
+    <web-view src="{{currUrl}}" webviewStyles="{{webviewStyles}}"></web-view>
+</view>

@@ -1,0 +1,15 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-25b74483" wx:if="{{isShow}}">
+    <view class="home-popup data-v-25b74483">
+        <view class="content data-v-25b74483">
+            <view class="cou-title data-v-25b74483">恭喜您获得货拉拉车主福利卡</view>
+            <view class="cont-coupon data-v-25b74483">
+                <view bindtap="__e" class="li data-v-25b74483" data-event-opts="{{[ [ 'tap',[ [ 'seeCoupon',['$0'],[ [ ['config','',index] ] ] ] ] ] ]}}" style="{{'background-image:'+'url('+item.bgUrl+') '+';'}}" wx:for="{{config}}" wx:key="index">
+                    <view class="price-box data-v-25b74483">¥<view class="price data-v-25b74483">{{''+item.money+''}}</view>
+                    </view>
+                    <view class="num data-v-25b74483">{{'含'+(item.number||1)+'张'+(item.typeName||'券')}}</view>
+                </view>
+            </view>
+            <view catchtap="__e" class="coupons-btn data-v-25b74483" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}">确定</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-32f1d9dc" wx:if="{{isShow}}">
+    <view class="{{['pro-keyboard','data-v-32f1d9dc',showBoard?'show':'']}}">
+        <view class="keyboard-cancel data-v-32f1d9dc">
+            <text catchtap="__e" class="cancel-txt data-v-32f1d9dc" data-event-opts="{{[ [ 'tap',[ [ 'cancelBoard',[1] ] ] ] ]}}">取消</text>
+        </view>
+        <view class="key-ul data-v-32f1d9dc">
+            <view catchtap="__e" class="{{['key-li','data-v-32f1d9dc',index===activeInd?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'boardClick',['$0',index],[ [ ['keyValues','',index] ] ] ] ] ] ]}}" wx:for="{{keyValues}}" wx:key="*this">{{item}}</view>
+            <view class="key-li-patch data-v-32f1d9dc" wx:for="{{patchLi}}" wx:for-index="ind" wx:key="ind"></view>
+        </view>
+    </view>
+</view>

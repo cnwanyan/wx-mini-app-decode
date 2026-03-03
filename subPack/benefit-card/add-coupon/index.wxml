@@ -1,0 +1,12 @@
+<view class="coupon-block data-v-57eadedf">
+    <view class="cont data-v-57eadedf">
+        <view class="inp-coupon data-v-57eadedf">
+            <input autoFocus="{{true}}" bindinput="__e" class="coupon-inp data-v-57eadedf" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','couponNum','$event',[] ] ],[ 'upperCode',['$event'] ] ] ] ]}}" disabled="{{disableInp}}" placeholder="请输入您的兑换码" value="{{couponNum}}"></input>
+        </view>
+        <view catchtap="__e" class="{{['btn','data-v-57eadedf',couponNum?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'getCoupon',['$event'] ] ] ] ]}}">兑换</view>
+    </view>
+    <view class="footer data-v-57eadedf">
+        <view class="title data-v-57eadedf">兑换说明：</view>
+        <view class="footer-desc data-v-57eadedf">兑换码由数字、英文字母组成；兑换码有兑换次数限制；兑换码输入时需区分大小写；如有其它问题，请咨询相应客服：<text catchtap="__e" class="strong data-v-57eadedf" data-event-opts="{{[ [ 'tap',[ [ 'goPhone',['$event'] ] ] ] ]}}">95036</text>。</view>
+    </view>
+</view>

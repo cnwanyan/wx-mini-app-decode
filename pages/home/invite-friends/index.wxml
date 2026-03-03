@@ -1,0 +1,29 @@
+<view class="invite-friends data-v-89d4512a" wx:if="{{isOnline}}">
+    <view class="banner data-v-89d4512a">
+        <view catchtap="__e" class="rule data-v-89d4512a" data-event-opts="{{[ [ 'tap',[ [ 'ruleHandle',['$event'] ] ] ] ]}}"></view>
+        <view class="price-detail data-v-89d4512a">
+            <view class="price-tips data-v-89d4512a">每邀请<text class="tips-txt data-v-89d4512a">1位新用户加油</text>可获得</view>
+            <view class="price-unit-box data-v-89d4512a">
+                <text class="price data-v-89d4512a">{{inviterAmount}}</text>
+                <view class="unit data-v-89d4512a">元</view>
+            </view>
+            <view class="price-tips data-v-89d4512a">加油券包</view>
+        </view>
+        <view class="banner-desc data-v-89d4512a">{{'好友也能获得'+invitedAmount+'元立减红包'}}</view>
+        <swiper-list bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refRaceLamp" vueId="adcc1d6a-1"></swiper-list>
+        <view class="go-invite-block data-v-89d4512a">
+            <image class="go-invite data-v-89d4512a" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162692151614024133324445.png"></image>
+            <button catchtap="__e" class="go-invite-btn data-v-89d4512a" data-event-opts="{{[ [ 'tap',[ [ 'inviteFriend',['$event'] ] ] ] ]}}" openType="share"></button>
+        </view>
+    </view>
+    <invite-guide bind:__l="__l" bind:gFaceHandle="__e" class="data-v-89d4512a" data-event-opts="{{[ [ '^gFaceHandle',[ ['face2Handle'] ] ] ]}}" vueId="adcc1d6a-2"></invite-guide>
+    <invite-list activityCode="{{activityCode}}" bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refInviteList" from="{{from}}" inviteCode="{{inviteCode}}" vueId="adcc1d6a-3"></invite-list>
+    <invite-tips bind:__l="__l" class="data-v-89d4512a" tips="{{tips}}" vueId="adcc1d6a-4" wx:if="{{tips}}"></invite-tips>
+    <v-rule bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refRule" rule="{{rule}}" vueId="adcc1d6a-5" wx:if="{{rule}}"></v-rule>
+    <invite-face activityCode="{{activityCode}}" bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refInviteFace" from="{{from}}" inviteCode="{{inviteCode}}" vueId="adcc1d6a-6" wx:if="{{faceParamsOk}}"></invite-face>
+    <coupons-dialog bind:__l="__l" bind:couponsResult="__e" class="data-v-89d4512a vue-ref" data-event-opts="{{[ [ '^couponsResult',[ ['couponsResult'] ] ] ]}}" data-ref="refCoupons" from="{{from}}" receiveActCode="{{receiveActCode}}" receiveFrom="{{receiveFrom}}" userCode="{{receiveInviteCode}}" vueId="adcc1d6a-7" wx:if="{{receiveInviteCode}}"></coupons-dialog>
+    <coupons-succ-dialog bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refCouponsSucc" inviterAmount="{{inviterAmount}}" vueId="adcc1d6a-8" wx:if="{{inviterAmount}}"></coupons-succ-dialog>
+    <coupons-fail-dialog bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refCouponsFail" vueId="adcc1d6a-9"></coupons-fail-dialog>
+    <login-guide-dialog bind:__l="__l" class="data-v-89d4512a vue-ref" data-ref="refLoginGuide" vueId="adcc1d6a-10"></login-guide-dialog>
+</view>
+<off-line bind:__l="__l" class="data-v-89d4512a" vueId="adcc1d6a-11" wx:else></off-line>

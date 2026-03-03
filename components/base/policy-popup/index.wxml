@@ -1,0 +1,10 @@
+<view catchtouchmove="preventTouchMove" class="policy-popup" wx:if="{{showPolicyPopup}}">
+    <view class="modal-content">
+        <view class="title">欢迎使用货拉拉车服</view>
+        <view class="desc">在使用货拉拉提供的产品和服务前，请您务必充分、仔细地阅读并确认您已理解<text bindtap="__e" class="highlight" data-event-opts="{{[ [ 'tap',[ [ 'goPolicy',['$event'] ] ] ] ]}}">《隐私政策》</text>和<text bindtap="__e" class="highlight" data-event-opts="{{[ [ 'tap',[ [ 'goWxPolicy',['$event'] ] ] ] ]}}">《小程序用户隐私保护指引》</text>（简称“隐私政策”）各条款。若您点击同意，即表示您已阅读并同意上述条款，货拉拉将按照隐私政策的各项条款使用和保护您的个人信息。如您不同意，很遗憾您将无法继续使用本小程序的服务。</view>
+        <view class="btn">
+            <button bindtap="__e" class="btn__item btn__disagree" data-event-opts="{{[ [ 'tap',[ [ 'handleDisagree',['$event'] ] ] ] ]}}">拒绝</button>
+            <button bindagreeprivacyauthorization="__e" class="btn__item btn__agree" data-event-opts="{{[ [ 'agreeprivacyauthorization',[ [ 'handleAgree',['$event'] ] ] ] ]}}" id="agree-btn" openType="agreePrivacyAuthorization">同意</button>
+        </view>
+    </view>
+</view>

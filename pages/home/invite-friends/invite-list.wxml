@@ -1,0 +1,28 @@
+<view class="list-section data-v-17a8573c">
+    <view class="g-title data-v-17a8573c">
+        <view class="title-center data-v-17a8573c">
+            <image class="title-little data-v-17a8573c" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162693622442146230993331.png"></image>
+            <text class="list-title data-v-17a8573c">好友邀请记录</text>
+            <image class="title-little data-v-17a8573c" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162693625420747291628538.png"></image>
+        </view>
+        <view catchtap="__e" class="title-rf data-v-17a8573c" data-event-opts="{{[ [ 'tap',[ [ 'goInviteHistory',['$event'] ] ] ] ]}}" wx:if="{{inviteCode}}">
+            <text class="list-title-rf data-v-17a8573c">邀请记录</text>
+            <hll-icon bind:__l="__l" class="data-v-17a8573c" color="#fff" name="icon-arrow-right" size="12px" vueId="749df3fb-1"></hll-icon>
+        </view>
+    </view>
+    <view class="list-cont data-v-17a8573c">
+        <block wx:if="{{list.length>0}}">
+            <view class="list-li data-v-17a8573c" wx:for="{{list}}" wx:key="index">
+                <view class="list-li-lf data-v-17a8573c">
+                    <image binderror="__e" class="logo data-v-17a8573c" data-event-opts="{{[ [ 'error',[ [ 'imgErrHandle',['$0'],[ [ ['list','',index] ] ] ] ] ] ]}}" mode="widthFix" src="{{item.invitee_avatar_url}}"></image>
+                    <view class="list-txt data-v-17a8573c">{{item.invitee_nick_name===''||item.invitee_nick_name==='null'?item.invitee_mobile:item.invitee_nick_name}}</view>
+                </view>
+                <view class="{{['list-txt','list-status','data-v-17a8573c',item.invitation_status===0?'status-color':'']}}">{{item.invitation_status_name||''}}</view>
+            </view>
+        </block>
+        <block wx:else>
+            <image class="no-list-img data-v-17a8573c" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162753857438848294074280.png"></image>
+            <view class="no-list-desc data-v-17a8573c">还没有邀请记录，快去邀请好友吧~</view>
+        </block>
+    </view>
+</view>

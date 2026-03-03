@@ -1,0 +1,70 @@
+<view class="{{['order-confirm-block','data-v-5d19420a',showPage?'show-page':'']}}">
+    <view class="head data-v-5d19420a"></view>
+    <view class="body data-v-5d19420a">
+        <view catchtap="__e" class="shop-addr data-v-5d19420a" data-event-opts="{{[ [ 'tap',[ [ 'go2StoreList',['$event'] ] ] ] ]}}">
+            <view class="shop-addr-head data-v-5d19420a">
+                <view class="lf data-v-5d19420a">门店地址</view>
+                <view class="rf data-v-5d19420a">其他门店<hll-icon bind:__l="__l" class="shop-right-icon data-v-5d19420a" color="#4991FC" name="ic-arrow-right" size="14px" vueId="f8d2f6c0-1"></hll-icon>
+                </view>
+            </view>
+            <view class="addr-cont data-v-5d19420a" wx:if="{{confirmInfo&&confirmInfo.store}}">
+                <view class="lf data-v-5d19420a">
+                    <image class="addr-logo data-v-5d19420a" src="https://ops-img-static.huolala.cn/imgs/2021/163056168639544229144847.png"></image>
+                </view>
+                <view class="data-v-5d19420a">
+                    <view class="name data-v-5d19420a">{{confirmInfo.store.store_name||'-'}}</view>
+                    <view class="address data-v-5d19420a">{{'距您'+(confirmInfo.store.distance||'0')+'公里 |\n            '+(confirmInfo.store.addr||'-')}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="order-detail data-v-5d19420a" wx:if="{{goodsList&&goodsList.length>0}}">
+            <view class="order-line-box data-v-5d19420a">
+                <goods-line bind:__l="__l" class="data-v-5d19420a" config="{{item}}" vueId="{{'f8d2f6c0-2-'+ind}}" wx:for="{{goodsList}}" wx:for-index="ind" wx:key="ind"></goods-line>
+            </view>
+            <view class="order-coupon data-v-5d19420a">
+                <view class="lf data-v-5d19420a">
+                    <image class="coupon-icon data-v-5d19420a" src="https://ops-img-static.huolala.cn/imgs/2021/162987578521688602802349.png"></image>
+                    <view class="lf-desc data-v-5d19420a">优惠券</view>
+                </view>
+                <view catchtap="__e" class="rf data-v-5d19420a" data-event-opts="{{[ [ 'tap',[ [ 'go2Coupon',['$event'] ] ] ] ]}}">
+                    <view class="coupon-num data-v-5d19420a">
+                        <block wx:if="{{currCoupon.coupon_id}}">{{'-'+$root.m0+''}}</block>
+                        <block wx:else>{{''+(couponList.length>0?couponList.length+'张可用':'暂无可用')+''}}</block>
+                    </view>
+                    <hll-icon bind:__l="__l" class="shop-right-icon data-v-5d19420a" color="#999" name="ic-arrow-right" size="12px" vueId="f8d2f6c0-3"></hll-icon>
+                </view>
+            </view>
+            <view class="price-detail data-v-5d19420a">
+                <view class="desc data-v-5d19420a">{{'总金额:￥'+$root.m1+''}}</view>
+                <view class="desc data-v-5d19420a">{{'工时:￥'+$root.m2+''}}</view>
+                <view class="desc data-v-5d19420a">{{'优惠:￥'+$root.m3+''}}</view>
+                <view class="all-price data-v-5d19420a">
+                    <view class="desc data-v-5d19420a">实付:</view>
+                    <view class="price-box data-v-5d19420a">¥<view class="price data-v-5d19420a">{{$root.m4}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="foot data-v-5d19420a" wx:if="{{confirmInfo}}">
+        <view class="lf data-v-5d19420a">
+            <view class="lf-desc data-v-5d19420a">实付：</view>
+            <view class="price-box data-v-5d19420a">¥<view class="price data-v-5d19420a">{{''+$root.m5+''}}</view>
+            </view>
+        </view>
+        <view catchtap="__e" class="rf foot-name data-v-5d19420a" data-event-opts="{{[ [ 'tap',[ [ 'doPay',['$event'] ] ] ] ]}}">立即支付</view>
+    </view>
+    <v-dialog bind:__l="__l" class="data-v-5d19420a vue-ref" data-ref="refNoCarDialog" vueId="f8d2f6c0-4"></v-dialog>
+    <full-dialog bind:__l="__l" class="data-v-5d19420a vue-ref" data-ref="refComDialog" vueId="f8d2f6c0-5" vueSlots="{{['default']}}">
+        <view class="dia-cont data-v-5d19420a">
+            <block wx:if="{{!hasStoreData}}">
+                <image class="dia-img data-v-5d19420a" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163400402331362875046435.png"></image>
+                <view class="dia-msg data-v-5d19420a">您附近没有可服务门店~</view>
+            </block>
+            <block wx:else>
+                <image class="dia-img data-v-5d19420a" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163400403435477271934923.png"></image>
+                <view class="dia-msg data-v-5d19420a">{{dialogMsg}}</view>
+            </block>
+        </view>
+    </full-dialog>
+</view>

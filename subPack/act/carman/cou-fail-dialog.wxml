@@ -1,0 +1,14 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-418b0e00" wx:if="{{isShow}}">
+    <view class="home-popup data-v-418b0e00">
+        <view class="content data-v-418b0e00">
+            <view class="data-v-418b0e00">
+                <view class="cou-title data-v-418b0e00">您已经领取过啦~</view>
+                <image class="cou-money data-v-418b0e00" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163903978733410749046505.png"></image>
+            </view>
+            <image catchtap="__e" class="coupons-close data-v-418b0e00" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/162737812130809814938517.png"></image>
+            <view catchtap="__e" class="coupons-btn data-v-418b0e00" data-event-opts="{{[ [ 'tap',[ [ 'go2CoupeList',['$event'] ] ] ] ]}}">
+                <image class="coupons-icon data-v-418b0e00" lazyLoad="true" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/163903983710335327039667.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

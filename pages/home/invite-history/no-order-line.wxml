@@ -1,0 +1,13 @@
+<view class="no-order-box data-v-62c17271">
+    <view class="lf data-v-62c17271">
+        <image binderror="__e" class="logo data-v-62c17271" data-event-opts="{{[ [ 'error',[ [ 'imgErrHandle',['$event'] ] ] ] ]}}" src="{{iconImg}}"></image>
+        <view class="data-v-62c17271">
+            <view class="name data-v-62c17271">{{config.invitee_nick_name||'吉友'}}</view>
+            <view class="order-txt data-v-62c17271">{{'注册时间：'+(config.register_time||'-')+''}}</view>
+            <view class="order-txt data-v-62c17271">{{'手机号码：'+(config.invitee_mobile||'-')+''}}</view>
+        </view>
+    </view>
+    <view class="rf data-v-62c17271">
+        <button catchtap="__e" class="rf-btn data-v-62c17271" data-event-opts="{{[ [ 'tap',[ [ 'inviteFriend',['$event'] ] ] ] ]}}" openType="share">提醒他</button>
+    </view>
+</view>

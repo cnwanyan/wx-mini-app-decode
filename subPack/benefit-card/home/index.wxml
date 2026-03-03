@@ -1,0 +1,56 @@
+<view class="benefit-card data-v-50b0536f">
+    <view class="head-card data-v-50b0536f">
+        <view catchtap="__e" class="btn code data-v-50b0536f" data-event-opts="{{[ [ 'tap',[ [ 'goAddBenefitCoupon',['$event'] ] ] ] ]}}">
+            <text class="data-v-50b0536f">兑换码</text>
+        </view>
+        <view catchtap="__e" class="btn change-list data-v-50b0536f" data-event-opts="{{[ [ 'tap',[ [ 'go2CouponList',['$event'] ] ] ] ]}}">
+            <text class="data-v-50b0536f">兑换记录</text>
+        </view>
+    </view>
+    <view class="coupon-info data-v-50b0536f">
+        <view class="title data-v-50b0536f">
+            <image class="title-icon data-v-50b0536f" src="https://ops-img-static.huolala.cn/imgs/2022/165328695020117075689396.png"></image>
+            <text class="data-v-50b0536f">优惠券</text>
+        </view>
+        <view class="ul data-v-50b0536f">
+            <block wx:if="{{!urlParams.scene&&!urlParams.res&&isPageOK||offLineList.length===0}}">
+                <view catchtap="__e" class="li data-v-50b0536f" data-event-opts="{{[ [ 'tap',[ [ 'seeCoupon',['$0'],[ [ ['initNoDataList','type',item.type] ] ] ] ] ] ]}}" wx:for="{{initNoDataList}}" wx:for-index="__i0__" wx:key="type">
+                    <view class="coupon-name data-v-50b0536f">{{item.name||''}}</view>
+                    <view class="coupon-btn data-v-50b0536f">
+                        <view class="btn data-v-50b0536f">立即查看</view>
+                    </view>
+                </view>
+            </block>
+            <block wx:else>
+                <view catchtap="__e" class="li data-li data-v-50b0536f" data-event-opts="{{[ [ 'tap',[ [ 'seeCoupon',['$0'],[ [ ['offLineList','',index] ] ] ] ] ] ]}}" style="{{'background-image:'+'url('+couponMsg.bgUrl+') '+';'}}" wx:for="{{offLineList}}" wx:for-item="couponMsg" wx:key="index">
+                    <view class="price-box data-v-50b0536f">¥<view class="price data-v-50b0536f">{{''+couponMsg.money+''}}</view>
+                    </view>
+                    <view class="num data-v-50b0536f">{{''+'含'+(couponMsg.number||1)+'张'+(couponMsg.typeName||'券')+''}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="rule-info data-v-50b0536f">
+        <view class="title data-v-50b0536f">{{coupeInfo.ruleTitle||'使用说明：'}}</view>
+        <view class="{{['msg','data-v-50b0536f',showMore?'more':'']}}">
+            <text class="data-v-50b0536f">{{''+(coupeInfo.msgRule||'')+''}}</text>
+        </view>
+        <view bindtap="__e" class="rule-more data-v-50b0536f" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+            <hll-icon bind:__l="__l" class="{{['animation','data-v-50b0536f',showMore?'rotate':'']}}" color="#fff4e4" name="ic-arrow-down" size="14px" vueId="24139c4f-1"></hll-icon>
+        </view>
+    </view>
+    <view class="more-info data-v-50b0536f">
+        <view class="big-title data-v-50b0536f">
+            <image class="h-icon data-v-50b0536f" src="https://ops-img-static.huolala.cn/imgs/2022/165329884534867215766258.png"></image>
+            <view class="title data-v-50b0536f">更多权益福利</view>
+            <image class="h-icon data-v-50b0536f" src="https://ops-img-static.huolala.cn/imgs/2022/165329883429091916398239.png"></image>
+        </view>
+        <view class="more-li data-v-50b0536f" wx:if="{{coupeInfo.list&&coupeInfo.list.length>0}}">
+            <view class="li data-v-50b0536f" wx:for="{{coupeInfo.list}}" wx:key="index">
+                <image class="logo data-v-50b0536f" src="{{item.img}}"></image>
+                <view class="name data-v-50b0536f">{{''+(item.name||'')+''}}</view>
+            </view>
+        </view>
+    </view>
+    <info-dialog bind:__l="__l" bind:childSeeCoupon="__e" class="data-v-50b0536f vue-ref" config="{{offLineList}}" data-event-opts="{{[ [ '^childSeeCoupon',[ ['seeCoupon'] ] ] ]}}" data-ref="refInfo" vueId="24139c4f-2"></info-dialog>
+</view>

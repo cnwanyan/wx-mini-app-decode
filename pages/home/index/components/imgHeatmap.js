@@ -1,0 +1,9 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/home/index/components/imgHeatmap"],{"0346":function(e,t,n){"use strict";var r=n("3c8e"),a=n.n(r);a.a},"04dc":function(e,t,n){"use strict";n.r(t);var r=n("c835"),a=n.n(r);for(var i in r)["default"].indexOf(i)<0&&function(e){n.d(t,e,(function(){return r[e]}))}(i);t["default"]=a.a},"3c8e":function(e,t,n){},b19b:function(e,t,n){"use strict";var r;n.d(t,"b",(function(){return a})),n.d(t,"c",(function(){return i})),n.d(t,"a",(function(){return r}));var a=function(){var e=this,t=e.$createElement;e._self._c},i=[]},c835:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=n("65ac"),a={props:{data:{type:Object,default:function(){return{}}}},methods:{handleClickItem:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;this.$report("xcf_advertise",{page_name:"车服广告",ad_position:"热区图",ad_order:t+1,ad_link:e.jump_url,ad_ref:(0,r.getUrlParams)(a,"ref")||"链接未携带ref"});var n=e.jump_url,a=void 0===n?"":n,i=e.mini_program_id,u=void 0===i?"":i;this.$pageHref(a,"",{appId:u,notNeedLogin:!0})}}};t.default=a},efc1:function(e,t,n){"use strict";n.r(t);var r=n("b19b"),a=n("04dc");for(var i in a)["default"].indexOf(i)<0&&function(e){n.d(t,e,(function(){return a[e]}))}(i);n("0346");var u,c=n("f0c5"),o=Object(c["a"])(a["default"],r["b"],r["c"],!1,null,"5f83dd72",null,!1,r["a"],u);t["default"]=o.exports}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'pages/home/index/components/imgHeatmap-create-component',
+    {
+        'pages/home/index/components/imgHeatmap-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("efc1"))
+        })
+    },
+    [['pages/home/index/components/imgHeatmap-create-component']]
+]);

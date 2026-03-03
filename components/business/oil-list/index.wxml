@@ -1,0 +1,75 @@
+<view class="oil-block data-v-4c6579c7">
+    <view class="oil-cont data-v-4c6579c7" wx:if="{{!isOilListEmpty}}">
+        <view catchtap="__e" class="oil-cont-line data-v-4c6579c7" data-event-opts="{{[ [ 'tap',[ [ 'oilLineHandle',['$0'],[ [ ['oilList','gas_id',item[$orig].gas_id] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="gas_id">
+            <view class="oil-head data-v-4c6579c7">
+                <view class="oil-head-lf data-v-4c6579c7">
+                    <image class="oil-station-img data-v-4c6579c7" src="{{item[$orig].small_logo}}"></image>
+                    <view class="oil-head-cent data-v-4c6579c7">
+                        <view class="cont-line-title data-v-4c6579c7">{{item[$orig].gas_name}}</view>
+                        <view class="cont-line-subtitle data-v-4c6579c7">{{item[$orig].gas_address}}</view>
+                    </view>
+                </view>
+                <view catchtap="__e" class="oil-head-rf data-v-4c6579c7" data-event-opts="{{[ [ 'tap',[ [ 'goLbs',['$0'],[ [ ['oilList','gas_id',item[$orig].gas_id] ] ] ] ] ] ]}}">
+                    <image class="oil-icon data-v-4c6579c7" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/16251360336264366037471.png"></image>
+                    <view class="data-v-4c6579c7">{{item[$orig].distance}}</view>
+                </view>
+            </view>
+            <view class="oil price-box data-v-4c6579c7">
+                <view class="lf data-v-4c6579c7">
+                    <view class="price-box-line data-v-4c6579c7">
+                        <text class="price-flag data-v-4c6579c7">￥</text>
+                        <text class="price data-v-4c6579c7">{{item[$orig].price_yfq}}</text>
+                        <text class="unit data-v-4c6579c7">/L</text>
+                        <text class="ori-price data-v-4c6579c7" wx:if="{{item.g0===false&&item[$orig].price_official>0}}">{{'¥'+item[$orig].price_official+'/L'}}</text>
+                    </view>
+                    <view class="info-price-down data-v-4c6579c7">
+                        <view class="container data-v-4c6579c7" wx:if="{{item.m0>0}}">
+                            <text class="down-l data-v-4c6579c7">加<text class="number data-v-4c6579c7">200</text>
+                            </text>
+                            <text class="down-r data-v-4c6579c7">约省<text class="number data-v-4c6579c7">{{item.g1}}</text>
+                            </text>
+                        </view>
+                        <view class="can-use-coupon-tag _div data-v-4c6579c7" wx:if="{{showCanUseCouponTag&&item[$orig].available_coupons>0}}">{{''+(item[$orig].available_coupons===1?'可用优惠券':'不可用券')+''}}</view>
+                    </view>
+                    <view class="lf-bottom-tip data-v-4c6579c7" wx:if="{{item[$orig].textTag&&item[$orig].textTag.length>0||item[$orig].iconTag&&item[$orig].iconTag.length>0}}">
+                        <block wx:if="{{item[$orig].textTag.length>0}}">
+                            <view class="flex-dom data-v-4c6579c7" wx:for="{{item[$orig].textTag}}" wx:for-item="tTag" wx:key="index">
+                                <text class="discount-line data-v-4c6579c7">{{tTag}}</text>
+                            </view>
+                        </block>
+                        <block wx:if="{{item[$orig].iconTag.length>0}}">
+                            <view class="flex-dom price-tips-box data-v-4c6579c7" wx:for="{{item[$orig].iconTag}}" wx:for-index="tagIndex" wx:for-item="iTag" wx:key="tagIndex">
+                                <view class="price-active-name-box data-v-4c6579c7">
+                                    <image binderror="__e" class="icon-discount data-v-4c6579c7" data-event-opts="{{[ [ 'error',[ [ 'onErrIcon',['$0'],[ [ ['oilList','gas_id',item[$orig].gas_id],['iconTag','',tagIndex] ] ] ] ] ] ]}}" src="{{iTag.icon}}"></image>
+                                </view>
+                                <text class="price-tips data-v-4c6579c7">{{iTag.name}}</text>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="lf-bottom-tip data-v-4c6579c7" wx:if="{{item.g2&&item[$orig].adverts&&item[$orig].adverts.length>0}}">
+                        <view class="gas-icon-sign-item data-v-4c6579c7" wx:for="{{item[$orig].adverts}}" wx:for-index="adIndex" wx:for-item="adItem" wx:key="adIndex">
+                            <text class="gas-icon data-v-4c6579c7" wx:if="{{adItem.titleWithinIcon}}">{{''+adItem.titleWithinIcon+''}}</text>
+                            <text class="gas-text data-v-4c6579c7" wx:if="{{adItem.titleAfterIcon}}">{{adItem.titleAfterIcon}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view catchtap="__e" class="more rf data-v-4c6579c7" data-event-opts="{{[ [ 'tap',[ [ 'changeState',['$0',index],[ [ ['oilList','gas_id',item[$orig].gas_id] ] ] ] ] ] ]}}" wx:if="{{item[$orig].extra_gas_data.length>0}}">
+                    <text class="more-txt data-v-4c6579c7">{{''+(item[$orig].childrenState?'收起':'展开')}}</text>
+                    <image class="{{['arrows-icon','data-v-4c6579c7',item[$orig].childrenState?'arrows-icon-open':'']}}"></image>
+                </view>
+            </view>
+            <view class="sub-oil data-v-4c6579c7" wx:if="{{item[$orig].extra_gas_data&&item[$orig].extra_gas_data.length>0&&item[$orig].childrenState}}">
+                <oil-line bind:__l="__l" class="data-v-4c6579c7" config="{{subLine}}" showCanUseCouponTag="{{showCanUseCouponTag}}" vueId="{{'5ca1fec6-1-'+index+'-'+ind}}" wx:for="{{item[$orig].extra_gas_data}}" wx:for-index="ind" wx:for-item="subLine" wx:key="ind"></oil-line>
+            </view>
+        </view>
+        <view class="end-tips data-v-4c6579c7" wx:if="{{gFecthOk}}">我也是有底线的~</view>
+    </view>
+    <block wx:else>
+        <view class="oil-empty data-v-4c6579c7" style="{{customHeistyle}}" wx:if="{{isRequestOnce}}">
+            <view class="data-v-4c6579c7">
+                <image class="oil-img data-v-4c6579c7" lazyLoad="true" src="https://ops-img-static.huolala.cn/imgs/2021/161898409739481450298471.png"></image>
+                <view class="empty-txt data-v-4c6579c7">没有找到相关加油站~</view>
+            </view>
+        </view>
+    </block>
+</view>

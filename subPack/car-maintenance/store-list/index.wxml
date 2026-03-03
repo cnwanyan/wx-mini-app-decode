@@ -1,0 +1,15 @@
+<view class="store-block data-v-467191de">
+    <view class="head data-v-467191de"></view>
+    <view class="body data-v-467191de">
+        <block wx:if="{{list&&list.length>0}}">
+            <store-line bind:__l="__l" bind:changeStoreId="__e" channelId="{{goodsList[0]&&goodsList[0].channelId}}" class="data-v-467191de" config="{{item}}" data-event-opts="{{[ [ '^changeStoreId',[ ['changeStoreId'] ] ] ]}}" storeId="{{currStoreId}}" vueId="{{'cff86400-1-'+index}}" wx:for="{{list}}" wx:key="index"></store-line>
+        </block>
+        <view class="empty-block data-v-467191de" wx:else>
+            <image class="no-coupon data-v-467191de" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16189901249313933409255.png"></image>
+            <view class="no-txt data-v-467191de">暂无数据</view>
+        </view>
+    </view>
+    <view class="foot data-v-467191de" wx:if="{{list&&list.length>0}}">
+        <view catchtap="__e" class="foot-name data-v-467191de" data-event-opts="{{[ [ 'tap',[ [ 'confirmBtn',['$event'] ] ] ] ]}}">确定</view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="oil-change-page data-v-277237d1">
+    <image class="content data-v-277237d1" mode="widthFix" src="{{contentUrl}}" wx:if="{{contentUrl}}"></image>
+    <view class="empty data-v-277237d1" wx:else>暂无内容</view>
+    <view class="btn-wrapper data-v-277237d1">
+        <image class="icon data-v-277237d1" mode="widthFix" src="https://static.huolala.cn/image/3c3f05a2078b444c2ae354a67245d9a1ea7c942b.gif"></image>
+        <view bindtap="__e" class="{{['btn','data-v-277237d1',!isLog?'not-login':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onOilChange',['$event'] ] ] ] ]}}">{{isLog?'订阅油价变动提醒':'请登录后订阅油价变动提醒'}}</view>
+    </view>
+</view>

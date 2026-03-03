@@ -1,0 +1,70 @@
+<view class="data-v-3dc138be">
+    <view class="search-box data-v-3dc138be">
+        <view bindtap="__e" class="search-input data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'goSearch',['$event'] ] ] ] ]}}">
+            <hll-icon bind:__l="__l" class="data-v-3dc138be" color="#A5A5AD" name="ic-search" size="30rpx" vueId="79de086f-1"></hll-icon>
+            <text class="search-input__placeholder data-v-3dc138be">搜索附近的油站</text>
+        </view>
+        <view bindtap="__e" class="coupon-box data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'goToCoupon',['$event'] ] ] ] ]}}">
+            <image class="coupon-icon data-v-3dc138be" src="https://static.huolala.cn/image/ac10294e11680403d95af11cdccf07551e550852.png"></image>优惠券</view>
+    </view>
+    <view class="condition condition-fixed data-v-3dc138be" hidden="{{!isShowTabFixed}}">
+        <view class="codition-container data-v-3dc138be">
+            <view bindtap="__e" class="condition-item data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'clickOilTab',['$event'] ] ] ] ]}}">{{''+(oilName||'')+''}}<hll-icon bind:__l="__l" class="icon-down data-v-3dc138be" color="#757575" name="ic-arrow-down" size="22rpx" vueId="79de086f-2"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'clickFilterTab',['$event'] ] ] ] ]}}">{{''+filterTabList[fetchOptions.filter-1].name+''}}<hll-icon bind:__l="__l" class="icon-down data-v-3dc138be" color="#757575" name="ic-arrow-down" size="22rpx" vueId="79de086f-3"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'clickBrandTab',['$event'] ] ] ] ]}}">{{''+brandName+''}}<hll-icon bind:__l="__l" class="icon-down data-v-3dc138be" color="#757575" name="ic-arrow-down" size="22rpx" vueId="79de086f-4"></hll-icon>
+            </view>
+            <view bindtap="__e" class="{{['condition-item','condition-radio','data-v-3dc138be',isDoilSelected?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickOilList',['$0','doil-zone'],['oilToggleOptions'] ] ] ] ]}}">柴油专区</view>
+        </view>
+        <view class="select-wrap pos-a bg-white pt-14 data-v-3dc138be" wx:if="{{isShowOilBox}}">
+            <view class="data-v-3dc138be" wx:for="{{$root.l0}}" wx:for-index="key" wx:for-item="value" wx:key="key">
+                <view class="select-title data-v-3dc138be">{{''+value.m0+''}}</view>
+                <view class="flex flex-wrap data-v-3dc138be">
+                    <view class="select-item data-v-3dc138be" wx:for="{{value[$orig]}}" wx:for-index="__i0__" wx:key="oil_no">
+                        <view bindtap="__e" class="{{['content','data-v-3dc138be',item.oil_no==fetchOptions.oil_no?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickOilList',['$0'],[ [ ['oilsTabList','',key],['','oil_no',item.oil_no] ] ] ] ] ] ]}}">{{''+item.oil_name+''}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="select-wrap pos-a bg-white pt-20 data-v-3dc138be" wx:if="{{isShowFilterBox}}">
+            <view class="flex flex-wrap data-v-3dc138be">
+                <view class="select-item data-v-3dc138be" wx:for="{{filterTabList}}" wx:for-index="__i1__" wx:key="filter">
+                    <view bindtap="__e" class="{{['content','data-v-3dc138be',item.filter==fetchOptions.filter?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickFilter',['$0'],[ [ ['filterTabList','filter',item.filter] ] ] ] ] ] ]}}">{{''+item.name+''}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="select-wrap pos-a bg-white pt-20 data-v-3dc138be" wx:if="{{isShowBrandBox}}">
+            <view class="flex flex-wrap data-v-3dc138be">
+                <view class="select-item data-v-3dc138be" wx:for="{{brandsTabList}}" wx:for-index="__i2__" wx:key="brand_id">
+                    <view catchtap="__e" class="{{['content','data-v-3dc138be',item.brand_id==fetchOptions.brand?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickBrandList',['$0'],[ [ ['brandsTabList','brand_id',item.brand_id] ] ] ] ] ] ]}}">{{''+item.brand_name+''}}</view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="__e" class="select-mask data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'resetTabShow',['$event'] ] ] ] ]}}"></view>
+    </view>
+    <view class="condition condition-sticky data-v-3dc138be">
+        <view class="codition-container data-v-3dc138be">
+            <view bindtap="__e" class="condition-item data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'clickOilTab',['$event'] ] ] ] ]}}">{{''+(oilName||'')+''}}<hll-icon bind:__l="__l" class="icon-down data-v-3dc138be" color="#757575" name="ic-arrow-down" size="22rpx" vueId="79de086f-5"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'clickFilterTab',['$event'] ] ] ] ]}}">{{''+filterTabList[fetchOptions.filter-1].name+''}}<hll-icon bind:__l="__l" class="icon-down data-v-3dc138be" color="#757575" name="ic-arrow-down" size="22rpx" vueId="79de086f-6"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'clickBrandTab',['$event'] ] ] ] ]}}">{{''+brandName+''}}<hll-icon bind:__l="__l" class="icon-down data-v-3dc138be" color="#757575" name="ic-arrow-down" size="22rpx" vueId="79de086f-7"></hll-icon>
+            </view>
+            <view bindtap="__e" class="{{['condition-item','condition-radio','data-v-3dc138be',isDoilSelected?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickOilList',['$0','doil-zone'],['oilToggleOptions'] ] ] ] ]}}">柴油专区</view>
+        </view>
+    </view>
+    <view catchtap="__e" class="coupon-deadline data-v-3dc138be" data-event-opts="{{[ [ 'tap',[ [ 'goToCoupon',['$event'] ] ] ] ]}}" wx:if="{{couponTipShow}}">
+        <image class="coupon-deadline__icon data-v-3dc138be" src="https://static.huolala.cn/image/dfe4951661a115627c28ad30f743bf635a6b1bbf.png"></image>
+        <text class="coupon-deadline__tip data-v-3dc138be" wx:if="{{couponDeadline>0}}">{{'您有1张优惠券还有'+couponDeadline+'天到期'}}</text>
+        <text class="coupon-deadline__tip data-v-3dc138be" wx:if="{{couponDeadline===0}}">您有1张优惠券今天到期</text>
+        <text class="coupon-deadline__btn data-v-3dc138be">去使用 ></text>
+    </view>
+    <oil-list bind:__l="__l" bind:oilNoChange="__e" bind:setGasDialog="__e" class="data-v-3dc138be vue-ref" customHeistyle="{{bodyStyle}}" data-event-opts="{{[ [ '^oilNoChange',[ ['oilNoChange'] ] ],[ '^setGasDialog',[ ['setGasDialog'] ] ] ]}}" data-ref="refOil" jkcode="{{jkcode}}" oilName="{{oilName}}" refcode="{{refcode}}" vueId="79de086f-8"></oil-list>
+    <oil-policy bind:__l="__l" class="data-v-3dc138be vue-ref" data-ref="oil_policy" keepHideTabBar="{{keepHideTabBar}}" vueId="79de086f-9" wx:if="{{!isNeedWxPolicy}}"></oil-policy>
+    <policy-popup bind:__l="__l" bind:agree="__e" bind:needAgree="__e" class="data-v-3dc138be" data-event-opts="{{[ [ '^agree',[ ['handleWxPolicy'] ] ],[ '^needAgree',[ ['handleNeedAgree'] ] ] ]}}" vueId="79de086f-10"></policy-popup>
+    <view bindtap="__e" class="{{['my-entry','data-v-3dc138be',showHalfMyIcon?'half-my-entry':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'goToMy',['$event'] ] ] ] ]}}" wx:if="{{keepHideTabBar}}">
+        <image class="my-entry-icon data-v-3dc138be" mode="aspectFit" src="https://static.huolala.cn/image/bf066284ba75a7c6cba6397d27981bbd88788866.png"></image>
+        <view class="my-entry-text data-v-3dc138be">我的</view>
+    </view>
+</view>

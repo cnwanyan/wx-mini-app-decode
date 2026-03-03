@@ -1,0 +1,7 @@
+<view class="invite-swiper data-v-5305afe1">
+    <swiper autoplay="{{autoplay}}" circular="true" class="swiper-box data-v-5305afe1" easingFunction="easeInOutCubic" interval="2000" vertical="true" wx:if="{{list&&list.length>0}}">
+        <swiper-item catchtouchmove="__e" class="swiper-self-border data-v-5305afe1" data-event-opts="{{[ [ 'touchmove',[ [ 'stopTouchMove',['$event'] ] ] ] ]}}" wx:for="{{list}}" wx:key="index">
+            <view class="swiper-txt data-v-5305afe1">{{''+item+''}}</view>
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,18 @@
+<view class="service data-v-8d1ceec4">
+    <view class="service__tab data-v-8d1ceec4" wx:if="{{car_services.length>1}}">
+        <view bindtap="__e" class="tab-item data-v-8d1ceec4" data-event-opts="{{[ [ 'tap',[ [ 'onTab',['$0',index],[ [ ['car_services','',index] ] ] ] ] ] ]}}" wx:for="{{car_services}}" wx:key="index">
+            <view class="{{['data-v-8d1ceec4',index==current?'active':'']}}">{{item.tab_name||'标签'}}</view>
+        </view>
+    </view>
+    <view class="service__main data-v-8d1ceec4" wx:if="{{car_services[current]}}">
+        <view class="service-item data-v-8d1ceec4" wx:if="{{car_services[current].content_style===1}}">
+            <view bindtap="__e" class="icon__item data-v-8d1ceec4" data-event-opts="{{[ [ 'tap',[ [ 'onClickIcon',['$0'],[ [ ['car_services.'+current+'.icons','',index] ] ] ] ] ] ]}}" wx:for="{{car_services[current].icons}}" wx:key="index">
+                <image class="icon__item__img data-v-8d1ceec4" lazyLoad="true" mode="aspectFill" src="{{item.img}}"></image>
+                <view class="icon__item__title data-v-8d1ceec4">{{item.title}}</view>
+                <view class="{{['icon__item__bubble','data-v-8d1ceec4',item.bubble_title.length===4?'icon__item__bubble--4':'',item.bubble_title.length===3?'icon__item__bubble--3':'']}}" wx:if="{{item.bubble_status===1&&item.bubble_valid}}">{{item.bubble_title}}</view>
+            </view>
+        </view>
+        <img-heatmap-tab bind:__l="__l" class="service-item heatmap data-v-8d1ceec4" data="{{car_services[current].heatmap_tabs}}" vueId="a298f234-1" wx:if="{{car_services[current].content_style===2}}"></img-heatmap-tab>
+        <img-heatmap bind:__l="__l" class="service-item heatmap data-v-8d1ceec4" data="{{car_services[current].heatmap}}" vueId="a298f234-2" wx:if="{{car_services[current].content_style===3}}"></img-heatmap>
+    </view>
+</view>

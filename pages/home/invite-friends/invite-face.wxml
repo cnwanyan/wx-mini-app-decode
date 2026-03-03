@@ -1,0 +1,15 @@
+<view class="data-v-426675d0">
+    <image class="before-code-img data-v-426675d0" mode="widthFix" src="{{shareImg}}"></image>
+    <view catchtouchmove="preventTouchMove" class="mask data-v-426675d0" wx:if="{{isShow}}">
+        <view class="home-popup data-v-426675d0">
+            <view class="content data-v-426675d0">
+                <image class="code-img data-v-426675d0" mode="widthFix" src="{{shareImg}}"></image>
+                <image catchtap="__e" class="down-close data-v-426675d0" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}" src="https://ops-img-static.huolala.cn/imgs/2021/162737812130809814938517.png"></image>
+                <view catchtap="__e" class="down-btn data-v-426675d0" data-event-opts="{{[ [ 'tap',[ [ 'downLoad',['$event'] ] ] ] ]}}">
+                    <image class="down-icon data-v-426675d0" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/16273781121674926489621.png"></image>
+                    <view class="down-txt data-v-426675d0">{{''+(runEnvData==='wxH5'?'请长按图片保存':'保存图片')+''}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

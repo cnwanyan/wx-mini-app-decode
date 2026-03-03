@@ -1,0 +1,11 @@
+<view class="page-index data-v-66968b46">
+    <add-to-my-mini bind:__l="__l" bind:onClose="__e" class="data-v-66968b46" data-event-opts="{{[ [ '^onClose',[ ['closeMyMini'] ] ] ]}}" vueId="eb6792b0-1" wx:if="{{isShowAddMyMini}}"></add-to-my-mini>
+    <view class="data-v-66968b46" id="wrapper">
+        <banner banners="{{banners}}" bind:__l="__l" class="data-v-66968b46" vueId="eb6792b0-2" wx:if="{{!!banners.length}}"></banner>
+        <service bind:__l="__l" car_services="{{car_services}}" class="data-v-66968b46" vueId="eb6792b0-3" wx:if="{{!!car_services.length}}"></service>
+        <coupon bind:__l="__l" class="data-v-66968b46" coupons="{{coupons}}" vueId="eb6792b0-4" wx:if="{{!!coupons.length}}"></coupon>
+        <activity activities="{{activities}}" bind:__l="__l" class="data-v-66968b46" vueId="eb6792b0-5" wx:if="{{!!activities.length}}"></activity>
+    </view>
+    <goods bind:__l="__l" class="data-v-66968b46 vue-ref" data-ref="goods" malls="{{malls}}" scrollTop="{{scrollTop}}" vueId="eb6792b0-6" wrapperHeight="{{wrapperHeight}}" wx:if="{{!!malls.length}}"></goods>
+    <policy-popup bind:__l="__l" bind:agree="__e" bind:needAgree="__e" class="data-v-66968b46" data-event-opts="{{[ [ '^agree',[ ['handleWxPolicy'] ] ],[ '^needAgree',[ ['handleNeedAgree'] ] ] ]}}" vueId="eb6792b0-7"></policy-popup>
+</view>

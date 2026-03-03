@@ -1,0 +1,10 @@
+<view class="data-v-5b966aa0">测试页<view class="data-v-5b966aa0">字体图标<hll-icon bind:__l="__l" class="data-v-5b966aa0" name="ic-checkbox-off" vueId="3ccf813c-1"></hll-icon>
+        <hll-icon bind:__l="__l" class="data-v-5b966aa0" name="ic-star" vueId="3ccf813c-2"></hll-icon>
+        <hll-icon bind:__l="__l" class="data-v-5b966aa0" name="ic-arrow-up" vueId="3ccf813c-3"></hll-icon>
+        <hll-icon bind:__l="__l" class="data-v-5b966aa0" name="ic-message" vueId="3ccf813c-4"></hll-icon>
+        <view bindtap="__e" class="data-v-5b966aa0" data-event-opts="{{[ [ 'tap',[ [ 'openPdf',['$event'] ] ] ] ]}}">打开pdd</view>
+        <hll-icon bind:__l="__l" class="data-v-5b966aa0" isCjjIcon="{{true}}" name="icon-coupon" size="114px" vueId="3ccf813c-5"></hll-icon>
+        <button bindtap="__e" class="lbs data-v-5b966aa0" data-event-opts="{{[ [ 'tap',[ [ 'goTest',['$event'] ] ] ] ]}}">导航</button>
+        <button bindtap="__e" class="lbs data-v-5b966aa0" data-event-opts="{{[ [ 'tap',[ [ 'getLbs',['$event'] ] ] ] ]}}">获取定位</button>
+    </view>
+</view>

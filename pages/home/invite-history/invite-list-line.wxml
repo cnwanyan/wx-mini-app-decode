@@ -1,0 +1,14 @@
+<view class="invite-list-box data-v-3544ca8c">
+    <view class="invite-lf data-v-3544ca8c">
+        <image binderror="__e" class="invite-logo data-v-3544ca8c" data-event-opts="{{[ [ 'error',[ [ 'imgErrHandle',['$event'] ] ] ] ]}}" src="{{iconImg}}"></image>
+        <view class="data-v-3544ca8c">
+            <view class="invite-txt invite-title data-v-3544ca8c">{{config.invitee_nick_name===''||config.invitee_nick_name==='null'?config.invitee_mobile:config.invitee_nick_name}}</view>
+            <view class="invite-txt invite-center data-v-3544ca8c">{{'注册时间：'+(config.register_time||'-')}}</view>
+            <view class="invite-txt data-v-3544ca8c">{{'首次下单时间：'+(config.create_order_time||'-')}}</view>
+        </view>
+    </view>
+    <view class="invite-rf data-v-3544ca8c">
+        <view class="invite-txt invite-title rf-price data-v-3544ca8c">{{'+'+config.first_amount}}</view>
+        <view class="invite-txt rf-desc data-v-3544ca8c">首次加油金额</view>
+    </view>
+</view>

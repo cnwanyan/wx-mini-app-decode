@@ -1,0 +1,49 @@
+<view class="goods-details data-v-470ad483">
+    <banner-ad bannerArr="{{bannerArr}}" bind:__l="__l" class="data-v-470ad483" vueId="24e636d6-1"></banner-ad>
+    <view class="goods-info data-v-470ad483" wx:if="{{goodsInfo}}">
+        <view class="top data-v-470ad483">
+            <view class="lf data-v-470ad483">
+                <view class="price-box data-v-470ad483">¥<view class="price data-v-470ad483">{{''+$root.m0+''}}</view>
+                </view>
+                <view class="origin-price data-v-470ad483">{{'￥'+$root.m1+''}}</view>
+            </view>
+            <view class="rf data-v-470ad483">{{'销售量：'+salesCount}}</view>
+        </view>
+        <view class="bottom data-v-470ad483">
+            <view class="goods-name data-v-470ad483">{{goodsInfo.goods_name||'-'}}</view>
+            <view class="label-box data-v-470ad483">
+                <view class="label data-v-470ad483" wx:for="{{labelArr}}" wx:for-index="__i0__" wx:for-item="name" wx:key="*this">{{''+name+''}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="goods-mode data-v-470ad483" wx:if="{{urlType!=='replaceOk'&&payStyle}}">
+        <view class="mode-title data-v-470ad483">选择提货方式</view>
+        <view class="ul data-v-470ad483">
+            <view catchtap="__e" class="{{['li','data-v-470ad483',activeModeId===item.id?'active':'',activeModeId!=='1'&&activeModeId!=='2'?'light':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'modeChange',['$0'],[ [ ['modeList','id',item.id] ] ] ] ] ] ]}}" wx:for="{{modeList}}" wx:for-index="__i1__" wx:key="id">{{''+item.name+''}}<image class="get-mode-icon data-v-470ad483" src="https://ops-img-static.huolala.cn/imgs/2022/164421690442342571624199.png" wx:if="{{activeModeId===item.id}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="goods-num-box data-v-470ad483">
+        <view class="lf data-v-470ad483">数量</view>
+        <view class="rf data-v-470ad483">
+            <image catchtap="__e" class="add-icon data-v-470ad483" data-event-opts="{{[ [ 'tap',[ [ 'reduceGoodsNum',['$event'] ] ] ] ]}}" src="{{1===goodsNum?'https://ops-img-static.huolala.cn/imgs/2021/16303800822263442054225.png':'https://ops-img-static.huolala.cn/imgs/2021/163039451510269183373738.png'}}"></image>
+            <view class="num data-v-470ad483">{{goodsNum+''}}</view>
+            <image catchtap="__e" class="add-icon data-v-470ad483" data-event-opts="{{[ [ 'tap',[ [ 'addGoodsNum',['$event'] ] ] ] ]}}" src="https://ops-img-static.huolala.cn/imgs/2021/16303800901765488985823.png"></image>
+        </view>
+    </view>
+    <view class="cont data-v-470ad483">
+        <view class="cont-title data-v-470ad483">商品详情</view>
+        <block wx:if="{{detailsArr&&detailsArr.length>0}}">
+            <image class="img data-v-470ad483" mode="widthFix" src="{{itemImg}}" wx:for="{{detailsArr}}" wx:for-item="itemImg" wx:key="index"></image>
+        </block>
+    </view>
+    <view class="foot data-v-470ad483">
+        <view class="lf data-v-470ad483">
+            <view class="lf-desc data-v-470ad483">实付：</view>
+            <view class="price-box data-v-470ad483">¥<view class="price data-v-470ad483">{{''+$root.m2+''}}</view>
+            </view>
+        </view>
+        <view catchtap="__e" class="rf foot-name data-v-470ad483" data-event-opts="{{[ [ 'tap',[ [ 'footHandle',['$event'] ] ] ] ]}}" wx:if="{{urlType==='replaceOk'}}">已选择</view>
+        <view catchtap="__e" class="{{['rf','foot-name','data-v-470ad483',payStyle?'pay-style':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'footHandle',['$event'] ] ] ] ]}}" wx:else>{{''+(payStyle?'立即支付':'我要更换')+''}}</view>
+    </view>
+</view>

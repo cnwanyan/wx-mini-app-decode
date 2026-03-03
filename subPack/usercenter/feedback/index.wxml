@@ -1,0 +1,12 @@
+<view class="feedback-block data-v-24f58616">
+    <view class="cont data-v-24f58616">
+        <view class="title data-v-24f58616">意见分类</view>
+        <view class="feedback-ul data-v-24f58616">
+            <view bindtap="__e" class="{{['feedback-li','data-v-24f58616',currId===item.id?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'changeItemHandle',['$0'],[ [ ['feedBackList','id',item.id] ] ] ] ] ] ]}}" wx:for="{{feedBackList}}" wx:for-index="__i0__" wx:key="id">{{item.name}}</view>
+        </view>
+        <view class="data-v-24f58616">
+            <textarea bindinput="__e" class="feedback-textarea data-v-24f58616" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','currTextArea','$event',[] ] ] ] ] ]}}" placeholder="请输入您需要反馈的问题（大于10个字符）" placeholderStyle="color: #CCCCCC" value="{{currTextArea}}"></textarea>
+        </view>
+        <view bindtap="__e" class="{{['btn','data-v-24f58616',currTextArea&&currTextArea.length>10&&currId?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'beforeSend',['$event'] ] ] ] ]}}">提交</view>
+    </view>
+</view>

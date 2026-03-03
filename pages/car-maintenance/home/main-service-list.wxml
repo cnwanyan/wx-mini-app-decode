@@ -1,0 +1,25 @@
+<view class="service-list-box data-v-35a4b266">
+    <carman-title bind:__l="__l" bind:rfHandle="__e" class="data-v-35a4b266" configData="{{lineTitleConfig}}" data-event-opts="{{[ [ '^rfHandle',[ ['moreJump'] ] ] ]}}" vueId="0ae9599e-1"></carman-title>
+    <view class="list-box data-v-35a4b266">
+        <scroll-view bindscroll="__e" class="scroll-view_H data-v-35a4b266" data-event-opts="{{[ [ 'scroll',[ [ 'spikeScroll',['$event'] ] ] ] ]}}" scrollX="true" style="width:100%;">
+            <view catchtap="__e" class="cont-item data-v-35a4b266" data-event-opts="{{[ [ 'tap',[ [ 'go2GoodsDetail',['$0'],[ [ ['config','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-item="goodsInfo" wx:key="index">
+                <image class="sw-image data-v-35a4b266" mode="aspectFill" src="{{goodsInfo[$orig].banner}}"></image>
+                <view class="goods-info data-v-35a4b266">
+                    <view class="goods-name data-v-35a4b266">{{goodsInfo[$orig].goods_name||'-'}}</view>
+                    <view class="label-box data-v-35a4b266">
+                        <view class="label data-v-35a4b266" wx:for="{{goodsInfo[$orig].labelArr}}" wx:for-index="__i0__" wx:for-item="name" wx:key="*this">{{''+(name||' ')+''}}</view>
+                    </view>
+                    <view class="sale-num data-v-35a4b266">{{'已核销'+(goodsInfo[$orig].sales_count||0)+'件'}}</view>
+                </view>
+                <view class="service-bottom data-v-35a4b266">
+                    <view class="price-box data-v-35a4b266">
+                        <view class="price data-v-35a4b266">¥<view class="price-num data-v-35a4b266">{{''+goodsInfo.m0+''}}</view>
+                        </view>
+                        <view class="del-price data-v-35a4b266">{{'¥'+(goodsInfo[$orig].market_price/100||'0')+''}}</view>
+                    </view>
+                    <view catchtap="__e" class="btn data-v-35a4b266" data-event-opts="{{[ [ 'tap',[ [ 'go2OrderConfirm',['$0'],[ [ ['config','',index] ] ] ] ] ] ]}}">立即购买</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="line-title data-v-57c3eac2">
+    <view class="lf data-v-57c3eac2">
+        <view class="lf-title data-v-57c3eac2">{{''+configData.lfTitle+''}}<slot></slot>
+        </view>
+    </view>
+    <view bindtap="__e" class="rf data-v-57c3eac2" data-event-opts="{{[ [ 'tap',[ [ 'rfHandle',['$0'],['configData'] ] ] ] ]}}" wx:if="{{configData}}">
+        <view class="rf-title data-v-57c3eac2" wx:if="{{configData.rfTitle}}">{{''+configData.rfTitle+''}}</view>
+        <hll-icon bind:__l="__l" class="data-v-57c3eac2" color="#999" name="{{configData.iconName}}" size="10px" vueId="bb8ee2a4-1" wx:if="{{configData.iconName}}"></hll-icon>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/home/index/components/banner"],{"5c2b":function(n,e,t){"use strict";var r=t("7343"),a=t.n(r);a.a},"61a2":function(n,e,t){"use strict";t.r(e);var r=t("9064"),a=t.n(r);for(var u in r)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return r[n]}))}(u);e["default"]=a.a},7343:function(n,e,t){},9064:function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r=t("65ac"),a={props:{banners:{type:Array,default:function(){return[]}}},data:function(){return{dotIndexs:0}},methods:{onClickBanner:function(n,e){this.$report("xcf_advertise",{page_name:"车服广告",ad_position:"首页banner",ad_order:e+1,ad_link:n.jump_url,ad_ref:(0,r.getUrlParams)(t,"ref")||"链接未携带ref"});var t=n.jump_url,a=n.mini_program_id,u=void 0===a?"":a;this.$pageHref(t,"",{appId:u,notNeedLogin:!0})},intervalChange:function(n){this.dotIndexs=n.detail.current}}};e.default=a},a2b1:function(n,e,t){"use strict";var r;t.d(e,"b",(function(){return a})),t.d(e,"c",(function(){return u})),t.d(e,"a",(function(){return r}));var a=function(){var n=this,e=n.$createElement;n._self._c},u=[]},effe:function(n,e,t){"use strict";t.r(e);var r=t("a2b1"),a=t("61a2");for(var u in a)["default"].indexOf(u)<0&&function(n){t.d(e,n,(function(){return a[n]}))}(u);t("5c2b");var i,o=t("f0c5"),c=Object(o["a"])(a["default"],r["b"],r["c"],!1,null,"6a212dcb",null,!1,r["a"],i);e["default"]=c.exports}}]);;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'pages/home/index/components/banner-create-component',
+    {
+        'pages/home/index/components/banner-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("effe"))
+        })
+    },
+    [['pages/home/index/components/banner-create-component']]
+]);

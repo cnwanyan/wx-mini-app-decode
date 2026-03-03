@@ -1,0 +1,24 @@
+<view class="popup">
+    <view class="orange-pull-mask" hidden="{{!showPullMask}}"></view>
+    <view class="{{['orange-pull-modal',value?'show':'']}}">
+        <view class="pull-list-title">
+            <view>{{title}}</view>
+            <image bindtap="__e" class="pull-close" data-event-opts="{{[ [ 'tap',[ [ 'closePull',['$event'] ] ] ] ]}}" src="https://static.huolala.cn/image/63aa6dcd5a8398d2e39b31da5bc6217ae26da51f.png"></image>
+        </view>
+        <slot name="content"></slot>
+        <view class="content-loading" wx:if="{{loading&&!showEmpty}}">
+            <view class="loading-img-wrapper">
+                <image class="loading-img" src="https://static.huolala.cn/image/3daa6466e4fedf5fa5825b7cde5fa6509f5462f9.png"></image>
+            </view>
+            <view class="loading-text">加载中...</view>
+        </view>
+        <view class="no-pull" wx:if="{{showEmpty}}">
+            <image class="no-pull-img" src="{{emptyImg}}"></image>
+            <view>{{emptyText}}</view>
+        </view>
+        <slot name="footer" wx:if="{{$slots.footer}}"></slot>
+        <view class="confirm-pull" wx:else>
+            <button bindtap="__e" class="{{['confirm-pull-btn',confirmDisabled?'disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'confirmPull',['$event'] ] ] ] ]}}">{{confirmBtnText}}</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view catchtouchmove="preventTouchMove" class="mask data-v-debfd844" wx:if="{{isShow}}">
+    <view class="home-popup data-v-debfd844">
+        <view class="content data-v-debfd844">
+            <view class="cont-title data-v-debfd844">
+                <image class="rule-little data-v-debfd844" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162695197240642848773314.png"></image>
+                <view class="rule-title data-v-debfd844">邀请规则</view>
+                <image class="rule-little data-v-debfd844" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2021/162695196417514865167153.png"></image>
+            </view>
+            <view class="rule-ul data-v-debfd844">
+                <view class="rule-li data-v-debfd844" wx:for="{{ruleList}}" wx:for-item="rule" wx:key="index">{{''+rule+''}}</view>
+            </view>
+            <view catchtap="__e" class="rule-btn data-v-debfd844" data-event-opts="{{[ [ 'tap',[ [ 'hide',['$event'] ] ] ] ]}}">我知道了</view>
+        </view>
+    </view>
+</view>

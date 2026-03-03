@@ -1,0 +1,23 @@
+<view class="goods data-v-28c22b15">
+    <view class="goods__header data-v-28c22b15">
+        <view bindtap="__e" class="goods__header__tab data-v-28c22b15" data-event-opts="{{[ [ 'tap',[ [ 'onClickTab',['$0',index],[ [ ['malls','',index] ] ] ] ] ] ]}}" wx:for="{{malls}}" wx:key="index">
+            <view class="{{['data-v-28c22b15',index==current?'active':'']}}">{{item.tab_name}}</view>
+        </view>
+    </view>
+    <view class="goods__main data-v-28c22b15">
+        <view bindtap="__e" class="goods__item data-v-28c22b15" data-event-opts="{{[ [ 'tap',[ [ 'onClickGoodsItem',['$0'],[ [ ['goodsList','item_id',item.item_id] ] ] ] ] ] ]}}" wx:for="{{goodsList}}" wx:for-index="__i0__" wx:key="item_id">
+            <image class="goods__item__img data-v-28c22b15" lazyLoad="true" mode="aspectFill" src="{{item.pics&&item.pics[0]}}"></image>
+            <view class="goods__item__title data-v-28c22b15">{{item.item_name}}</view>
+            <view class="goods__item__info data-v-28c22b15">
+                <view class="price data-v-28c22b15">
+                    <text class="price-flag data-v-28c22b15">￥</text>
+                    <text class="price-num data-v-28c22b15">{{item.price/100}}</text>
+                </view>
+                <view class="buy-icon data-v-28c22b15">
+                    <image class="buy-icon__img data-v-28c22b15" mode="widthFix" src="/static/img/goods-buy.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="end-tips data-v-28c22b15" wx:if="{{!hasMore}}">我也是有底线的~</view>
+</view>

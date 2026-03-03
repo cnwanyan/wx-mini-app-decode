@@ -1,0 +1,20 @@
+<view class="city-select-box data-v-b845df70">
+    <view class="indexed-list data-v-b845df70">
+        <uni-indexed-list bind:__l="__l" bind:click="__e" class="data-v-b845df70" data-event-opts="{{[ [ '^click',[ ['bindClick'] ] ] ]}}" options="{{list}}" showSelect="{{false}}" vueId="ee107402-1" vueSlots="{{['default']}}">
+            <view class="city data-v-b845df70">
+                <view class="curr-city data-v-b845df70">
+                    <hll-icon bind:__l="__l" class="data-v-b845df70" color="#666666" name="ic-location" size="36rpx" vueId="{{'ee107402-2'+','+'ee107402-1'}}"></hll-icon>
+                    <view class="curr-city-txt data-v-b845df70">当前定位城市：<text bindtap="__e" class="data-v-b845df70" data-event-opts="{{[ [ 'tap',[ [ 'selCity',['$event'] ] ] ] ]}}">{{pageCityName+''}}</text>
+                    </view>
+                </view>
+                <view class="hot-city data-v-b845df70" wx:if="{{0}}">
+                    <view class="hot-city-title data-v-b845df70">热门城市</view>
+                    <view class="hot-city-ul data-v-b845df70">
+                        <view class="hot-city-li active data-v-b845df70">北京</view>
+                        <view class="hot-city-li data-v-b845df70">北京</view>
+                    </view>
+                </view>
+            </view>
+        </uni-indexed-list>
+    </view>
+</view>

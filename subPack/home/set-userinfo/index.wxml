@@ -1,0 +1,25 @@
+<view class="set-userinfo data-v-aff5be6c">
+    <view class="cont data-v-aff5be6c">
+        <view class="ul data-v-aff5be6c">
+            <view class="li data-v-aff5be6c">
+                <view class="data-v-aff5be6c">个人信息</view>
+                <image class="logo data-v-aff5be6c" src="{{userInfo.avatar_url||'https://ops-img-static.huolala.cn/imgs/2021/161880543739409453411634.png'}}" wx:if="{{userInfo}}"></image>
+            </view>
+            <view class="li data-v-aff5be6c">
+                <view class="data-v-aff5be6c">昵称</view>
+                <view class="rf-txt nick-name data-v-aff5be6c">{{userInfo.nick_name||'微信用户'}}</view>
+            </view>
+            <view class="li data-v-aff5be6c">
+                <view class="data-v-aff5be6c">生日</view>
+                <view class="birth-rf data-v-aff5be6c">
+                    <picker bindchange="__e" class="picker data-v-aff5be6c" data-event-opts="{{[ [ 'change',[ [ 'birthDateHandle',['$event'] ] ] ] ]}}" end="{{endDate}}" headerText="选择生日日期" mode="date">{{birthTime||'选择生日日期'}}</picker>
+                    <hll-icon bind:__l="__l" class="data-v-aff5be6c" color="#999" name="ic-arrow-right" size="12px" vueId="152c973a-1"></hll-icon>
+                </view>
+            </view>
+            <view class="li data-v-aff5be6c">
+                <view class="data-v-aff5be6c">手机号</view>
+                <view class="rf-txt data-v-aff5be6c">{{phoneHandle||'-'}}</view>
+            </view>
+        </view>
+    </view>
+</view>

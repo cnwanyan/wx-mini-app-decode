@@ -1,0 +1,46 @@
+<view class="oil-detail-block data-v-24d91f08">
+    <view class="cont-box first-box data-v-24d91f08">
+        <view class="oil-id data-v-24d91f08">加油ID：859380646</view>
+        <view class="oil-desc data-v-24d91f08">加油ID可能用于加油咨询小票打印等过程</view>
+    </view>
+    <view class="cont-box data-v-24d91f08">
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">加油站</text>
+            <text class="data-v-24d91f08">品牌优选-石化第二加油站</text>
+        </view>
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">加油站</text>
+            <text class="data-v-24d91f08">品牌优选-石化第二加油站</text>
+        </view>
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">加油站</text>
+            <text class="data-v-24d91f08">品牌优选-石化第二加油站</text>
+        </view>
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">加油站</text>
+            <text class="data-v-24d91f08">品牌优选-石化第二加油站</text>
+        </view>
+    </view>
+    <view class="cont-box data-v-24d91f08">
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">订单编号</text>
+            <text class="data-v-24d91f08">202101091447107756812000002</text>
+        </view>
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">加油站</text>
+            <text class="data-v-24d91f08">品牌优选-石化第二加油站</text>
+        </view>
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">加油站</text>
+            <text class="data-v-24d91f08">品牌优选-石化第二加油站</text>
+        </view>
+    </view>
+    <view class="cont-box data-v-24d91f08">
+        <view class="txt-line data-v-24d91f08">
+            <text class="data-v-24d91f08">支付状态</text>
+            <text class="data-v-24d91f08">已取消</text>
+        </view>
+    </view>
+    <view class="oil-ask data-v-24d91f08">如有疑问，请咨询团油客服：<text bindtap="__e" class="ask-phone data-v-24d91f08" data-event-opts="{{[ [ 'tap',[ [ 'doAskPhone',['$event'] ] ] ] ]}}">4000835999</text>
+    </view>
+</view>

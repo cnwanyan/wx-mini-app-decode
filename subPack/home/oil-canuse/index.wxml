@@ -1,0 +1,49 @@
+<view class="data-v-2a56e22a">
+    <view class="condition condition-fixed data-v-2a56e22a" hidden="{{!isShowTabFixed}}">
+        <view class="codition-container data-v-2a56e22a">
+            <view bindtap="__e" class="condition-item data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'clickTab',['oil'] ] ] ] ]}}">{{''+(oilName||'')+''}}<hll-icon bind:__l="__l" class="icon-down data-v-2a56e22a" color="#757575" name="ic-arrow-down" size="22rpx" vueId="30d21e95-1"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'clickTab',['filter'] ] ] ] ]}}">{{''+filterTabList[fetchOptions.filter-1].name+''}}<hll-icon bind:__l="__l" class="icon-down data-v-2a56e22a" color="#757575" name="ic-arrow-down" size="22rpx" vueId="30d21e95-2"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'clickTab',['brand'] ] ] ] ]}}">{{''+brandName+''}}<hll-icon bind:__l="__l" class="icon-down data-v-2a56e22a" color="#757575" name="ic-arrow-down" size="22rpx" vueId="30d21e95-3"></hll-icon>
+            </view>
+        </view>
+        <view class="select-wrap pos-a bg-white pt-14 data-v-2a56e22a" wx:if="{{tabVisibleMap.oil}}">
+            <block wx:for="{{$root.l0}}" wx:for-index="key" wx:for-item="value" wx:key="key">
+                <view class="select-title data-v-2a56e22a">{{''+value.m0+''}}</view>
+                <view class="flex flex-wrap data-v-2a56e22a">
+                    <view class="select-item data-v-2a56e22a" wx:for="{{value[$orig]}}" wx:for-index="__i0__" wx:key="oil_no">
+                        <view bindtap="__e" class="{{['content','data-v-2a56e22a',item.oil_no==fetchOptions.oil_no?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickOilList',['$0'],[ [ ['oilsTabList','',key],['','oil_no',item.oil_no] ] ] ] ] ] ]}}">{{''+item.oil_name+''}}</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="select-wrap pos-a bg-white pt-20 data-v-2a56e22a" wx:if="{{tabVisibleMap.filter}}">
+            <view class="flex flex-wrap data-v-2a56e22a">
+                <view class="select-item data-v-2a56e22a" wx:for="{{filterTabList}}" wx:for-index="__i1__" wx:key="filter">
+                    <view bindtap="__e" class="{{['content','data-v-2a56e22a',item.filter==fetchOptions.filter?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickFilter',['$0'],[ [ ['filterTabList','filter',item.filter] ] ] ] ] ] ]}}">{{''+item.name+''}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="select-wrap pos-a bg-white pt-20 data-v-2a56e22a" wx:if="{{tabVisibleMap.brand}}">
+            <view class="flex flex-wrap data-v-2a56e22a">
+                <view class="select-item data-v-2a56e22a" wx:for="{{brandsTabList}}" wx:for-index="__i2__" wx:key="brand_id">
+                    <view catchtap="__e" class="{{['content','data-v-2a56e22a',item.brand_id==fetchOptions.brand?'select-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'clickBrandList',['$0'],[ [ ['brandsTabList','brand_id',item.brand_id] ] ] ] ] ] ]}}">{{''+item.brand_name+''}}</view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="__e" class="select-mask data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'resetTabShow',['$event'] ] ] ] ]}}"></view>
+    </view>
+    <view class="condition condition-sticky data-v-2a56e22a">
+        <view class="codition-container data-v-2a56e22a">
+            <view bindtap="__e" class="condition-item data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'clickTab',['oil'] ] ] ] ]}}">{{''+(oilName||'')+''}}<hll-icon bind:__l="__l" class="icon-down data-v-2a56e22a" color="#757575" name="ic-arrow-down" size="22rpx" vueId="30d21e95-4"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'clickTab',['filter'] ] ] ] ]}}">{{''+filterTabList[fetchOptions.filter-1].name+''}}<hll-icon bind:__l="__l" class="icon-down data-v-2a56e22a" color="#757575" name="ic-arrow-down" size="22rpx" vueId="30d21e95-5"></hll-icon>
+            </view>
+            <view bindtap="__e" class="condition-item data-v-2a56e22a" data-event-opts="{{[ [ 'tap',[ [ 'clickTab',['brand'] ] ] ] ]}}">{{''+brandName+''}}<hll-icon bind:__l="__l" class="icon-down data-v-2a56e22a" color="#757575" name="ic-arrow-down" size="22rpx" vueId="30d21e95-6"></hll-icon>
+            </view>
+        </view>
+    </view>
+    <view class="coupon-canuse-hint data-v-2a56e22a vue-ref" data-ref="hint">以下油站可使用优惠券，优惠券与货拉拉直降优惠不同享</view>
+    <oil-block bind:__l="__l" bind:oilNoChange="__e" bind:setGasDialog="__e" class="data-v-2a56e22a vue-ref" customHeistyle="{{bodyStyle}}" data-event-opts="{{[ [ '^oilNoChange',[ ['oilNoChange'] ] ],[ '^setGasDialog',[ ['setGasDialog'] ] ] ]}}" data-ref="refOil" gasDialog="{{gasDialog}}" showCanUseCouponTag="{{true}}" vueId="30d21e95-7"></oil-block>
+</view>

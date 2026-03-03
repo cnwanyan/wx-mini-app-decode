@@ -1,0 +1,15 @@
+<view class="goods-line data-v-6d5c097b">
+    <view class="goods-line-lf data-v-6d5c097b">
+        <image class="goods-logo data-v-6d5c097b" mode="widthFix" src="{{config.logo}}"></image>
+        <view class="lf-label-box data-v-6d5c097b">
+            <view class="goods-desc data-v-6d5c097b">{{config.goods_name||'-'}}</view>
+            <view class="goods-label data-v-6d5c097b">
+                <view class="label data-v-6d5c097b" wx:for="{{labelArr}}" wx:for-index="ind" wx:key="ind">{{''+item+''}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="goods-line-rf data-v-6d5c097b">
+        <view class="single-price data-v-6d5c097b">{{'¥'+$root.m0+''}}</view>
+        <view class="single-num data-v-6d5c097b">{{'×'+(config.num||'0')}}</view>
+    </view>
+</view>

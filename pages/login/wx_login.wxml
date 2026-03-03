@@ -1,0 +1,37 @@
+<view class="data-v-61b22134">
+    <view class="content data-v-61b22134">
+        <view class="title-box data-v-61b22134">
+            <image class="logo data-v-61b22134" mode="widthFix" src="https://ops-img-static.huolala.cn/imgs/2022/165646972813449996874592.png"></image>
+            <view class="title data-v-61b22134">您好，欢迎使用货拉拉车服</view>
+        </view>
+        <view class="wx-desc data-v-61b22134">
+            <view class="data-v-61b22134" wx:if="{{openType==='userProfile'}}">
+                <view class="cjj-get data-v-61b22134">货拉拉车服需要获取授权内容：</view>
+                <text class="cjj-txt data-v-61b22134">你的公开信息（昵称、头像、地区等）</text>
+            </view>
+            <view bindtap="__e" class="cjj-txt data-v-61b22134" data-event-opts="{{[ [ 'tap',[ [ 'userInfoHandler',['$event'] ] ] ] ]}}" wx:else>立即登录，享受优质车主服务</view>
+        </view>
+        <view capture-bind:tap="__e" class="sub-btn data-v-61b22134" data-event-opts="{{[ [ 'tap',[ [ 'onValidPolicy',['$event'] ] ] ] ]}}">
+            <button bindgetphonenumber="__e" bindtap="__e" class="login-btn btn data-v-61b22134" data-event-opts="{{[ [ 'tap',[ [ 'userInfoHandler',['$event'] ] ] ],[ 'getphonenumber',[ [ 'phoneHandler',['$event'] ] ] ] ]}}" disabled="{{!checkedPolicy}}" openType="{{openType}}" wx:if="{{canIUseUserProfile}}">
+                <view class="data-v-61b22134">{{openType==='userProfile'?'授权登录':'手机号快捷登录'}}</view>
+            </button>
+            <button bindgetphonenumber="__e" bindgetuserinfo="__e" class="login-btn btn data-v-61b22134" data-event-opts="{{[ [ 'getuserinfo',[ [ 'hackGetUserInfo',['$event'] ] ] ],[ 'getphonenumber',[ [ 'phoneHandler',['$event'] ] ] ] ]}}" disabled="{{!checkedPolicy}}" openType="{{openType==='userProfile'?'getUserInfo':openType}}" wx:else>
+                <view class="data-v-61b22134">{{openType==='userProfile'?'授权登录':'手机号快捷登录'}}</view>
+            </button>
+        </view>
+        <view bindtap="__e" class="sub-btn mobile-login data-v-61b22134" data-event-opts="{{[ [ 'tap',[ [ 'goPhoneLogin',['$event'] ] ] ] ]}}" wx:if="{{openType!=='userProfile'}}">
+            <text class="data-v-61b22134">验证码验证登录</text>
+        </view>
+        <view class="protocol data-v-61b22134">
+            <view class="protocol-txt-box data-v-61b22134">
+                <label bindtap="__e" class="{{['checkbox','_span','data-v-61b22134',checkedPolicy?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'checkboxConfirm',['$event'] ] ] ] ]}}"></label>
+                <text class="data-v-61b22134">我已阅读并同意</text>
+                <text bindtap="__e" class="protocol-txt data-v-61b22134" data-event-opts="{{[ [ 'tap',[ [ 'toService',['$event'] ] ] ] ]}}">《用户协议》</text>
+                <text class="data-v-61b22134">和</text>
+                <text bindtap="__e" class="protocol-txt data-v-61b22134" data-event-opts="{{[ [ 'tap',[ [ 'toProtocol',['$event'] ] ] ] ]}}">《隐私政策》</text>
+            </view>
+        </view>
+    </view>
+    <v-dialog bind:__l="__l" class="data-v-61b22134 vue-ref" data-ref="dialog" vueId="1c6d099c-1"></v-dialog>
+    <policy-popup bind:__l="__l" class="data-v-61b22134" vueId="1c6d099c-2"></policy-popup>
+</view>

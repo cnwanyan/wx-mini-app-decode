@@ -1,0 +1,11 @@
+<view class="activity data-v-2834bea4">
+    <view class="activity-item data-v-2834bea4" wx:for="{{activities}}" wx:key="index">
+        <view class="{{['activity__container','data-v-2834bea4',activities.length===2?'activity__container--two':'']}}" style="{{'background-image:'+'url('+item.img+')'+';'}}" wx:if="{{item.content_style===1}}">
+            <view class="activity__container__inner data-v-2834bea4">
+                <image bindtap="__e" class="{{['activity__item','data-v-2834bea4',item.icons.length===2?'activity__item--two':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onClickActivity',['$0',subIndex],[ [ ['activities','',index],['icons','',subIndex] ] ] ] ] ] ]}}" lazyLoad="true" mode="aspectFill" src="{{sub.img}}" wx:for="{{item.icons}}" wx:for-index="subIndex" wx:for-item="sub" wx:key="subIndex"></image>
+            </view>
+        </view>
+        <img-heatmap-tab bind:__l="__l" class="coupon-heatmap data-v-2834bea4" data="{{item.heatmap_tabs}}" vueId="{{'bd32435c-1-'+index}}" wx:if="{{item.content_style===2}}"></img-heatmap-tab>
+        <img-heatmap bind:__l="__l" class="coupon-heatmap data-v-2834bea4" data="{{item.heatmap}}" vueId="{{'bd32435c-2-'+index}}" wx:if="{{item.content_style===3}}"></img-heatmap>
+    </view>
+</view>

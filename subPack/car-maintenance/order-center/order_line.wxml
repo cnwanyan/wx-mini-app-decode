@@ -1,0 +1,40 @@
+<view catchtap="__e" class="order-line-box data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'goOrderDetails',['$event'] ] ] ] ]}}">
+    <view class="top data-v-37653aea">
+        <view class="top-lf data-v-37653aea">
+            <view class="order-type data-v-37653aea">{{''+(config.order_type===2?'线下':'到店')+''}}</view>
+            <view class="order-name data-v-37653aea" wx:if="{{config.store}}">{{''+(config.store.store_name||'-')+''}}</view>
+        </view>
+        <view class="order-status data-v-37653aea" style="{{lineTxtStyle}}">{{''+(orderStatusTxt||'-')+''}}</view>
+    </view>
+    <view class="center data-v-37653aea" wx:if="{{config.goods_list&&config.goods_list.length>0}}">
+        <goods-line bind:__l="__l" class="data-v-37653aea" config="{{item}}" vueId="{{'76ceac0f-1-'+__i0__}}" wx:for="{{config.goods_list}}" wx:for-index="__i0__" wx:key="goods_id"></goods-line>
+    </view>
+    <view class="order-bottom data-v-37653aea">
+        <view class="order-time data-v-37653aea">{{formateCreateAt}}</view>
+        <view class="order-desc data-v-37653aea">共计<view class="light-color data-v-37653aea">{{(config.total_num||'0')+''}}</view>件商品，实付：<view class="light-color strong data-v-37653aea">{{'¥'+$root.m0+''}}</view>
+        </view>
+    </view>
+    <view class="bottom data-v-37653aea">
+        <view class="do-pay data-v-37653aea" wx:if="{{config.status===1}}">
+            <view catchtap="__e" class="btn data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'beforeCancelOrder',['$event'] ] ] ] ]}}">取消订单</view>
+            <view catchtap="__e" class="btn data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'doPay',['$event'] ] ] ] ]}}">去付款</view>
+        </view>
+        <block wx:else>
+            <view catchtap="__e" class="do-again data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'doAgainBuy',['$event'] ] ] ] ]}}" wx:if="{{config.status===3||config.status===4||config.status===8}}">
+                <view class="btn data-v-37653aea">再次购买</view>
+            </view>
+            <block wx:else>
+                <view class="do-server data-v-37653aea" wx:if="{{config.status===2}}">
+                    <view catchtap="__e" class="btn data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'goLbs',['$0'],['config.store'] ] ] ] ]}}">导航</view>
+                    <view catchtap="__e" class="btn data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'goRefund',['$event'] ] ] ] ]}}">申请退款</view>
+                    <view catchtap="__e" class="btn data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'goOrderDetails',['$event'] ] ] ] ]}}">查看二维码</view>
+                </view>
+                <block wx:else>
+                    <view catchtap="__e" class="do-again data-v-37653aea" data-event-opts="{{[ [ 'tap',[ [ 'callPhone',['$event'] ] ] ] ]}}" wx:if="{{config.status===7}}">
+                        <view class="btn data-v-37653aea">联系客服</view>
+                    </view>
+                </block>
+            </block>
+        </block>
+    </view>
+</view>

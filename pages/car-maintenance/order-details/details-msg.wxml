@@ -1,0 +1,27 @@
+<view class="details-msg data-v-1e213a47" wx:if="{{detailInfo}}">
+    <view class="title data-v-1e213a47">订单信息</view>
+    <view class="li data-v-1e213a47">
+        <view class="lf data-v-1e213a47">订单编号</view>
+        <view class="rf data-v-1e213a47">{{detailInfo.order_id||'-'}}</view>
+    </view>
+    <view class="li data-v-1e213a47">
+        <view class="lf data-v-1e213a47">下单时间</view>
+        <view class="rf data-v-1e213a47">{{formateCreateAt||'-'}}</view>
+    </view>
+    <view class="li data-v-1e213a47" wx:if="{{pageStatus===2||pageStatus===4||pageStatus===5||pageStatus===6||pageStatus===7||pageStatus===8}}">
+        <view class="lf data-v-1e213a47">支付时间</view>
+        <view class="rf data-v-1e213a47">{{formatePayTime||'-'}}</view>
+    </view>
+    <view class="li data-v-1e213a47" wx:if="{{pageStatus===4}}">
+        <view class="lf data-v-1e213a47">完成时间</view>
+        <view class="rf data-v-1e213a47">{{formateQrUserTime||'-'}}</view>
+    </view>
+    <view class="li data-v-1e213a47" wx:if="{{pageStatus===5||pageStatus===6}}">
+        <view class="lf data-v-1e213a47">退款申请时间</view>
+        <view class="rf data-v-1e213a47">{{formateApplyTime||'-'}}</view>
+    </view>
+    <view class="li data-v-1e213a47" wx:if="{{pageStatus===7||pageStatus===8}}">
+        <view class="lf data-v-1e213a47">退款完成时间</view>
+        <view class="rf data-v-1e213a47">{{formateFinishTime||'-'}}</view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="slide-box data-v-5c029dff">
+    <view class="slide-label data-v-5c029dff">
+        <view catchtap="__e" class="{{['label','data-v-5c029dff',labelName===item.goods_label?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'setLabel',['$0',ind],[ [ ['labelArr','',ind] ] ] ] ] ] ]}}" wx:for="{{labelArr}}" wx:for-index="ind" wx:key="ind">{{item.goods_label}}</view>
+        <view class="last-space data-v-5c029dff"></view>
+    </view>
+</view>

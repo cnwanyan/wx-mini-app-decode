@@ -1,0 +1,5 @@
+<view class="more-serve data-v-6a8c43e9">
+    <view class="serve-block data-v-6a8c43e9" wx:for="{{serveConfig}}" wx:key="index">
+        <func-area bind:__l="__l" class="data-v-6a8c43e9" configData="{{item.serveArr}}" title="{{item.title}}" vueId="{{'2cf8baf0-1-'+index}}"></func-area>
+    </view>
+</view>

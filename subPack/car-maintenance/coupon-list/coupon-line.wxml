@@ -1,0 +1,20 @@
+<view catchtap="__e" class="coupon-line data-v-4529ece6" data-event-opts="{{[ [ 'tap',[ [ 'lineClick',['$event'] ] ] ] ]}}">
+    <view class="line-lf data-v-4529ece6">
+        <view class="line-lf-box data-v-4529ece6">
+            <view class="price data-v-4529ece6">{{'￥'+$root.m0+''}}</view>
+        </view>
+        <image class="coupon-split data-v-4529ece6" mode="heightFix" src="https://ops-img-static.huolala.cn/imgs/2021/161890770510866352852674.png"></image>
+    </view>
+    <view class="line-rf data-v-4529ece6">
+        <view class="coupon-name-box data-v-4529ece6">
+            <view class="name data-v-4529ece6">{{config.coupon_name||'-'}}</view>
+            <view class="time data-v-4529ece6" wx:if="{{config.receive_time&&config.end_time}}">{{''+config.receive_time+'-'+config.end_time+''}}</view>
+            <view class="desc data-v-4529ece6" wx:if="{{config.note}}">{{config.note}}</view>
+        </view>
+        <view class="coupon-status data-v-4529ece6">
+            <radio-group class="data-v-4529ece6">
+                <radio checked="{{config.coupon_id&&couponId===config.coupon_id}}" class="custom-radio data-v-4529ece6" color="#ff6952" disabled="{{!config.coupon_id}}"></radio>
+            </radio-group>
+        </view>
+    </view>
+</view>

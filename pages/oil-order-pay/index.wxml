@@ -1,0 +1,71 @@
+<view class="oil-order-pay data-v-a5299976">
+    <view bindtap="__e" class="header data-v-a5299976" data-event-opts="{{[ [ 'tap',[ [ 'onCancel',['$event'] ] ] ] ]}}" wx:if="{{urlParams.type==='waitPay'}}">
+        <view class="cancel-order data-v-a5299976">取消订单</view>
+    </view>
+    <view class="container bg-white data-v-a5299976">
+        <view class="title data-v-a5299976">加油订单</view>
+        <view class="split-line data-v-a5299976"></view>
+        <view class="info-item flex flex-justify-between data-v-a5299976">
+            <view class="desc data-v-a5299976">加油ID</view>
+            <view class="data-v-a5299976">{{orderData.driver_oil_id||'-'}}</view>
+        </view>
+        <view class="info-item flex flex-justify-between data-v-a5299976">
+            <view class="desc data-v-a5299976">加油站</view>
+            <view class="data-v-a5299976">{{orderData.gas_name||'-'}}</view>
+        </view>
+        <view class="info-item flex flex-justify-between data-v-a5299976">
+            <view class="desc data-v-a5299976">油号、枪号</view>
+            <view class="data-v-a5299976" wx:if="{{isBMFQRCode}}">不限</view>
+            <view class="data-v-a5299976" wx:else>{{''+orderData.oil_name+'\n        '+(orderData.gun_no||orderData.gun_no===0?orderData.gun_no+'号':'')+''}}</view>
+        </view>
+        <view class="split-line data-v-a5299976"></view>
+        <view class="info-item flex flex-justify-between data-v-a5299976">
+            <view class="desc data-v-a5299976">订单总金额</view>
+            <view class="data-v-a5299976">{{'¥'+orderData.order_amount}}</view>
+        </view>
+    </view>
+    <view class="container bg-white data-v-a5299976">
+        <view class="title data-v-a5299976">加油优惠</view>
+        <view class="split-line data-v-a5299976"></view>
+        <view class="info-item flex flex-justify-between data-v-a5299976" wx:if="{{showDescentAmount}}">
+            <view class="data-v-a5299976">
+                <text class="hll-you-icon data-v-a5299976">优</text>货拉拉优惠金额</view>
+            <view class="discount-num data-v-a5299976">{{'-¥'+(orderData.direct_descent_amount||'0')+''}}</view>
+        </view>
+        <view class="info-item flex flex-justify-between data-v-a5299976" wx:if="{{showCouponAmount}}">
+            <view class="data-v-a5299976">
+                <text class="hll-quan-icon data-v-a5299976">券</text>优惠券</view>
+            <view class="discount-num data-v-a5299976">{{'-¥'+(orderData.coupon_amount||'0')+''}}</view>
+        </view>
+        <view class="info-item flex flex-justify-between bg-white data-v-a5299976" wx:if="{{showServiceFee&&!orderData.hide_service_fee}}">
+            <view class="flex flex-align-center data-v-a5299976">
+                <text class="hll-fu-icon data-v-a5299976">服</text>服务费</view>
+            <view class="data-v-a5299976">{{'+¥'+(orderData.service_fee||'0')}}</view>
+        </view>
+        <view class="info-item flex flex-justify-between bg-white data-v-a5299976" wx:if="{{orderData.oil_coin_discount_amount>0}}">
+            <view class="flex flex-align-center data-v-a5299976">
+                <image class="hll-coin-icon data-v-a5299976" src="https://static.huolala.cn/image/22559360d33a0da536423fa1f3199ec49b886c3e.png"></image>加油金</view>
+            <view class="discount-num data-v-a5299976">{{'-¥'+(orderData.oil_coin_discount_amount||'0')+''}}</view>
+        </view>
+        <view class="split-line data-v-a5299976"></view>
+        <view class="info-item amount data-v-a5299976">
+            <view class="dicount data-v-a5299976">
+                <view class="desc data-v-a5299976">已优惠</view>
+                <view class="dicount-total data-v-a5299976">{{'¥'+(orderData.discount_total_amount||'0')+''}}</view>
+                <view class="desc data-v-a5299976">实付</view>
+                <view class="pay-amount data-v-a5299976">
+                    <text class="sign data-v-a5299976">¥</text>{{(orderData.pay_amount||'-')+''}}</view>
+            </view>
+            <view catchtap="__e" class="fee_detail data-v-a5299976" data-event-opts="{{[ [ 'tap',[ [ 'onShowServiceFeeDetail',['$event'] ] ] ] ]}}" wx:if="{{showServiceFee&&orderData.hide_service_fee&&orderData.pay_amount>0}}">
+                <image class="service-fee-icon data-v-a5299976" src="https://static.huolala.cn/image/870a5c15bcf4a36c10b10d47f2464326542954c1.png"></image>
+                <text class="service-fee-text data-v-a5299976">含服务费</text>
+            </view>
+        </view>
+    </view>
+    <view class="service data-v-a5299976">如有疑问，请咨询客服：<text bindtap="__e" class="tel data-v-a5299976" data-event-opts="{{[ [ 'tap',[ [ 'onCallPhone',['$event'] ] ] ] ]}}">{{orderData.partner_phone_no}}</text>
+    </view>
+    <view class="pay-btn-container data-v-a5299976">
+        <view bindtap="__e" class="pay-btn data-v-a5299976" data-event-opts="{{[ [ 'tap',[ [ 'toPay',['$event'] ] ] ] ]}}">{{''+payBtnText+''}}</view>
+    </view>
+    <service-fee bind:__l="__l" bind:close="__e" class="data-v-a5299976" coupon_money="{{orderData.coupon_amount}}" data-event-opts="{{[ [ '^close',[ ['e0'] ] ] ]}}" discount="{{orderData.direct_descent_amount}}" isShowCoupon="{{orderData.coupon_amount>0}}" isShowDiscount="{{orderData.direct_descent_amount>0}}" oil_coin_discount_amount="{{orderData.oil_coin_discount_amount}}" order_real_pay_amount="{{orderData.pay_amount}}" order_total_amount="{{orderData.order_amount}}" price="{{orderData.direct_descent_amount}}" serviceFee="{{orderData.service_fee}}" vueId="3c55567e-1" wx:if="{{showServiceFeeModal}}"></service-fee>
+</view>
